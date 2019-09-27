@@ -1,0 +1,56 @@
+// Tables.
+
+table {
+	width           : 100%;
+	border-collapse : collapse;
+	border-spacing  : 0;
+	text-align     : left;
+	font-size:       $text-base;
+}
+
+caption {
+	margin: 0 0 5px;
+}
+
+th,
+thead,
+tfoot {
+	font-weight: 700;
+}
+
+tr {
+	border-bottom-width: 1px;
+}
+
+tbody tr:last-child,
+tfoot tr {
+	border-bottom-width: 0;
+}
+
+tfoot tr {
+	border-top-width: 1px;
+}
+
+th,
+td {
+	padding        : $spacing-half;
+	box-sizing     : border-box;
+	vertical-align : top;
+
+	&:empty,
+ 	&.pad { opacity : 0; }
+}
+
+th {
+//	font-size:         16px;
+//	text-align:        left;
+}
+
+td {
+	//border : 1px solid var( --color-border );
+}
+
+thead td,
+tfoot td {
+	//border: none;
+}

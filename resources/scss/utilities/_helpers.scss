@@ -1,0 +1,48 @@
+////
+/// Helper classes.
+///
+/// @group  Utilities
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://themehybrid.com/themes/exhale
+////
+
+:first-child {
+	margin-top: 0;
+}
+
+h1 + *,
+h2 + *,
+h3 + *,
+h4 + *,
+h5 + *,
+h6 + * {
+	margin-top: 0;
+}
+
+/// Clear floats.
+
+.clear {
+	clear: both;
+}
+
+// Adds a box-shadow to elements.
+
+p.has-background,
+p.is-style-highlight {
+	padding: $spacing-global;
+}
+
+.wp-block-image,
+.wp-block-media-text,
+.wp-block-gallery {
+	box-shadow: none;
+	border-radius: 0;
+}
+
+/// Used for paragraphs that only contain an image. These have no height. We use
+/// JS to add the `.is-collapsed` class and remove any margins and paddings.
+
+.is-collapsed {
+//	margin-bottom: 0;
+//	margin-top: 0;
+}

@@ -1,0 +1,19 @@
+////
+/// Verse block.
+///
+/// @group  Blocks
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://themehybrid.com/themes/exhale
+////
+
+.wp-block-verse {
+	margin-top:  $spacing-global;
+	padding:     0;
+	line-height: inherit;
+	font-family: inherit;
+	font-size:   inherit;
+	background:  inherit;
+	color:       inherit;
+	border:      none;
+	box-shadow:  none;
+}

@@ -1,0 +1,129 @@
+////
+/// Alignment classes.
+///
+/// Primarily, we use this to build out style rules for the core WordPress
+/// `.align*` classes.
+///
+/// @group  Utilities
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://themehybrid.com/themes/exhale
+////
+
+// Left alignment.
+.alignleft {
+	float:  left;
+	margin-right:  1.5em;
+	margin-bottom: 0.25em;
+}
+
+// Right alignment.
+.alignright {
+	float:  right;
+	margin-left: 1.5em;
+	margin-bottom: 0.25em;
+}
+
+.alignleft > img,
+.alignright > img {
+	display: block;
+}
+
+.alignleft:not(.is-resized),
+.alignright:not(.is-resized) {
+	max-width: 50%;
+}
+
+@media( min-width: $content-width ) {
+	.entry__content > .alignleft:not(.is-resized),
+	.entry__content > .alignright:not(.is-resized),
+	.wp-block-group > .alignleft:not(.is-resized),
+	.wp-block-group > .alignright:not(.is-resized),
+	.wp-block-group__inner-container > .alignleft:not(.is-resized),
+	.wp-block-group__inner-container > .alignright:not(.is-resized) {
+		max-width: calc( #{ $content-width } / 2 );
+	}
+}
+
+@media ( min-width: $content-width-padded ) {
+
+	.entry__content > .alignleft,
+	.entry__content .wp-block-group > .alignleft,
+	.entry__content .wp-block-group__inner-container > .alignleft {
+		margin-left: calc( ( 100% - #{ $content-width } ) / 2 );
+	}
+
+	.entry__content > .alignright,
+	.entry__content .wp-block-group > .alignright,
+	.entry__content .wp-block-group__inner-container > .alignright {
+		margin-right: calc( ( 100% - #{ $content-width } ) / 2 );
+	}
+}
+
+@media( max-width: break( 'mobile' ) ) {
+	.alignleft:not(.is-small),
+	.alignright:not(.is-small ) {
+		float:   none;
+		display: block;
+	//	margin:  0 0 $spacing-global;
+		margin: $spacing-global 0 0;
+	}
+}
+
+// Center alignment.
+.aligncenter {
+	display:      block;
+	margin-left:  auto;
+	margin-right: auto;
+	text-align:   center;
+
+	> img {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+// Align full and wide classes.
+.alignwide,
+.alignfull,
+.aligncenter {
+	clear:         both;
+	//margin-bottom: $spacing-global;
+	//margin-top: $spacing-global;
+}
+
+p [class*=align] {
+	//margin-bottom: 0;
+}
+
+.alignfull,
+.alignwide {
+	max-width:    100%;
+	margin-left:  auto;
+	margin-right: auto;
+}
+
+@media( min-width: #{ $width-alignwide } ) {
+
+	.alignwide {
+		max-width: $width-alignwide;
+	}
+}
+
+/// Removes the whitespace between full-width elements so that they're stacked
+/// directly on top of one another.  All the ridiculous CSS wrangling is due to
+/// Gutenberg not adding a `.has-background` class to blocks with a background.
+///
+/// @link https://github.com/WordPress/gutenberg/issues/11172
+
+.alignfull[style*=background-color] + .alignfull[style*=background-color],
+.alignfull[style*=background-color] + .alignfull[class*=background-color],
+.alignfull[style*=background-color] + .alignfull.wp-block-cover,
+.alignfull[class*=background-color] + .alignfull[class*=background-color],
+.alignfull[class*=background-color] + .alignfull[style*=background-color],
+.alignfull[class*=background-color] + .alignfull.wp-block-cover,
+.alignfull.wp-block-cover + .alignfull.wp-block-cover,
+.alignfull.wp-block-cover + .alignfull[style*=background-cover],
+.alignfull.wp-block-cover + .alignfull[class*=background-cover] {
+	//margin-top: -#{ $spacing-global };
+	margin-top: 0;
+}

@@ -1,0 +1,22 @@
+////
+/// List helper classes.
+///
+/// @group  Utilities
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://themehybrid.com/themes/exhale
+////
+
+// List Style Type.
+
+$list-style-types: (
+	list-none:   none,
+	list-disc:   disc,
+	list-circle: circle,
+	list-square: square
+);
+
+@each $name, $value in $list-style-types {
+	.#{ $name } {
+		list-style-type: $value;
+	}
+}

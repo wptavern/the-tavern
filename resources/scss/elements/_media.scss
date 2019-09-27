@@ -1,0 +1,42 @@
+// Figures.
+figcaption {
+	// components/_text-secondary.scss
+	text-align: center;
+	margin-top: $spacing-fourth;
+	padding:    0 $spacing-global;
+}
+
+// Images.
+// Note that `.entry__image` is an SVG, but we don't want to target all SVGs.
+
+img,
+svg {
+	max-width: 100%;
+	height:    auto;
+}
+
+img,
+.entry__image {
+	box-shadow:    $shadow-sm;
+	border-radius: 3px;
+	box-sizing:    border-box;
+	filter:        var( --image-default-filter );
+}
+
+a img,
+a .entry__image {
+	transition: all 0.5s ease-in-out;
+}
+
+a:hover img,
+a:focus img,
+a:hover .entry__image,
+a:focus .entry__image {
+	filter: var( --image-hover-filter );
+}
+
+// Embeds.
+
+audio, video, object, embed, iframe {
+	width: 100%;
+}

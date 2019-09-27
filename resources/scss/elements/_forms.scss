@@ -1,0 +1,81 @@
+
+
+label {
+	// components/_text-secondary.scss
+}
+
+input {
+	display: block;
+
+	&[type="checkbox"],
+	&[type="radio"] {
+		display: inline-block;
+	}
+}
+
+select,
+textarea {
+	display: block;
+}
+
+input,
+select,
+textarea,
+button {
+	box-sizing:  border-box;
+	padding:     0.5rem;
+	line-height: 1;
+	font-family: var( --font-family-primary );
+	font-size:   1em;
+	color:       currentColor;
+	background:  transparent;
+	border:      1px solid var( --color-border );
+}
+
+input[type*="date"],
+input[type="email"],
+input[type="month"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+textarea,
+select {
+	width:     100%;
+	display:   block;
+	font-size: 1.0625rem;
+}
+
+textarea {
+	line-height: inherit;
+}
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+	cursor:          pointer;
+	display:         inline-block;
+	margin:          0;
+	padding:         0.75rem $spacing-global;
+	line-height:     1;
+	font-family:     var( --font-family-secondary );
+	font-size:       1rem;
+	border-radius:   3px;
+	white-space:     normal;
+	word-break:      break-all;
+	transition:      all 0.5s ease-in-out;
+
+	&:hover,
+	&:focus {
+		text-decoration: underline;
+	}
+}
+
+::placeholder {
+	color: currentColor;
+	opacity: 1;
+}

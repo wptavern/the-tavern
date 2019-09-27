@@ -1,0 +1,56 @@
+{
+	"name": "exhale",
+	"version": "1.0.0",
+	"description": "Exhale is a clean and modern theme.",
+	"author": "Justin Tadlock",
+	"license": "GPL-2.0+",
+	"homepage": "https://themehybrid.com/themes/exhale",
+	"main": "resources/js/app.js",
+	"scripts": {
+		"build": "npm run prod && npm run i18n && npm run export",
+		"dev": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+		"watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+		"watch:sync": "cross-env sync=1 NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+		"hot": "cross-env sync=1 NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+		"prod": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+		"export": "cross-env export=1 NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+		"lint": "npm run lint:styles && npm run lint:scripts",
+		"lint:styles": "cross-env stylelint './resources/scss/**/*.scss' --syntax scss",
+		"lint:scripts": "cross-env eslint './resources/js/**/*.js'",
+		"i18n": "npm run i18n:textdomain && npm run i18n:pot",
+		"i18n:textdomain": "npx wpi18n addtextdomain --exclude=vendor,node_modules",
+		"i18n:pot": "npx wpi18n makepot --domain-path=/resources/lang"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/justintadlock/exhale.git"
+	},
+	"bugs": {
+		"url": "https://github.com/justintadlock/exhale/issues"
+	},
+	"devDependencies": {
+		"@babel/preset-react": "^7.0.0",
+		"babel-plugin-transform-react-jsx": "^6.24.1",
+		"browser-sync": "^2.26.3",
+		"browser-sync-webpack-plugin": "2.2.2",
+		"copy-webpack-plugin": "^4.6.0",
+		"cross-env": "^5.2.0",
+		"eslint": "^5.15.2",
+		"eslint-config-wordpress": "^2.0.0",
+		"imagemin-mozjpeg": "^6.0.0",
+		"imagemin-webpack-plugin": "^2.4.2",
+		"laravel-mix": "^4.0.15",
+		"node-wp-i18n": "^1.2.3",
+		"postcss-preset-env": "^6.6.0",
+		"rimraf": "^2.6.3",
+		"sass": "^1.17.3",
+		"sass-loader": "^7.1.0",
+		"stylelint": "^9.10.1",
+		"stylelint-config-wordpress": "^13.1.0",
+		"vue-template-compiler": "^2.6.9"
+	},
+	"dependencies": {
+		"lodash.assign": "^4.2.0",
+		"webfontloader": "^1.6.28"
+	}
+}

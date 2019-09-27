@@ -1,0 +1,47 @@
+////
+/// Media meta component.
+///
+/// This component is shown on attachment pages and lists the metadata about
+/// the attachment's media file.
+///
+/// @group  Components
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://themehybrid.com/themes/exhale
+////
+
+.media-meta {
+
+	// Section title.
+	&__title {}
+
+	// List of meta.
+	&__items {
+	//	list-style: none;
+	//	padding:    0;
+	//	font-size:  1rem;
+	}
+
+	// Individual meta items.
+	&__item {
+	//	padding:       0.5em;
+		border-color: var( --color-border );
+
+	//	@media ( min-width: break( mobile ) ) {
+	//		display: flex;
+	//	}
+	}
+
+	&__item:last-of-type {
+		border: none;
+	}
+
+	// Textual label.
+	&__label {}
+
+	// Output of the data.
+	&__data {
+	//	flex:       1;
+	//	text-align: right;
+		opacity:    0.75;
+	}
+}

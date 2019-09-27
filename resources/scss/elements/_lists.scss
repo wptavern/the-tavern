@@ -1,0 +1,46 @@
+// Lists.
+ul,
+ol {
+	padding-left: 2em;
+	//margin:       0 0 $spacing-global;
+	margin: $spacing-global 0 0;
+
+	&.aligncenter,
+	&.aligncenter ul {
+		list-style: none;
+	}
+}
+
+ul[class*=list-] li > ul:not([class*=list-]),
+ol[class*=list-] li > ol:not([class*=list-]) {
+	list-style-type: inherit;
+}
+
+li > ul,
+li > ol {
+	margin:       0;
+	padding-left: $spacing-global;
+}
+
+
+// Remove bottom margin from lists that are direct children of a list item.
+li > ul,
+li > ol {
+	//margin-bottom : 0;
+	margin-top: 0;
+}
+
+dl {
+	margin-top: $spacing-global;
+}
+
+dd {
+	display: list-item;
+	//margin:  0 0 0.5em $spacing-global;
+	//margin:  0.5em 0 0 $spacing-global;
+	margin-left: $spacing-global;
+
+	+ dd {
+	//	margin-top: -0.5em;
+	}
+}

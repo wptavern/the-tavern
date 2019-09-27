@@ -1,0 +1,115 @@
+////
+/// Background helper classes.
+///
+/// @group  Utilities
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://themehybrid.com/themes/exhale
+////
+
+$bg-position : (
+	bg-bottom:        bottom,
+	bg-center:        center,
+	bg-left:          left,
+	bg-left-bottom:   left bottom,
+	bg-left-top:      left top,
+	bg-right:         right,
+	bg-right-bottom:  right bottom,
+	bg-right-top:     right top,
+	bg-top:           top
+);
+
+$bg-repeat: (
+	bg-repeat: repeat,
+	bg-no-repeat: no-repeat,
+	bg-repeat-x:  repeat-x,
+	bg-repeat-y:  repeat-y
+);
+
+$bg-size: (
+	bg-auto:    auto,
+	bg-cover:   cover,
+	bg-contain: contain
+);
+
+$bg-attachment: (
+	bg-fixed: fixed,
+	bg-local: local,
+	bg-scroll: scroll
+);
+
+/// Give a default background color to blocks with an old background that the
+/// theme doesn't recognize so that our margins and paddings don't look off.
+
+.has-background,
+.is-style-solid-color {
+	background-color: var( --gray-100 );
+}
+
+/// Loops through the theme colors and adds utility classes for them. Primarily,
+/// these are the `.has-{$color}-color` and `.has-{$color}-background-color`
+/// classes added via Gutenberg. However, they are useful elsewhere.
+
+@each $color-name, $color-value in block-colors() {
+
+	.bg-#{ $color-name } {
+		background-color: $color-value;
+	}
+}
+
+/// Background position.
+
+@each $name, $value in $bg-position {
+	.#{ $name } {
+		background-position: $value;
+	}
+}
+
+/// Background repeat.
+
+@each $name, $value in $bg-repeat {
+	.#{ $name } {
+		background-repeat: $value;
+	}
+}
+
+/// Background size.
+
+@each $name, $value in $bg-size {
+	.#{ $name } {
+		background-size: $value;
+	}
+}
+
+/// Background attachment.
+
+@each $name, $value in $bg-attachment {
+	.#{ $name } {
+		background-attachment: $value;
+	}
+}
+
+/// Background dim handling. Right now, this is primarily used with the Cover
+/// block. However, it may be applied to other elements in the future, so we're
+/// keeping it separate.
+
+.has-background-dim::before {
+	background-color: inherit;
+	content:         "";
+	position:         absolute;
+	top:              0;
+	left:             0;
+	bottom:           0;
+	right:            0;
+	z-index:          0;
+	opacity:          0.5;
+}
+
+// The background dim can be any number from 10-100, by 10s. We're just running
+// a simple loop to add a black background color over the element.
+
+@for $dim from 1 through 10 {
+
+	.has-background-dim-#{ $dim * 10 }::before {
+		opacity: $dim * 0.1;
+	}
+}

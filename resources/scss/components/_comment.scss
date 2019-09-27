@@ -1,0 +1,109 @@
+////
+/// Comment component.
+///
+/// This is the component for handling individual comments in a comments list.
+///
+/// @group  Components
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://themehybrid.com/themes/exhale
+////
+
+.comment {
+
+	&--depth-1 {
+	//	margin-bottom: $spacing-global;
+	//	padding:       $spacing-global $spacing-global 0;
+		border:        1px solid var( --color-border );
+	//	border-color: var( --color-border );
+
+		@media only screen and ( max-width: $content-width-padded ) {
+	//		margin-bottom: 0;
+			border-width:  0 0 1px;
+	//		margin-bottom: -1px;
+
+			&:first-child {
+				border-width: 1px 0;
+			}
+		}
+	}
+
+	// Type of comment.
+	&--type-comment {}
+
+	&--type-ping {}
+
+	// Comment status.
+	&--status-unapproved {}
+
+	// Full comment text/content.
+	&__content {
+
+		// Readjust bottom margin for lists.
+		> ul,
+		> ol {
+			//margin-bottom: $spacing-global;
+		//	margin-top: $spacing-global;
+		}
+	}
+
+	// Comment under moderation message.
+	&__moderation {}
+
+	// Metadata wrapper.
+	&__meta {
+		// components/_text-secondary.scss
+		//@include meta-links;
+	//	padding:       0 0 $spacing-half;
+	//	margin:        0 0 $spacing-half;
+		border-bottom: 1px solid var( --color-border );
+	}
+
+	// Individual metadata items.
+	&__avatar {
+		float:         left;
+	//	margin-right:  $spacing-half;
+	//	border-radius: 50%;
+	}
+
+	&__parent {
+	//	font-size: 0.9125em;
+
+		svg {
+			height:         1em;
+			vertical-align: text-bottom;
+			padding:        0 0.25em 0.1em;
+		}
+	}
+
+	&__parent-link {
+	//	font-size:     0.9125em;
+	//	display:       inline-block;
+	//	margin-bottom: $spacing-fourth;
+		color:         var( --color-secondary-link-hover );
+	}
+
+	&__author {
+	//	font-weight: 700;
+	}
+
+	&__meta .comment__author-link {
+		color:           var( --color-headings );
+	//	text-decoration: none;
+
+
+		&:hover,
+		&:focus {
+	//		text-decoration: underline;
+		}
+	}
+
+	&__permalink {}
+
+	&__date {}
+
+	&__time {}
+
+	&__edit {}
+
+	&__reply {}
+}

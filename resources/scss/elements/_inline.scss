@@ -1,0 +1,68 @@
+// Inline elements that don't have a more-specific folder.
+
+// strong, bold, etc.
+b,
+strong { font-weight: 700; }
+
+	b b,
+	strong strong { font-weight: 400; }
+
+// Emphasis, italics, etc.
+i,
+em,
+mark,
+cite,
+dfn { font-style : italic; }
+
+i i,
+em em { font-style : normal; }
+
+// Abbreviations, acronymns, etc.
+
+abbr[title],
+acronym[title],
+time[title] { cursor: help; }
+
+abbr,
+acronym {
+	border-bottom : 1px dotted var( --color-border );
+}
+
+acronym { text-transform: uppercase; }
+
+// Big
+
+big { font-size : 1.125em; }
+
+// Small, sup, sub.
+
+small,
+sup,
+sub { font-size : 0.8125em; }
+
+sup,
+sub {
+	vertical-align : baseline;
+	position       : relative;
+}
+
+sup {
+	bottom : 0.3em;
+}
+
+sub {
+	top : 0.3em;
+}
+
+// Deletes, strikes, line-throughs.
+del,
+s,
+strike {
+	text-decoration:       line-through;
+	text-decoration-color: var( --red-500 );
+}
+
+// Inserts.
+ins {
+	border-bottom: 1px dashed var( --green-400 );
+}

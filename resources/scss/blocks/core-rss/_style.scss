@@ -1,0 +1,21 @@
+////
+/// Latest comments block.
+///
+/// @group  Blocks
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://themehybrid.com/themes/exhale
+////
+
+.wp-block-rss {
+	display: grid;
+	grid-row-gap: $spacing-global;
+
+	&__item-publish-date,
+	&__item-author {
+		// components/_text-secondary.scss
+	}
+
+	&__item-excerpt {
+	//	margin:      0 0 $spacing-global;
+	}
+}

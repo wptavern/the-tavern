@@ -1,0 +1,34 @@
+////
+/// File block.
+///
+/// @group  Blocks
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://themehybrid.com/themes/exhale
+////
+
+.wp-block-file {
+	//margin-bottom: $spacing-global;
+	margin-top: $spacing-global;
+
+	&.aligncenter {
+		text-align: center;
+	}
+
+	&.alignright {
+		text-align: right;
+	}
+
+	// See `components/_button.scss`.
+	&__button {}
+
+	&__button:hover,
+	&__button:focus {
+		color:  var( --color-content-background );
+	}
+}
+
+// Give the file block button some spacing to the left if there's another element
+// preceding it.
+* + .wp-block-file__button {
+	margin-left: 0.75em;
+}

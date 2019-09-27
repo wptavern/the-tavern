@@ -1,0 +1,106 @@
+////
+/// Comment respond form component.
+///
+/// @group  Components
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://themehybrid.com/themes/exhale
+////
+
+.comment-respond {
+	box-sizing: content-box;
+	width:        100%;
+	max-width:    $content-width;
+	//margin:       0 auto $spacing-global;
+	margin:       $spacing-global auto 0;
+//	margin-bottom: $spacing-global;
+	padding:       $spacing-global;
+	border:        1px solid var( --color-border );
+
+	@media only screen and ( max-width: $content-width-padded ) {
+	//	margin-bottom: 0;
+		margin-top:    0;
+		border-width:  0 0 1px;
+	}
+
+	.comments__list & {
+		margin-top: 0;
+	}
+
+	.children & {
+		width: auto;
+		margin: $spacing-global -#{ $spacing-global } 0 -#{ $spacing-2x };
+		border-width: 1px 0 0;
+	}
+
+	// Header/title for the respond section.
+	&__reply-title {
+
+		// Cancel reply link is wrapped in `<small>` element.
+		small {
+			font-size: .6125em;
+		}
+	}
+
+	// The comment form.
+	&__form textarea {
+		max-height: 230px;
+	}
+
+	// Note section at the top of form.
+	&__notes {}
+
+	// Logged-in message at the top of the form.\
+	&__notes,
+	&__logged-in-as {
+		// components/_text-secondary.scss
+	}
+
+	.required {
+		font-weight: bold;
+		color:       var( --color-primary-link );
+	}
+
+	// The wrapping element around individual form fields.
+	&__field {
+
+		&--comment {}
+		&--author {}
+		&--email {}
+		&--url {}
+		&--cookies {}
+		&--submit {}
+	}
+
+	@media ( min-width: $content-width ) {
+
+		&__field--author,
+		&__field--email {
+			box-sizing: border-box;
+			width:      50%;
+		}
+
+		&__field--author {
+			float:         left;
+			padding-right: 1em;
+		}
+
+		&__field--email {
+			float:         right;
+			padding-left:  1em;
+		}
+	}
+
+	&__submit[type=submit] {
+		padding: $spacing-half $spacing-global;
+	}
+
+	&__submit {
+
+		@media only screen and ( max-width: $content-width ) {
+			width: 100%;
+		}
+	}
+
+	// Comments closed message.
+	&__closed {}
+}

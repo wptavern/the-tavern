@@ -1,0 +1,46 @@
+////
+/// Button block.
+///
+/// @group  Blocks
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://themehybrid.com/themes/exhale
+////
+
+.wp-block-button__link,
+.wp-block-file__button {
+	@include button;
+}
+
+.wp-block-button {
+//	margin-bottom: $spacing-global;
+	margin-top: $spacing-global;
+
+	// See `components/_button.scss`.
+	&__link {}
+
+	&__link:hover,
+	&__link:focus {}
+}
+
+// Using `a` here to overwrite general link rules.
+.wp-block-button__link {
+	color:      var( --color-content-background );
+	background: var( --color-primary );
+	text-decoration: none;
+}
+
+.is-style-squared .wp-block-button__link {
+	border-radius: 0;
+}
+
+.is-style-outline .wp-block-button__link {
+	border: 1px solid currentColor;
+}
+
+.is-style-outline .wp-block-button__link:not(.has-background) {
+	background: transparent;
+}
+
+.is-style-outline .wp-block-button__link:not(.has-text-color) {
+	color: inherit;
+}

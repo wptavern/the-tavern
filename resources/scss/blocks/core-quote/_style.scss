@@ -1,0 +1,22 @@
+////
+/// Quote block.
+///
+/// @group  Blocks
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://themehybrid.com/themes/exhale
+////
+
+.wp-block-quote {
+
+	&.is-style-large {
+		font-size: 1.25em;
+	}
+
+	p {}
+
+	> cite {
+		display:  block;
+		//margin-bottom: $spacing-global;
+		margin-top: $spacing-global;
+	}
+}
