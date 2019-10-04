@@ -67,7 +67,7 @@ class FeaturedImage extends Image {
 		// Put the class on the wrapper.
 		$class = isset( $args['class'] ) ? $args['class'] : 'entry__media';
 
-		$args['size']    = Loop::imageSize()->name();
+		$args['size']    = 'tavern-landscape-medium';
 		$args['link_class'] = 'entry__image-link inline-block align-top';
 		$args['class']   = 'entry__image block mx-auto';
 		$args['post_id'] = $post_id;

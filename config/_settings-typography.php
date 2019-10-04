@@ -15,7 +15,7 @@ return [
 	'headings' => [
 		'label'           => _x( 'Headings', 'font family setting', 'tavern' ),
 		'description'     => __( 'Font used for text headings.', 'tavern' ),
-		'family'          => 'system-ui',
+		'family'          => 'libre-baskerville',
 		'style'           => '700',
 		'variant'         => 'normal',
 		'transform'       => 'none',
@@ -24,7 +24,7 @@ return [
 	'primary' => [
 		'label'           => _x( 'Primary', 'font family setting', 'tavern' ),
 		'description'     => __( 'Font used for most of the text on the site.', 'tavern' ),
-		'family'          => 'georgia',
+		'family'          => 'pt-sans',
 		'options'         => [ 'family' ],
 		'required_styles' => [ '400', '400i', '700', '700i' ]
 	],

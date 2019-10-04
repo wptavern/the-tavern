@@ -1,19 +1,10 @@
-<div <?php Hybrid\Attr\display( 'app-content', '', [
-	'class' => sprintf(
-		'app-content max-w-%s overflow-hidden my-%s mx-auto pt-12',
-		'boxed-content' === Tavern\Tools\Mod::get( 'layout' ) ? '5xl' : 'full',
-		'boxed-content' === Tavern\Tools\Mod::get( 'layout' ) ? '12' : '0'
-	)
-] ) ?>>
+<div class="app-content max-w-full overflow-hidden mx-auto pt-12">
 
 	<main id="main" class="app-main mx-auto mb-12 text-lg leading-loose">
 
 		<?php $engine->display( 'partials', 'archive-header' ) ?>
 
-		<?php $engine->display(
-			sprintf( 'loop/%s', Tavern\Template\Loop::layout()->name() ),
-			$view->slugs()
-		) ?>
+		<?php $engine->display( 'loop/grid', $view->slugs() ) ?>
 
 	</main>
 

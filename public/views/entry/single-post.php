@@ -1,7 +1,9 @@
 <article <?php Hybrid\Attr\display( 'entry' ) ?>>
 
 	<header class="entry__header mb-8 text-center">
-		<?php Hybrid\Post\display_title( [ 'class' => 'entry__title md:max-w-4xl mx-8 sm:mx-auto my-0' ] ) ?>
+		<h1 class="entry__title md:max-w-4xl mx-8 sm:mx-auto my-4 text-5xl leading-tight">
+			<?php the_title() ?>
+		</h1>
 
 		<div class="entry__byline max-w-2xl mx-8 sm:mx-auto">
 			<?php Hybrid\Post\display_author() ?>

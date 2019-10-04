@@ -41,7 +41,7 @@ add_action( 'wp_enqueue_scripts', function() {
 	// Enqueue theme styles.
 	wp_enqueue_style(
 		'tavern-screen',
-		asset( Options::get( 'classic_style' ) ? 'css/screen-classic.css' : 'css/screen.css' ),
+		asset( 'css/screen.css' ),
 		null,
 		null
 	);
