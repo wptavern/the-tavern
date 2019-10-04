@@ -4,17 +4,17 @@
  *
  * Defines the font options available in the customizer.
  *
- * @package   Exhale
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright 2019 Justin Tadlock
+ * @package   Tavern
+ * @author    WP Tavern <justintadlock@gmail.com>
+ * @copyright 2019 WP Tavern
  * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
- * @link      https://themehybrid.com/themes/exhale
+ * @link      https://wptavern.com
  */
 
 return [
 	'headings' => [
-		'label'           => _x( 'Headings', 'font family setting', 'exhale' ),
-		'description'     => __( 'Font used for text headings.', 'exhale' ),
+		'label'           => _x( 'Headings', 'font family setting', 'tavern' ),
+		'description'     => __( 'Font used for text headings.', 'tavern' ),
 		'family'          => 'system-ui',
 		'style'           => '700',
 		'variant'         => 'normal',
@@ -22,15 +22,15 @@ return [
 		'options'         => [ 'family', 'style', 'caps', 'transform' ]
 	],
 	'primary' => [
-		'label'           => _x( 'Primary', 'font family setting', 'exhale' ),
-		'description'     => __( 'Font used for most of the text on the site.', 'exhale' ),
+		'label'           => _x( 'Primary', 'font family setting', 'tavern' ),
+		'description'     => __( 'Font used for most of the text on the site.', 'tavern' ),
 		'family'          => 'georgia',
 		'options'         => [ 'family' ],
 		'required_styles' => [ '400', '400i', '700', '700i' ]
 	],
 	'secondary' => [
-		'label'           => _x( 'Secondary', 'font family setting', 'exhale' ),
-		'description'     => __( 'Font used for secondary, less important text.', 'exhale' ),
+		'label'           => _x( 'Secondary', 'font family setting', 'tavern' ),
+		'description'     => __( 'Font used for secondary, less important text.', 'tavern' ),
 		'family'          => 'system-ui',
 		'options'         => [ 'family' ],
 		'required_styles' => [ '400', '400i', '700', '700i' ]

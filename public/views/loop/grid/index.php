@@ -3,7 +3,7 @@
 	<div <?php Hybrid\Attr\display( 'loop', 'grid', [
 		'class' => sprintf(
 			'loop loop--grid loop--%s px-8',
-			str_replace( '_', '-', Exhale\Template\Loop::type() )
+			str_replace( '_', '-', Tavern\Template\Loop::type() )
 		),
 		'data-customize-partial-placement-context' => wp_json_encode( [
 			'slugs' => $view->slugs()
@@ -13,10 +13,10 @@
 		<ul <?php Hybrid\Attr\display( 'grid', 'posts', [
 			'class' => sprintf(
 				'clear grid grid--posts grid-col-%s sm:grid-col-%s md:grid-col-%s grid-gap-8 list-none max-w-%s mx-auto mb-8 p-0',
-				'landscape' === Exhale\Template\Loop::imageSize()->orientation() ? 1 : 2,
-				3 <= Exhale\Template\Loop::columns() ? 3 : 2,
-				Exhale\Template\Loop::columns(),
-				Exhale\Template\Loop::width()
+				'landscape' === Tavern\Template\Loop::imageSize()->orientation() ? 1 : 2,
+				3 <= Tavern\Template\Loop::columns() ? 3 : 2,
+				Tavern\Template\Loop::columns(),
+				Tavern\Template\Loop::width()
 			)
 		] ) ?>>
 

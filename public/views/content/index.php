@@ -1,8 +1,8 @@
 <div <?php Hybrid\Attr\display( 'app-content', '', [
 	'class' => sprintf(
 		'app-content max-w-%s overflow-hidden my-%s mx-auto pt-12',
-		'boxed-content' === Exhale\Tools\Mod::get( 'layout' ) ? '5xl' : 'full',
-		'boxed-content' === Exhale\Tools\Mod::get( 'layout' ) ? '12' : '0'
+		'boxed-content' === Tavern\Tools\Mod::get( 'layout' ) ? '5xl' : 'full',
+		'boxed-content' === Tavern\Tools\Mod::get( 'layout' ) ? '12' : '0'
 	)
 ] ) ?>>
 
@@ -11,7 +11,7 @@
 		<?php $engine->display( 'partials', 'archive-header' ) ?>
 
 		<?php $engine->display(
-			sprintf( 'loop/%s', Exhale\Template\Loop::layout()->name() ),
+			sprintf( 'loop/%s', Tavern\Template\Loop::layout()->name() ),
 			$view->slugs()
 		) ?>
 

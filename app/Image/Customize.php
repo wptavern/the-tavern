@@ -4,21 +4,21 @@
  *
  * Adds customizer elements for the image component.
  *
- * @package   Exhale
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright 2019 Justin Tadlock
+ * @package   Tavern
+ * @author    WP Tavern <justintadlock@gmail.com>
+ * @copyright 2019 WP Tavern
  * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
- * @link      https://themehybrid.com/themes/exhale
+ * @link      https://wptavern.com
  */
 
-namespace Exhale\Image;
+namespace Tavern\Image;
 
 use WP_Customize_Manager;
-use Exhale\Customize\Controls;
-use Exhale\Customize\Customizable;
-use Exhale\Image\Filter\Filters;
-use Exhale\Tools\Collection;
-use Exhale\Tools\Mod;
+use Tavern\Customize\Controls;
+use Tavern\Customize\Customizable;
+use Tavern\Image\Filter\Filters;
+use Tavern\Tools\Collection;
+use Tavern\Tools\Mod;
 
 /**
  * Image customize class.
@@ -84,16 +84,16 @@ class Customize extends Customizable {
 				'filters'     => $this->filters,
 				'l10n'        => [
 					'function' => [
-						'label'       => __( 'Image Filter', 'exhale' ),
-						'description' => __( 'CSS filter function to apply to images.', 'exhale' )
+						'label'       => __( 'Image Filter', 'tavern' ),
+						'description' => __( 'CSS filter function to apply to images.', 'tavern' )
 					],
 					'default_amount' => [
-						'label'       => __( 'Default Filter Amount', 'exhale' ),
-						'description' => __( 'Filter amount applied to all images.', 'exhale' )
+						'label'       => __( 'Default Filter Amount', 'tavern' ),
+						'description' => __( 'Filter amount applied to all images.', 'tavern' )
 					],
 					'hover_amount' => [
-						'label'       => __( 'Hover Filter  Amount', 'exhale' ),
-						'description' => __( 'Filter amount applied to linked images when they are hovered or focused.', 'exhale' )
+						'label'       => __( 'Hover Filter  Amount', 'tavern' ),
+						'description' => __( 'Filter amount applied to linked images when they are hovered or focused.', 'tavern' )
 					]
 				],
 				'settings'    => [

@@ -4,14 +4,14 @@
  *
  * Creates a theme object.
  *
- * @package   Exhale
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright 2019 Justin Tadlock
+ * @package   Tavern
+ * @author    WP Tavern <justintadlock@gmail.com>
+ * @copyright 2019 WP Tavern
  * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
- * @link      https://themehybrid.com/themes/exhale
+ * @link      https://wptavern.com
  */
 
-namespace Exhale\ThemeManager;
+namespace Tavern\ThemeManager;
 
 use WP_Theme;
 
@@ -237,7 +237,7 @@ class Theme {
 					<?php if ( $this->active() ) : ?>
 						<?php printf(
 							'<span>%s</span> %s',
-							esc_html__( 'Active:', 'exhale' ),
+							esc_html__( 'Active:', 'tavern' ),
 							esc_html( $this->label() )
 						) ?>
 					<?php else : ?>
@@ -273,7 +273,7 @@ class Theme {
 				$actions[] = sprintf(
 					'<a class="button button-primary load-customize hide-if-no-customize" href="%s">%s</a>',
 					esc_url( $this->customizeUrl() ),
-					esc_html__( 'Customize', 'exhale' )
+					esc_html__( 'Customize', 'tavern' )
 				);
 			}
 
@@ -282,8 +282,8 @@ class Theme {
 				$actions[] = sprintf(
 					'<a class="button activate" href="%s" aria-label="%s">%s</a>',
 					esc_url( $this->activateUrl() ),
-					esc_attr( sprintf( __( 'Activate %s', 'exhale' ), $this->label() ) ),
-					esc_html__( 'Activate', 'exhale' )
+					esc_attr( sprintf( __( 'Activate %s', 'tavern' ), $this->label() ) ),
+					esc_html__( 'Activate', 'tavern' )
 				);
 			}
 
@@ -292,7 +292,7 @@ class Theme {
 				$actions[] = sprintf(
 					'<a class="button button-primary load-customize hide-if-no-customize" href="%s">%s</a>',
 					esc_url( $this->customizeUrl() ),
-					esc_html__( 'Live Preview', 'exhale' )
+					esc_html__( 'Live Preview', 'tavern' )
 				);
 			}
 
@@ -301,7 +301,7 @@ class Theme {
 			$actions[] = sprintf(
 				'<a class="button button-primary" href="%s" target="_blank">%s</a>',
 				esc_url( $this->downloadUrl() ),
-				esc_html__( 'Download', 'exhale' )
+				esc_html__( 'Download', 'tavern' )
 			);
 		}
 

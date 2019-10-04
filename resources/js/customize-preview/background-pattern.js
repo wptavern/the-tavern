@@ -1,5 +1,5 @@
 // Global set via `wp_localize_script()`.
-const { backgroundPatterns } = exhaleCustomizePreview;
+const { backgroundPatterns } = tavernCustomizePreview;
 
 let types = {
 	body:           'body',

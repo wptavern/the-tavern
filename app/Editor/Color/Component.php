@@ -4,18 +4,18 @@
  *
  * Handles the theme color feature.
  *
- * @package   Exhale
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright 2019 Justin Tadlock
+ * @package   Tavern
+ * @author    WP Tavern <justintadlock@gmail.com>
+ * @copyright 2019 WP Tavern
  * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
- * @link      https://themehybrid.com/themes/exhale
+ * @link      https://wptavern.com
  */
 
-namespace Exhale\Editor\Color;
+namespace Tavern\Editor\Color;
 
 use Hybrid\Contracts\Bootable;
-use Exhale\Tools\Config;
-use Exhale\Tools\CustomProperties;
+use Tavern\Tools\Config;
+use Tavern\Tools\CustomProperties;
 
 /**
  * Color component class.
@@ -81,7 +81,7 @@ class Component implements Bootable {
 		add_action( 'after_setup_theme', [ $this, 'register' ] );
 
 		// Register colors.
-		add_action( 'exhale/editor/color/register', [ $this, 'registerDefaultColors' ] );
+		add_action( 'tavern/editor/color/register', [ $this, 'registerDefaultColors' ] );
 	}
 
 	/**
@@ -94,7 +94,7 @@ class Component implements Bootable {
 	public function register() {
 
 		// Hook for registering custom colors.
-		do_action( 'exhale/editor/color/register', $this->colors );
+		do_action( 'tavern/editor/color/register', $this->colors );
 
 		// Adds a color palette to the block editor.
 		add_theme_support( 'editor-color-palette', $this->colors->palette() );

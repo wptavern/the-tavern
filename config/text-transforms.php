@@ -4,24 +4,24 @@
  *
  * Defines the `text-transforms` options available in the customizer.
  *
- * @package   Exhale
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright 2019 Justin Tadlock
+ * @package   Tavern
+ * @author    WP Tavern <justintadlock@gmail.com>
+ * @copyright 2019 WP Tavern
  * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
- * @link      https://themehybrid.com/themes/exhale
+ * @link      https://wptavern.com
  */
 
 return [
 	'none' => [
-		'label' => __( 'None', 'exhale' )
+		'label' => __( 'None', 'tavern' )
 	],
 	'capitalize' => [
-		'label' => __( 'Capitalize', 'exhale' )
+		'label' => __( 'Capitalize', 'tavern' )
 	],
 	'lowercase' => [
-		'label' => __( 'Lowercase', 'exhale' )
+		'label' => __( 'Lowercase', 'tavern' )
 	],
 	'uppercase' => [
-		'label' => __( 'Uppercase', 'exhale' )
+		'label' => __( 'Uppercase', 'tavern' )
 	]
 ];

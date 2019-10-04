@@ -4,20 +4,20 @@
  *
  * Adds customizer elements for the color component.
  *
- * @package   Exhale
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright 2019 Justin Tadlock
+ * @package   Tavern
+ * @author    WP Tavern <justintadlock@gmail.com>
+ * @copyright 2019 WP Tavern
  * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
- * @link      https://themehybrid.com/themes/exhale
+ * @link      https://wptavern.com
  */
 
-namespace Exhale\Color;
+namespace Tavern\Color;
 
 use WP_Customize_Manager;
 use WP_Customize_Color_Control;
-use Exhale\Color\Setting\Settings;
-use Exhale\Customize\Customizable;
-use Exhale\Tools\Collection;
+use Tavern\Color\Setting\Settings;
+use Tavern\Customize\Customizable;
+use Tavern\Tools\Collection;
 
 /**
  * Color customize class.

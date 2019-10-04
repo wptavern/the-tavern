@@ -4,18 +4,18 @@
  *
  * Bootstraps the settings component.
  *
- * @package   Exhale
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright 2019 Justin Tadlock
+ * @package   Tavern
+ * @author    WP Tavern <justintadlock@gmail.com>
+ * @copyright 2019 WP Tavern
  * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
- * @link      https://themehybrid.com/themes/exhale
+ * @link      https://wptavern.com
  */
 
-namespace Exhale\Settings;
+namespace Tavern\Settings;
 
 use Hybrid\Tools\ServiceProvider;
-use Exhale\Settings\Admin\OptionsPage;
-use Exhale\Settings\Admin\Views\Views;
+use Tavern\Settings\Admin\OptionsPage;
+use Tavern\Settings\Admin\Views\Views;
 
 /**
  * Settings provider class.
@@ -39,10 +39,10 @@ class Provider extends ServiceProvider {
 		$this->app->singleton( OptionsPage::class, function() {
 
 			return new OptionsPage(
-				'exhale-settings',
+				'tavern-settings',
 				$this->app->resolve( Views::class ),
 				[
-					'label'      => __( 'Exhale Settings', 'exhale' ),
+					'label'      => __( 'Tavern Settings', 'tavern' ),
 					'capability' => 'edit_theme_options'
 				]
 			);

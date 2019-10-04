@@ -4,18 +4,18 @@
  *
  * A simple class for working with the loop template on the front end.
  *
- * @package   Exhale
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright 2019 Justin Tadlock
+ * @package   Tavern
+ * @author    WP Tavern <justintadlock@gmail.com>
+ * @copyright 2019 WP Tavern
  * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
- * @link      https://themehybrid.com/themes/exhale
+ * @link      https://wptavern.com
  */
 
-namespace Exhale\Template;
+namespace Tavern\Template;
 
 use Hybrid\App;
-use Exhale\Tools\Mod;
-use Exhale\Image\Size\Sizes as ImageSizes;
+use Tavern\Tools\Mod;
+use Tavern\Image\Size\Sizes as ImageSizes;
 
 /**
  * Loop class.
@@ -100,7 +100,7 @@ class Loop {
 	 * @since  2.1.0
 	 * @access public
 	 * @param  string  $type
-	 * @return \Exhale\Layout\LoopLayout
+	 * @return \Tavern\Layout\LoopLayout
 	 */
 	public static function layout( $type = '' ) {
 
@@ -115,7 +115,7 @@ class Loop {
 	 * @since  2.1.0
 	 * @access public
 	 * @param  string  $type
-	 * @return \Exhale\Image\Size\Size
+	 * @return \Tavern\Image\Size\Size
 	 */
 	public static function imageSize( $type = '' ) {
 
@@ -143,7 +143,7 @@ class Loop {
 	 * @since  2.1.0
 	 * @access public
 	 * @param  string  $type
-	 * @return \Exhale\Layout\LoopLayout
+	 * @return \Tavern\Layout\LoopLayout
 	 */
 	public static function width( $type = '' ) {
 

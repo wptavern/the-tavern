@@ -4,16 +4,16 @@
  *
  * Handles outputting the title and content for the 404 Not Found error page.
  *
- * @package   Exhale
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright 2019 Justin Tadlock
+ * @package   Tavern
+ * @author    WP Tavern <justintadlock@gmail.com>
+ * @copyright 2019 WP Tavern
  * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
- * @link      https://themehybrid.com/themes/exhale
+ * @link      https://wptavern.com
  */
 
-namespace Exhale\Template;
+namespace Tavern\Template;
 
-use Exhale\Settings\Options;
+use Tavern\Settings\Options;
 
 use function Hybrid\Post\render_title;
 
@@ -114,7 +114,7 @@ class ErrorPage {
 			return;
 		}
 
-		esc_html_e( '404 Not Found', 'exhale' );
+		esc_html_e( '404 Not Found', 'tavern' );
 	}
 
 	/**
@@ -133,7 +133,7 @@ class ErrorPage {
 
 		printf(
 			'<p>%s</p>',
-			esc_html__( 'It looks like you stumbled upon a page that does not exist. Perhaps rolling the dice with a search might help.', 'exhale' )
+			esc_html__( 'It looks like you stumbled upon a page that does not exist. Perhaps rolling the dice with a search might help.', 'tavern' )
 		);
 
 		get_search_form();

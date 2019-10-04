@@ -4,19 +4,19 @@
  *
  * Bootstraps the font components.
  *
- * @package   Exhale
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright 2019 Justin Tadlock
+ * @package   Tavern
+ * @author    WP Tavern <justintadlock@gmail.com>
+ * @copyright 2019 WP Tavern
  * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
- * @link      https://themehybrid.com/themes/exhale
+ * @link      https://wptavern.com
  */
 
-namespace Exhale\Editor;
+namespace Tavern\Editor;
 
 use Hybrid\Tools\ServiceProvider;
-use Exhale\Tools\CustomProperties;
-use Exhale\Editor\Color;
-use Exhale\Editor\Font;
+use Tavern\Tools\CustomProperties;
+use Tavern\Editor\Color;
+use Tavern\Editor\Font;
 
 /**
  * Font service provider class.

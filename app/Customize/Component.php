@@ -4,21 +4,21 @@
  *
  * Integrates the theme's settings into the customizer.
  *
- * @package   Exhale
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright 2019 Justin Tadlock
+ * @package   Tavern
+ * @author    WP Tavern <justintadlock@gmail.com>
+ * @copyright 2019 WP Tavern
  * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
- * @link      https://themehybrid.com/themes/exhale
+ * @link      https://wptavern.com
  */
 
-namespace Exhale\Customize;
+namespace Tavern\Customize;
 
 use WP_Customize_Manager;
-use Exhale\Tools\Collection;
+use Tavern\Tools\Collection;
 use Hybrid\App;
 use Hybrid\Contracts\Bootable;
 
-use function Exhale\asset;
+use function Tavern\asset;
 
 /**
  * Handles setting up everything we need for the customizer.
@@ -87,10 +87,10 @@ class Component implements Bootable {
 	public function registerPanels( WP_Customize_Manager $manager ) {
 
 		$panels = [
-			'theme_global'  => __( 'Theme: Global',  'exhale' ),
-			'theme_header'  => __( 'Theme: Header',  'exhale' ),
-			'theme_content' => __( 'Theme: Content', 'exhale' ),
-			'theme_footer'  => __( 'Theme: Footer',  'exhale' )
+			'theme_global'  => __( 'Theme: Global',  'tavern' ),
+			'theme_header'  => __( 'Theme: Header',  'tavern' ),
+			'theme_content' => __( 'Theme: Content', 'tavern' ),
+			'theme_footer'  => __( 'Theme: Footer',  'tavern' )
 		];
 
 		foreach ( $panels as $panel => $label ) {
@@ -123,31 +123,31 @@ class Component implements Bootable {
 
 		$manager->add_section( 'theme_global_layout', [
 			'panel'    => 'theme_global',
-			'title'    => __( 'Layout', 'exhale' ),
+			'title'    => __( 'Layout', 'tavern' ),
 			'priority' => 5
 		] );
 
 		$manager->add_section( 'theme_global_typography', [
 			'panel'    => 'theme_global',
-			'title'    => __( 'Typography', 'exhale' ),
+			'title'    => __( 'Typography', 'tavern' ),
 			'priority' => 10
 		] );
 
 		$manager->add_section( 'theme_global_colors', [
 			'panel'    => 'theme_global',
-			'title'    => __( 'Colors', 'exhale' ),
+			'title'    => __( 'Colors', 'tavern' ),
 			'priority' => 15
 		] );
 
 		$manager->add_section( 'theme_body_background', [
 			'panel'     => 'theme_global',
-			'title'     => __( 'Background', 'exhale' ),
+			'title'     => __( 'Background', 'tavern' ),
 			'priority'  => 15
 		] );
 
 		$manager->add_section( 'theme_global_media', [
 			'panel'    => 'theme_global',
-			'title'    => __( 'Media', 'exhale' ),
+			'title'    => __( 'Media', 'tavern' ),
 			'priority' => 25
 		] );
 
@@ -161,26 +161,26 @@ class Component implements Bootable {
 
 		$manager->add_section( 'theme_header_layout', [
 			'panel'    => 'theme_header',
-			'title'    => __( 'Layout', 'exhale' ),
+			'title'    => __( 'Layout', 'tavern' ),
 			'priority' => 5
 		] );
 
 		$manager->add_section( 'theme_header_colors', [
 			'panel'    => 'theme_header',
-			'title'    => __( 'Colors', 'exhale' ),
+			'title'    => __( 'Colors', 'tavern' ),
 			'priority' => 15
 		] );
 
 		$manager->add_section( 'theme_header_background', [
 			'panel'     => 'theme_header',
-			'title'     => __( 'Background', 'exhale' ),
+			'title'     => __( 'Background', 'tavern' ),
 			'priority'  => 15
 		] );
 
 		// Customize the title/tagline section.
 		$title_tagline           = $manager->get_section( 'title_tagline' );
 		$title_tagline->panel    = 'theme_header';
-		$title_tagline->title    = __( 'Branding', 'exhale' );
+		$title_tagline->title    = __( 'Branding', 'tavern' );
 		$title_tagline->priority = 20;
 
 		// -------------------------------------------------------------
@@ -189,13 +189,13 @@ class Component implements Bootable {
 
 		$manager->add_section( 'theme_content_colors', [
 			'panel'    => 'theme_content',
-			'title'    => __( 'Colors', 'exhale' ),
+			'title'    => __( 'Colors', 'tavern' ),
 			'priority' => 15
 		] );
 
 		$manager->add_section( 'theme_content_background', [
 			'panel'     => 'theme_content',
-			'title'     => __( 'Background', 'exhale' ),
+			'title'     => __( 'Background', 'tavern' ),
 			'priority'  => 15
 		] );
 
@@ -210,35 +210,35 @@ class Component implements Bootable {
 
 		$manager->add_section( 'theme_footer_colors', [
 			'panel'    => 'theme_footer',
-			'title'    => __( 'Colors', 'exhale' ),
+			'title'    => __( 'Colors', 'tavern' ),
 			'priority' => 15
 		] );
 
 		$manager->add_section( 'theme_footer_background', [
 			'panel'     => 'theme_footer',
-			'title'     => __( 'Background: Footer', 'exhale' ),
+			'title'     => __( 'Background: Footer', 'tavern' ),
 			'priority'  => 15
 		] );
 
 		$manager->add_section( 'theme_sidebar_footer_background', [
 			'panel'     => 'theme_footer',
-			'title'     => __( 'Background: Sidebar', 'exhale' ),
+			'title'     => __( 'Background: Sidebar', 'tavern' ),
 			'priority'  => 15
 		] );
 
 		$manager->add_section( 'theme_footer_sidebar', [
 			'panel'    => 'theme_footer',
-			'title'    => __( 'Sidebar', 'exhale' ),
+			'title'    => __( 'Sidebar', 'tavern' ),
 			'description' => sprintf(
 				'<a class="button button-secondary" href="javascript:wp.customize.panel( \'widgets\' ).focus();">%s</a>',
-				__( 'Add Footer Widgets &rarr;', 'exhale' )
+				__( 'Add Footer Widgets &rarr;', 'tavern' )
 			),
 			'priority' => 20
 		] );
 
 		$manager->add_section( 'theme_footer_credit', [
 			'panel'    => 'theme_footer',
-			'title'    => __( 'Credit', 'exhale' ),
+			'title'    => __( 'Credit', 'tavern' ),
 			'priority' => 25
 		] );
 
@@ -278,13 +278,13 @@ class Component implements Bootable {
 		}
 
 		$manager->add_setting( 'header_sticky', [
-			'default'           => \Exhale\Tools\Mod::fallback( 'header_sticky' ),
+			'default'           => \Tavern\Tools\Mod::fallback( 'header_sticky' ),
 			'sanitize_callback' => 'wp_validate_boolean',
 			'transport'         => 'postMessage'
 		] );
 
 		$manager->add_setting( 'branding_sep', [
-			'default'           => \Exhale\Tools\Mod::fallback( 'branding_sep' ),
+			'default'           => \Tavern\Tools\Mod::fallback( 'branding_sep' ),
 			'sanitize_callback' => 'sanitize_text_field',
 			'transport'         => 'postMessage'
 		] );
@@ -309,8 +309,8 @@ class Component implements Bootable {
 
 		// Change background color control labels.
 		$bg_color              = $manager->get_control( 'background_color' );
-		$bg_color->label       = __( 'Background', 'exhale' );
-		$bg_color->description = __( 'Background color used for the site.', 'exhale' );
+		$bg_color->label       = __( 'Background', 'tavern' );
+		$bg_color->description = __( 'Background color used for the site.', 'tavern' );
 
 		// Register component controls.
 		foreach ( $this->components as $component ) {
@@ -321,13 +321,13 @@ class Component implements Bootable {
 		$manager->add_control( 'header_sticky', [
 			'section'     => 'theme_header_layout',
 			'type'        => 'checkbox',
-			'label'       => __( 'Always stick header to top of screen?', 'exhale' ),
-			'description' => __( 'Note: Header is sticky on mobile by default.', 'exhale' )
+			'label'       => __( 'Always stick header to top of screen?', 'tavern' ),
+			'description' => __( 'Note: Header is sticky on mobile by default.', 'tavern' )
 		] );
 
 		$choices  = [ '' => '' ];
 
-		foreach ( \Exhale\Tools\Config::get( 'character-entities' ) as $entity ) {
+		foreach ( \Tavern\Tools\Config::get( 'character-entities' ) as $entity ) {
 			$choices[ $entity ] = esc_html( $entity );
 		}
 
@@ -335,8 +335,8 @@ class Component implements Bootable {
 		$manager->add_control( 'branding_sep', [
 			'section'     => 'title_tagline',
 			'type'        => 'select',
-			'label'       => __( 'Separator', 'exhale' ),
-			'description' => __( 'Character used as a separator between the title and tagline.', 'exhale' ),
+			'label'       => __( 'Separator', 'tavern' ),
+			'description' => __( 'Character used as a separator between the title and tagline.', 'tavern' ),
 			'choices'     => $choices
 		] );
 	}
@@ -391,7 +391,7 @@ class Component implements Bootable {
 
 		// Enqueue controls style.
 		wp_enqueue_style(
-			'exhale-customize-controls',
+			'tavern-customize-controls',
 			asset( 'css/customize-controls.css' ),
 			[],
 			null
@@ -399,7 +399,7 @@ class Component implements Bootable {
 
 		// Enqueue controls script.
 		wp_enqueue_script(
-			'exhale-customize-controls',
+			'tavern-customize-controls',
 			asset( 'js/customize-controls.js' ),
 			[ 'customize-controls' ],
 			null,
@@ -416,8 +416,8 @@ class Component implements Bootable {
 
 		// Pass JSON to the controls script.
 		wp_localize_script(
-			'exhale-customize-controls',
-			'exhaleCustomizeControls',
+			'tavern-customize-controls',
+			'tavernCustomizeControls',
 			$json
 		);
 	}
@@ -433,7 +433,7 @@ class Component implements Bootable {
 
 		// Enqueue preview style.
 		wp_enqueue_style(
-			'exhale-customize-preview',
+			'tavern-customize-preview',
 			asset( 'css/customize-preview.css' ),
 			[],
 			null
@@ -441,7 +441,7 @@ class Component implements Bootable {
 
 		// Enqueue preview script.
 		wp_enqueue_script(
-			'exhale-customize-preview',
+			'tavern-customize-preview',
 			asset( 'js/customize-preview.js' ),
 			[ 'customize-preview' ],
 			null,
@@ -458,8 +458,8 @@ class Component implements Bootable {
 
 		// Pass JSON to the preview script.
 		wp_localize_script(
-			'exhale-customize-preview',
-			'exhaleCustomizePreview',
+			'tavern-customize-preview',
+			'tavernCustomizePreview',
 			$json
 		);
 	}

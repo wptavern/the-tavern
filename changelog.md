@@ -96,8 +96,8 @@
 	- Rounded style replaced in Design Settings.
 	- List styles replaced in Design Settings.
 	- Border/Borderless styles removed in favor of Box Shadow settings.
-- Removed the blog and archive posts-per-page settings from Appearance > Exhale Settings in favor of the content settings in the customizer.
-- Support for the old Subhead block that was never in any version of Gutenberg Exhale supported.
+- Removed the blog and archive posts-per-page settings from Appearance > Tavern Settings in favor of the content settings in the customizer.
+- Support for the old Subhead block that was never in any version of Gutenberg Tavern supported.
 
 ## [2.0.0] - 2019-06-19
 
@@ -181,12 +181,12 @@
 	- Ultra
 	- Work Sans
 	- Yellowtail
-- `Exhale\Tools\Mod::fallback()` method for grabbing the default/fallback theme mod.
+- `Tavern\Tools\Mod::fallback()` method for grabbing the default/fallback theme mod.
 - `config/settings-mods.php` now supports configuring all default theme mods other than fonts and colors.
 
 ### Fixed
 
-- Added a `?ver` parameter to screenshot images on the Exhale Settings > Themes page for cache busting.
+- Added a `?ver` parameter to screenshot images on the Tavern Settings > Themes page for cache busting.
 - Blockquotes now appear with their proper left/right padding.
 - Columns block nested within group block with padding left/right margins corrected.
 
@@ -211,7 +211,7 @@
 ### Added
 
 - Gutenberg 5.8 compatibility.
-- Added the [Manuscript](https://themehybrid.com/themes/manuscript) child theme to the Exhale Settings > Themes view.
+- Added the [Manuscript](https://themehybrid.com/themes/manuscript) child theme to the Tavern Settings > Themes view.
 
 ### Changed
 
@@ -247,7 +247,7 @@
 	- Footer: Link
 	- Footer: Link Hover
 - Support for background and text colors with the Heading block.
-- Early version of theme manager via Appearance > Exhale Settings > Themes, which will primarily be used for showcasing new child themes.
+- Early version of theme manager via Appearance > Tavern Settings > Themes, which will primarily be used for showcasing new child themes.
 - Added `block-styles` and `wide-blocks` to the theme tags list.
 
 ### Changed
@@ -269,7 +269,7 @@
 - Fixed center alignment of images not working.
 - Removed top margin of headings when following a `</div>`.
 - Clear floats when using a wide or full-aligned block.
-- Fixed a fatal error on PHP 5.6 when importing the `Hybrid\Tools\Collection` class from Hybrid Core under the `Exhale\Tools` namespace instead of the `Exhale\Tools\Collection` class.
+- Fixed a fatal error on PHP 5.6 when importing the `Hybrid\Tools\Collection` class from Hybrid Core under the `Tavern\Tools` namespace instead of the `Tavern\Tools\Collection` class.
 - Fall back to `transparent` when a color is set to nothing.
 - Lowered the padding for `<code>` elements, which was bumping into before/after lines when used inline.
 - Fixed weird white panel over editor when using an unaligned image within a full-width columns block.

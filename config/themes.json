@@ -1,18 +1,18 @@
 {
-	"exhale" : {},
-	"exhale-manuscript" : {
-		"label"        : "Exhale - Manuscript",
-		"screenshot"   : "%s/public/img/themes/exhale-manuscript.png",
+	"tavern" : {},
+	"tavern-manuscript" : {
+		"label"        : "Tavern - Manuscript",
+		"screenshot"   : "%s/public/img/themes/tavern-manuscript.png",
 		"download_url" : "https://themehybrid.com/account"
 	},
-	"exhale-mountains" : {
-		"label"        : "Exhale - Mountains",
-		"screenshot"   : "%s/public/img/themes/exhale-mountains.png",
+	"tavern-mountains" : {
+		"label"        : "Tavern - Mountains",
+		"screenshot"   : "%s/public/img/themes/tavern-mountains.png",
 		"download_url" : "https://themehybrid.com/account"
 	},
-	"exhale-unravel" : {
-		"label"        : "Exhale - Unravel",
-		"screenshot"   : "%s/public/img/themes/exhale-unravel.png",
+	"tavern-unravel" : {
+		"label"        : "Tavern - Unravel",
+		"screenshot"   : "%s/public/img/themes/tavern-unravel.png",
 		"download_url" : "https://themehybrid.com/account"
 	}
 }

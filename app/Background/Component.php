@@ -4,20 +4,20 @@
  *
  * Handles the theme background feature.
  *
- * @package   Exhale
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright 2019 Justin Tadlock
+ * @package   Tavern
+ * @author    WP Tavern <justintadlock@gmail.com>
+ * @copyright 2019 WP Tavern
  * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
- * @link      https://themehybrid.com/themes/exhale
+ * @link      https://wptavern.com
  */
 
-namespace Exhale\Background;
+namespace Tavern\Background;
 
 use Hybrid\Contracts\Bootable;
-use Exhale\Background\Patterns;
-use Exhale\Settings\Options;
-use Exhale\Tools\Config;
-use Exhale\Tools\Mod;
+use Tavern\Background\Patterns;
+use Tavern\Settings\Options;
+use Tavern\Tools\Config;
+use Tavern\Tools\Mod;
 
 use function Hybrid\sprintf_theme_uri;
 

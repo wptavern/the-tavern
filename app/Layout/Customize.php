@@ -4,20 +4,20 @@
  *
  * Adds customizer elements for the layout component.
  *
- * @package   Exhale
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright 2019 Justin Tadlock
+ * @package   Tavern
+ * @author    WP Tavern <justintadlock@gmail.com>
+ * @copyright 2019 WP Tavern
  * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
- * @link      https://themehybrid.com/themes/exhale
+ * @link      https://wptavern.com
  */
 
-namespace Exhale\Layout;
+namespace Tavern\Layout;
 
 use WP_Customize_Manager;
-use Exhale\Customize\Customizable;
-use Exhale\Template\FeaturedImage;
-use Exhale\Tools\Collection;
-use Exhale\Tools\Mod;
+use Tavern\Customize\Customizable;
+use Tavern\Template\FeaturedImage;
+use Tavern\Tools\Collection;
+use Tavern\Tools\Mod;
 use Hybrid\App;
 
 /**
@@ -51,7 +51,7 @@ class Customize extends Customizable {
 	 *
 	 * @since  2.1.0
 	 * @access protected
-	 * @var    \Exhale\Image\Size\Sizes
+	 * @var    \Tavern\Image\Size\Sizes
 	 */
 	protected $image_sizes;
 
@@ -66,15 +66,15 @@ class Customize extends Customizable {
 	public function registerSections( WP_Customize_Manager $manager ) {
 
 		$loop_layouts = [
-			'blog'    => __( 'Blog',     'exhale' ),
-			'archive' => __( 'Archives', 'exhale' )
+			'blog'    => __( 'Blog',     'tavern' ),
+			'archive' => __( 'Archives', 'tavern' )
 		];
 
 		$post_types = get_post_types( [ 'public' => true, '_builtin' => false, ], 'objects', 'and' );
 
 		foreach ( $post_types as $type ) {
 			$loop_layouts["archive_{$type->name}"] =sprintf(
-				__( 'Archive: %s', 'exhale' ),
+				__( 'Archive: %s', 'tavern' ),
 				$type->labels->name
 			);
 		}
@@ -163,8 +163,8 @@ class Customize extends Customizable {
 		$manager->add_control( 'layout', [
 			'section'     => 'theme_global_layout',
 			'type'        => 'select',
-			'label'       => __( 'Global Layout', 'exhale' ),
-			'description' => __( 'Select the layout used across the site.', 'exhale' ),
+			'label'       => __( 'Global Layout', 'tavern' ),
+			'description' => __( 'Select the layout used across the site.', 'tavern' ),
 			'choices'     => $this->app_layouts->customizeChoices()
 		] );
 
@@ -180,16 +180,16 @@ class Customize extends Customizable {
 			$manager->add_control( "loop_{$type}_layout", [
 				'section'     => "theme_content_loop_{$type}",
 				'type'        => 'select',
-				'label'       => __( 'Layout', 'exhale' ),
-				'description' => __( 'Layout style for the content area.', 'exhale' ),
+				'label'       => __( 'Layout', 'tavern' ),
+				'description' => __( 'Layout style for the content area.', 'tavern' ),
 				'choices'     => $this->loop_layouts->customizeChoices()
 			] );
 
 			$manager->add_control( "loop_{$type}_limit", [
 				'section'     => "theme_content_loop_{$type}",
 				'type'        => 'number',
-				'label'       => __( 'Posts Per Page', 'exhale' ),
-				'description' => __( 'Number of posts to display.', 'exhale' ),
+				'label'       => __( 'Posts Per Page', 'tavern' ),
+				'description' => __( 'Number of posts to display.', 'tavern' ),
 				'input_attrs' => [
 					'min' => 1
 				]
@@ -198,19 +198,19 @@ class Customize extends Customizable {
 			$manager->add_control( "loop_{$type}_width", [
 				'section'     => "theme_content_loop_{$type}",
 				'type'        => 'select',
-				'label'       => __( 'Width', 'exhale' ),
-				'description' => __( 'Width for the content area container.', 'exhale' ),
+				'label'       => __( 'Width', 'tavern' ),
+				'description' => __( 'Width for the content area container.', 'tavern' ),
 				// Note that the labels don't match the actual
 				// sizes, which wouldn't make as much sense to
 				// the user.
 				'choices' => [
-					'2xl'       => __( 'Medium',      'exhale' ),
-					'3xl'       => __( 'Large',       'exhale' ),
-					'4xl'       => __( 'Extra Large', 'exhale' ),
-					'5xl'       => __( 'Huge',        'exhale' ),
-					'6xl'       => __( 'Gargantuan',  'exhale' ),
-					'7xl'       => __( 'Titanic',     'exhale' ),
-					'full'      => __( 'Full',        'exhale' )
+					'2xl'       => __( 'Medium',      'tavern' ),
+					'3xl'       => __( 'Large',       'tavern' ),
+					'4xl'       => __( 'Extra Large', 'tavern' ),
+					'5xl'       => __( 'Huge',        'tavern' ),
+					'6xl'       => __( 'Gargantuan',  'tavern' ),
+					'7xl'       => __( 'Titanic',     'tavern' ),
+					'full'      => __( 'Full',        'tavern' )
 				],
 				'active_callback' => function( $control ) use ( $type ) {
 
@@ -225,8 +225,8 @@ class Customize extends Customizable {
 			$manager->add_control( "loop_{$type}_columns", [
 				'section'     => "theme_content_loop_{$type}",
 				'type'        => 'number',
-				'label'       => __( 'Columns', 'exhale' ),
-				'description' => __( 'Number of columns to organize posts.', 'exhale' ),
+				'label'       => __( 'Columns', 'tavern' ),
+				'description' => __( 'Number of columns to organize posts.', 'tavern' ),
 				'input_attrs' => [
 					'min' => 2,
 					'max' => 6
@@ -247,11 +247,11 @@ class Customize extends Customizable {
 				'choices'     => $this->image_sizes->customizeChoices(
 					$this->loop_layouts->get( Mod::get( "loop_{$type}_layout", 'blog' ) )->imageSizes()
 				),
-				'label'       => esc_html__( 'Featured Image Size', 'exhale' ),
+				'label'       => esc_html__( 'Featured Image Size', 'tavern' ),
 				'description' => sprintf(
 					// Translators: %s is a plugin link.
-					esc_html__( 'For images to be sized correctly, regenerate them using the %s plugin.', 'exhale' ),
-					sprintf( '<a href="https://wordpress.org/plugins/regenerate-thumbnails/">%s</a>', esc_html__( 'Regnerate Thumbnails', 'exhale' ) )
+					esc_html__( 'For images to be sized correctly, regenerate them using the %s plugin.', 'tavern' ),
+					sprintf( '<a href="https://wordpress.org/plugins/regenerate-thumbnails/">%s</a>', esc_html__( 'Regnerate Thumbnails', 'tavern' ) )
 				),
 				'active_callback' => function( $control ) use ( $type ) {
 
@@ -298,7 +298,7 @@ class Customize extends Customizable {
 				'render_callback'     => function( $partial, $context ) use ( $type ) {
 
 					return App::resolve( 'view/engine' )->render(
-						sprintf( 'loop/%s', \Exhale\Template\Loop::layout( $type )->name() ),
+						sprintf( 'loop/%s', \Tavern\Template\Loop::layout( $type )->name() ),
 						! empty( $context['slugs'] ) ? $context['slugs'] : []
 					);
 				}
@@ -314,7 +314,7 @@ class Customize extends Customizable {
 				'render_callback'     => function( $partial, $context ) use ( $type )  {
 
 					return App::resolve( 'view/engine' )->render(
-						sprintf( 'loop/%s', \Exhale\Template\Loop::layout( $type )->name() ),
+						sprintf( 'loop/%s', \Tavern\Template\Loop::layout( $type )->name() ),
 						! empty( $context['slugs'] ) ? $context['slugs'] : []
 					);
 				}

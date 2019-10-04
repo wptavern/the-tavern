@@ -6,18 +6,18 @@
  * They allow you to add bindings to the container on registration and boot them
  * once everything has been registered.
  *
- * @package   Exhale
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright 2019 Justin Tadlock
+ * @package   Tavern
+ * @author    WP Tavern <justintadlock@gmail.com>
+ * @copyright 2019 WP Tavern
  * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
- * @link      https://themehybrid.com/themes/exhale
+ * @link      https://wptavern.com
  */
 
-namespace Exhale;
+namespace Tavern;
 
 use Hybrid\Tools\ServiceProvider;
-use Exhale\Tools\Config;
-use Exhale\Tools\CustomProperties;
+use Tavern\Tools\Config;
+use Tavern\Tools\CustomProperties;
 
 /**
  * App service provider.
@@ -38,7 +38,7 @@ class Provider extends ServiceProvider {
 	public function register() {
 
 		// Bind a single instance of theme mod defaults.
-		$this->app->singleton( 'exhale/mods', function() {
+		$this->app->singleton( 'tavern/mods', function() {
 
 			return array_merge(
 				Config::get( '_settings-mods' ),
@@ -47,7 +47,7 @@ class Provider extends ServiceProvider {
 		} );
 
 		// Bind a single instance of the WP custom background settings.
-		$this->app->singleton( 'exhale/compat/background', function() {
+		$this->app->singleton( 'tavern/compat/background', function() {
 			return array_merge(
 				[
 					'default-image'          => '',
@@ -63,7 +63,7 @@ class Provider extends ServiceProvider {
 		} );
 
 		// Bind the Laravel Mix manifest for cache-busting.
-		$this->app->singleton( 'exhale/mix', function() {
+		$this->app->singleton( 'tavern/mix', function() {
 
 			$file     = get_parent_theme_file_path( 'public/mix-manifest.json' );
 			$contents = (array) json_decode( file_get_contents( $file ), true );

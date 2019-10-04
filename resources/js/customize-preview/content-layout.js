@@ -4,15 +4,15 @@
  * This file handles the JavaScript for the live preview of the `custom-header`
  * feature in the customizer.
  *
- * @package   Exhale
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright 2019 Justin Tadlock
+ * @package   Tavern
+ * @author    WP Tavern <justintadlock@gmail.com>
+ * @copyright 2019 WP Tavern
  * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
- * @link      https://themehybrid.com/themes/exhale
+ * @link      https://wptavern.com
  */
 
 // Global set via `wp_localize_script()`.
-const { loopQueries } = exhaleCustomizePreview;
+const { loopQueries } = tavernCustomizePreview;
 
 let widths = [
 	'max-w-2xl',

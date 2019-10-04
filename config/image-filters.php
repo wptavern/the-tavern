@@ -5,55 +5,55 @@
  * Defines the image filters available for users with the image filter feature
  * in the customizer.
  *
- * @package   Exhale
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright 2019 Justin Tadlock
+ * @package   Tavern
+ * @author    WP Tavern <justintadlock@gmail.com>
+ * @copyright 2019 WP Tavern
  * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
- * @link      https://themehybrid.com/themes/exhale
+ * @link      https://wptavern.com
  */
 
 return [
 	'none' => [
-		'label' => __( 'None', 'exhale' )
+		'label' => __( 'None', 'tavern' )
 	],
 	'brightness' => [
-		'label'   => __( 'Brightness', 'exhale' ),
+		'label'   => __( 'Brightness', 'tavern' ),
 		'min'     => 0,
 		'max'     => 200,
 		'lacuna'  => 100
 	],
 	'contrast' => [
-		'label'  => __( 'Contrast', 'exhale' ),
+		'label'  => __( 'Contrast', 'tavern' ),
 		'min'    => 0,
 		'max'    => 200,
 		'lacuna' => 100
 	],
 	'grayscale' => [
-		'label'  => __( 'Grayscale', 'exhale' ),
+		'label'  => __( 'Grayscale', 'tavern' ),
 		'min'    => 0,
 		'max'    => 100,
 		'lacuna' => 0
 	],
 	'invert' => [
-		'label'  => __( 'Invert', 'exhale' ),
+		'label'  => __( 'Invert', 'tavern' ),
 		'min'    => 0,
 		'max'    => 100,
 		'lacuna' => 0
 	],
 	'opacity' => [
-		'label'  => __( 'Opacity', 'exhale' ),
+		'label'  => __( 'Opacity', 'tavern' ),
 		'min'    => 0,
 		'max'    => 100,
 		'lacuna' => 100
 	],
 	'saturate' => [
-		'label'  => __( 'Saturate', 'exhale' ),
+		'label'  => __( 'Saturate', 'tavern' ),
 		'min'    => 0,
 		'max'    => 200,
 		'lacuna' => 100
 	],
 	'sepia' => [
-		'label'  => __( 'Sepia', 'exhale' ),
+		'label'  => __( 'Sepia', 'tavern' ),
 		'min'    => 0,
 		'max'    => 100,
 		'lacuna' => 0

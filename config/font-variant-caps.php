@@ -4,33 +4,33 @@
  *
  * Defines the `font-variant-caps` options available in the customizer.
  *
- * @package   Exhale
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright 2019 Justin Tadlock
+ * @package   Tavern
+ * @author    WP Tavern <justintadlock@gmail.com>
+ * @copyright 2019 WP Tavern
  * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
- * @link      https://themehybrid.com/themes/exhale
+ * @link      https://wptavern.com
  */
 
 return [
 	'normal' => [
-		'label' => __( 'Normal', 'exhale' )
+		'label' => __( 'Normal', 'tavern' )
 	],
 	'small-caps' => [
-		'label' => __( 'Small Caps', 'exhale' )
+		'label' => __( 'Small Caps', 'tavern' )
 	],
 	'all-small-caps' => [
-		'label' => __( 'All Small Caps', 'exhale' )
+		'label' => __( 'All Small Caps', 'tavern' )
 	],
 	'petite-caps' => [
-		'label' => __( 'Petite Caps', 'exhale' )
+		'label' => __( 'Petite Caps', 'tavern' )
 	],
 	'all-petite-caps' => [
-		'label' => __( 'All Petite Caps', 'exhale' )
+		'label' => __( 'All Petite Caps', 'tavern' )
 	],
 	'titling-caps' => [
-		'label' => __( 'Titling Caps', 'exhale' )
+		'label' => __( 'Titling Caps', 'tavern' )
 	],
 	'unicase' => [
-		'label' => __( 'Unicase', 'exhale' )
+		'label' => __( 'Unicase', 'tavern' )
 	]
 ];

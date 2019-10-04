@@ -4,17 +4,17 @@
  *
  * Interface for defining an object to be used as a CSS custom property.
  *
- * @package   Exhale
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright 2019 Justin Tadlock
+ * @package   Tavern
+ * @author    WP Tavern <justintadlock@gmail.com>
+ * @copyright 2019 WP Tavern
  * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
- * @link      https://themehybrid.com/themes/exhale
+ * @link      https://wptavern.com
  */
 
-namespace Exhale\Tools;
+namespace Tavern\Tools;
 
 use Closure;
-use Exhale\Contracts\CssCustomProperty;
+use Tavern\Contracts\CssCustomProperty;
 
 /**
  * CSS custom property interface.

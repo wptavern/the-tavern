@@ -3,20 +3,20 @@
  *
  * This file handles the JavaScript for the font customize control.
  *
- * @package   Exhale
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright 2019 Justin Tadlock
+ * @package   Tavern
+ * @author    WP Tavern <justintadlock@gmail.com>
+ * @copyright 2019 WP Tavern
  * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
- * @link      https://themehybrid.com/themes/exhale
+ * @link      https://wptavern.com
  */
 
-wp.customize.controlConstructor['exhale-typography'] = wp.customize.Control.extend( {
+wp.customize.controlConstructor['tavern-typography'] = wp.customize.Control.extend( {
 
 	ready : function() {
 
 		// Globals set via `wp_localize_script()`.
-		let families = exhaleCustomizeControls.fontFamilies;
-		let styles   = exhaleCustomizeControls.fontStyles;
+		let families = tavernCustomizeControls.fontFamilies;
+		let styles   = tavernCustomizeControls.fontStyles;
 
 		let control       = this;
 		let familySetting = control.settings.family;

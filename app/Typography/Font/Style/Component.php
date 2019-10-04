@@ -4,19 +4,19 @@
  *
  * Manages the font style component.
  *
- * @package   Exhale
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright 2019 Justin Tadlock
+ * @package   Tavern
+ * @author    WP Tavern <justintadlock@gmail.com>
+ * @copyright 2019 WP Tavern
  * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
- * @link      https://themehybrid.com/themes/exhale
+ * @link      https://wptavern.com
  */
 
-namespace Exhale\Typography\Font\Style;
+namespace Tavern\Typography\Font\Style;
 
 use WP_Customize_Manager;
 
 use Hybrid\Contracts\Bootable;
-use Exhale\Tools\Config;
+use Tavern\Tools\Config;
 
 /**
  * Font component class.
@@ -60,7 +60,7 @@ class Component implements Bootable {
 		add_action( 'after_setup_theme', [ $this, 'register' ] );
 
 		// Register default styles.
-		add_action( 'exhale/typography/font/style/register', [ $this, 'registerDefaultStyles' ] );
+		add_action( 'tavern/typography/font/style/register', [ $this, 'registerDefaultStyles' ] );
 	}
 
 	/**
@@ -73,7 +73,7 @@ class Component implements Bootable {
 	public function register() {
 
 		// Hook for registering custom styles.
-		do_action( 'exhale/typography/font/style/register', $this->styles );
+		do_action( 'tavern/typography/font/style/register', $this->styles );
 	}
 
 	/**

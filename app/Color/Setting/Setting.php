@@ -4,18 +4,18 @@
  *
  * Creates a customize color object.
  *
- * @package   Exhale
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright 2019 Justin Tadlock
+ * @package   Tavern
+ * @author    WP Tavern <justintadlock@gmail.com>
+ * @copyright 2019 WP Tavern
  * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
- * @link      https://themehybrid.com/themes/exhale
+ * @link      https://wptavern.com
  */
 
-namespace Exhale\Color\Setting;
+namespace Tavern\Color\Setting;
 
 use Closure;
 use JsonSerializable;
-use Exhale\Contracts\CssCustomProperty;
+use Tavern\Contracts\CssCustomProperty;
 use function Hybrid\hex_to_rgb;
 
 /**
@@ -130,7 +130,7 @@ class Setting implements JsonSerializable, CssCustomProperty {
 	public function label() {
 
 		return apply_filters(
-			"exhale/color/setting/{$this->name}/label",
+			"tavern/color/setting/{$this->name}/label",
 			$this->label ?: $this->name(),
 			$this
 		);
@@ -176,7 +176,7 @@ class Setting implements JsonSerializable, CssCustomProperty {
 			 : $this->color;
 
 		return apply_filters(
-			"exhale/color/setting/{$this->name}/default",
+			"tavern/color/setting/{$this->name}/default",
 			$color,
 			$this
 		);

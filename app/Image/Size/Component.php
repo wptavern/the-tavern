@@ -4,22 +4,22 @@
  *
  * Manages the image size component.
  *
- * @package   Exhale
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright 2019 Justin Tadlock
+ * @package   Tavern
+ * @author    WP Tavern <justintadlock@gmail.com>
+ * @copyright 2019 WP Tavern
  * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
- * @link      https://themehybrid.com/themes/exhale
+ * @link      https://wptavern.com
  */
 
-namespace Exhale\Image\Size;
+namespace Tavern\Image\Size;
 
 use WP_Customize_Manager;
 
 use Hybrid\App;
 use Hybrid\Contracts\Bootable;
-use Exhale\Tools\Config;
-use Exhale\Tools\Mod;
-use Exhale\Template\FeaturedImage;
+use Tavern\Tools\Config;
+use Tavern\Tools\Mod;
+use Tavern\Template\FeaturedImage;
 
 /**
  * Image size component class.
@@ -63,7 +63,7 @@ class Component implements Bootable {
 		add_action( 'init', [ $this, 'register' ], 5 );
 
 		// Register default sizes.
-		add_action( 'exhale/image/size/register', [ $this, 'registerDefaultSizes' ] );
+		add_action( 'tavern/image/size/register', [ $this, 'registerDefaultSizes' ] );
 
 		// Filter the image size names in the editor.
 		add_filter( 'image_size_names_choose', [ $this, 'imageSizeNamesChoose' ] );
@@ -82,7 +82,7 @@ class Component implements Bootable {
 	public function register() {
 
 		// Hook for registering custom image sizes.
-		do_action( 'exhale/image/size/register', $this->sizes );
+		do_action( 'tavern/image/size/register', $this->sizes );
 
 		// Registers image sizes with WordPress.  Note that the
 		// `post-thumbnail` size should be properly register with the

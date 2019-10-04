@@ -6,13 +6,13 @@
  * apply by default and on hover/focus.
  *
  * @package   Hybrid
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright Copyright (c) 2018, Justin Tadlock
+ * @author    WP Tavern <justintadlock@gmail.com>
+ * @copyright Copyright (c) 2018, WP Tavern
  * @link      https://github.com/justintadlock/hybrid-customize
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-namespace Exhale\Customize\Controls;
+namespace Tavern\Customize\Controls;
 
 use WP_Customize_Control;
 
@@ -31,7 +31,7 @@ class BackgroundPosition extends WP_Customize_Control {
 	 * @access public
 	 * @var    string
 	 */
-	public $type = 'exhale-background-position';
+	public $type = 'tavern-background-position';
 
 	/**
 	 * Add custom parameters to pass to the JS via JSON.
@@ -50,43 +50,43 @@ class BackgroundPosition extends WP_Customize_Control {
 		$this->json['choices'] = [
 			[
 				'left-top' => [
-					'label' => __( 'Top Left', 'exhale' ),
+					'label' => __( 'Top Left', 'tavern' ),
 					'icon'  => 'dashicons dashicons-arrow-left-alt'
 				],
 				'top' => [
-					'label' => __( 'Top', 'exhale' ),
+					'label' => __( 'Top', 'tavern' ),
 					'icon'  => 'dashicons dashicons-arrow-up-alt'
 				],
 				'right-top'  => [
-					'label' => __( 'Top Right', 'exhale' ),
+					'label' => __( 'Top Right', 'tavern' ),
 					'icon'  => 'dashicons dashicons-arrow-right-alt'
 				]
 			],
 			[
 				'left'   => [
-					'label' => __( 'Left', 'exhale' ),
+					'label' => __( 'Left', 'tavern' ),
 					'icon'  => 'dashicons dashicons-arrow-left-alt'
 				],
 				'center' => [
-					'label' => __( 'Center', 'exhale' ),
+					'label' => __( 'Center', 'tavern' ),
 					'icon'  => 'background-position-center-icon'
 				],
 				'right'  => [
-					'label' => __( 'Right', 'exhale' ),
+					'label' => __( 'Right', 'tavern' ),
 					'icon'  => 'dashicons dashicons-arrow-right-alt'
 				]
 			],
 			[
 				'left-bottom'   => [
-					'label' => __( 'Bottom Left', 'exhale' ),
+					'label' => __( 'Bottom Left', 'tavern' ),
 					'icon'  => 'dashicons dashicons-arrow-left-alt'
 				],
 				'bottom' => [
-					'label' => __( 'Bottom', 'exhale' ),
+					'label' => __( 'Bottom', 'tavern' ),
 					'icon'  => 'dashicons dashicons-arrow-down-alt'
 				],
 				'right-bottom'  => [
-					'label' => __( 'Bottom Right', 'exhale' ),
+					'label' => __( 'Bottom Right', 'tavern' ),
 					'icon'  => 'dashicons dashicons-arrow-right-alt'
 				]
 			]

@@ -3,17 +3,17 @@
  *
  * This file handles the JavaScript for the font customize control.
  *
- * @package   Exhale
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright 2019 Justin Tadlock
+ * @package   Tavern
+ * @author    WP Tavern <justintadlock@gmail.com>
+ * @copyright 2019 WP Tavern
  * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
- * @link      https://themehybrid.com/themes/exhale
+ * @link      https://wptavern.com
  */
 
 wp.customize.bind( 'ready', () => {
 
 	// Global set via `wp_localize_script()`.
-	const { backgroundPatterns } = exhaleCustomizeControls;
+	const { backgroundPatterns } = tavernCustomizeControls;
 
 	let types = [
 		'body',

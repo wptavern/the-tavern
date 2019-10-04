@@ -4,17 +4,17 @@
  *
  * Displays the general theme settings view (tab) on the settings page.
  *
- * @package    Exhale
+ * @package    Tavern
  * @subpackage Admin
- * @author     Justin Tadlock <justintadlock@gmail.com>
- * @copyright  Copyright (c) 2009 - 2018, Justin Tadlock
+ * @author     WP Tavern <justintadlock@gmail.com>
+ * @copyright  Copyright (c) 2009 - 2018, WP Tavern
  * @link       https://themehybrid.com/plugins/members
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-namespace Exhale\Settings\Admin\Views;
+namespace Tavern\Settings\Admin\Views;
 
-use Exhale\Settings\Options;
+use Tavern\Settings\Options;
 
 /**
  * General settings view class.
@@ -43,7 +43,7 @@ class General extends View {
 	 * @return string
 	 */
 	public function label() {
-		return __( 'General', 'exhale' );
+		return __( 'General', 'tavern' );
 	}
 
 	/**
@@ -57,14 +57,14 @@ class General extends View {
 	public function register() {
 
 		// Get the current plugin settings w/o the defaults.
-		$this->settings = get_option( 'exhale_settings' );
+		$this->settings = get_option( 'tavern_settings' );
 
 		// Register the setting.
-		register_setting( 'exhale_settings', 'exhale_settings', [ $this, 'validateSettings' ] );
+		register_setting( 'tavern_settings', 'tavern_settings', [ $this, 'validateSettings' ] );
 
 		// Register sections and fields.
-		add_action( 'exhale/settings/admin/view/general/register', [ $this, 'registerDefaultSections' ] );
-		add_action( 'exhale/settings/admin/view/general/register', [ $this, 'registerDefaultFields'   ] );
+		add_action( 'tavern/settings/admin/view/general/register', [ $this, 'registerDefaultSections' ] );
+		add_action( 'tavern/settings/admin/view/general/register', [ $this, 'registerDefaultFields'   ] );
 	}
 
 	/**
@@ -76,7 +76,7 @@ class General extends View {
 	 * @return void
 	 */
 	public function boot() {
-		do_action( 'exhale/settings/admin/view/general/register' );
+		do_action( 'tavern/settings/admin/view/general/register' );
 	}
 
 	/**
@@ -113,15 +113,15 @@ class General extends View {
 
 		$sections = [
 			'editor' => [
-				'label'    => __( 'Editor', 'exhale' ),
+				'label'    => __( 'Editor', 'tavern' ),
 				'callback' => 'sectionEditor'
 			],
 			'reading' => [
-				'label'    => __( 'Reading', 'exhale' ),
+				'label'    => __( 'Reading', 'tavern' ),
 				'callback' => 'sectionReading'
 			],
 			'clean_wp' => [
-				'label'    => __( 'Clean WordPress', 'exhale' ),
+				'label'    => __( 'Clean WordPress', 'tavern' ),
 				'callback' => 'sectionCleanWP'
 			]
 		];
@@ -132,7 +132,7 @@ class General extends View {
 				$name,
 				$section['label'],
 				[ $this, $section['callback'] ],
-				'exhale_settings'
+				'tavern_settings'
 			);
 
 		}, array_keys( $sections ), $sections );
@@ -150,31 +150,31 @@ class General extends View {
 		$fields = [
 			// Editor fields.
 			'classic_style' => [
-				'label'    => __( 'Classic Editor', 'exhale' ),
+				'label'    => __( 'Classic Editor', 'tavern' ),
 				'callback' => 'fieldClassicStyle',
 				'section'  => 'editor'
 			],
 
 			// Reading fields.
 			'error_page' => [
-				'label'    => __( '404 Page', 'exhale' ),
+				'label'    => __( '404 Page', 'tavern' ),
 				'callback' => 'fieldErrorPage',
 				'section'  => 'reading'
 			],
 
 			// Clean WP fields.
 			'emoji' => [
-				'label'    => __( 'Emoji', 'exhale' ),
+				'label'    => __( 'Emoji', 'tavern' ),
 				'callback' => 'fieldEmoji',
 				'section'  => 'clean_wp',
 			],
 			'toolbar' => [
-				'label'    => __( 'Toolbar', 'exhale' ),
+				'label'    => __( 'Toolbar', 'tavern' ),
 				'callback' => 'fieldToolbar',
 				'section'  => 'clean_wp'
 			],
 			'embeds' => [
-				'label'    => __( 'Embeds', 'exhale' ),
+				'label'    => __( 'Embeds', 'tavern' ),
 				'callback' => 'fieldEmbeds',
 				'section'  => 'clean_wp'
 			]
@@ -186,7 +186,7 @@ class General extends View {
 				$name,
 				$field['label'],
 				[ $this, $field['callback'] ],
-				'exhale_settings',
+				'tavern_settings',
 				$field['section']
 			);
 
@@ -203,7 +203,7 @@ class General extends View {
 	public function sectionEditor() { ?>
 
 		<p>
-			<?php esc_html_e( 'Settings based on which WordPress editor that you prefer to use.', 'exhale' ) ?>
+			<?php esc_html_e( 'Settings based on which WordPress editor that you prefer to use.', 'tavern' ) ?>
 		</p>
 
 		<?php
@@ -218,9 +218,9 @@ class General extends View {
 				'<p>%s</p>',
 				sprintf(
 					// Translators: 1 is WordPress version, 2 is Gutenberg link, 3 is Gutenberg version.
-					esc_html__( 'Exhale requires at least WordPress version %1$s or %2$s version %3$s for the block editor to be styled correctly.', 'exhale' ),
+					esc_html__( 'Tavern requires at least WordPress version %1$s or %2$s version %3$s for the block editor to be styled correctly.', 'tavern' ),
 					$wordpress_req,
-					'<a href="https://wordpress.org/plugins/gutenberg">' . esc_html__( 'Gutenberg', 'exhale' ) . '</a>',
+					'<a href="https://wordpress.org/plugins/gutenberg">' . esc_html__( 'Gutenberg', 'tavern' ) . '</a>',
 					$gutenberg_req
 				)
 			);
@@ -237,7 +237,7 @@ class General extends View {
 	public function sectionReading() { ?>
 
 		<p>
-			<?php esc_html_e( 'Alter the output for specific views on the front end.', 'exhale' ) ?>
+			<?php esc_html_e( 'Alter the output for specific views on the front end.', 'tavern' ) ?>
 		</p>
 
 	<?php }
@@ -252,7 +252,7 @@ class General extends View {
 	public function sectionCleanWP() { ?>
 
 		<p>
-			<?php esc_html_e( 'Clean up unnecessary items on the front end of your site for speed improvements.', 'exhale' ) ?>
+			<?php esc_html_e( 'Clean up unnecessary items on the front end of your site for speed improvements.', 'tavern' ) ?>
 		</p>
 
 	<?php }
@@ -268,13 +268,13 @@ class General extends View {
 
 		<p>
 			<label>
-				<input type="checkbox" name="exhale_settings[classic_style]" value="true" <?php checked( Options::get( 'classic_style' ) ) ?> />
-				<?php esc_html_e( 'Use Classic Editor Stylesheet', 'exhale' ) ?>
+				<input type="checkbox" name="tavern_settings[classic_style]" value="true" <?php checked( Options::get( 'classic_style' ) ) ?> />
+				<?php esc_html_e( 'Use Classic Editor Stylesheet', 'tavern' ) ?>
 			</label>
 		</p>
 
 		<p class="description">
-			<?php esc_html_e( 'Loads a smaller stylesheet if you are using the classic WordPress editor instead of the block editor.', 'exhale' ) ?>
+			<?php esc_html_e( 'Loads a smaller stylesheet if you are using the classic WordPress editor instead of the block editor.', 'tavern' ) ?>
 		</p>
 
 	<?php }
@@ -289,7 +289,7 @@ class General extends View {
 	public function fieldErrorPage() {
 
 		$dropdown = wp_dropdown_pages( [
-			'name'              => 'exhale_settings[error_page]',
+			'name'              => 'tavern_settings[error_page]',
 			'show_option_none'  => '-',
 			'option_none_value' => 0,
 			'selected'          => Options::get( 'error_page' ),
@@ -305,13 +305,13 @@ class General extends View {
 
 				<?php else : ?>
 
-					<select name="exhale_settings[error_page]">
-						<option value="0" selected="selected"><?php esc_html_e( 'No Private Pages', 'exhale' ) ?></option>
+					<select name="tavern_settings[error_page]">
+						<option value="0" selected="selected"><?php esc_html_e( 'No Private Pages', 'tavern' ) ?></option>
 					</select>
 
 					<?php if ( current_user_can( 'publish_pages' ) ) : ?>
 
-						<a href="<?= esc_url( add_query_arg( 'post_type', 'page', admin_url( 'post-new.php' ) ) ) ?>"><?php esc_html_e( 'Add New Page', 'exhale' ) ?></a>
+						<a href="<?= esc_url( add_query_arg( 'post_type', 'page', admin_url( 'post-new.php' ) ) ) ?>"><?php esc_html_e( 'Add New Page', 'tavern' ) ?></a>
 
 					<?php endif ?>
 
@@ -320,7 +320,7 @@ class General extends View {
 		</p>
 
 		<p class="description">
-			<?php esc_html_e( 'Select a page to display when a user visits a 404 error page on your site. The page must be set to private so that it will not appear on the front end.', 'exhale' ) ?>
+			<?php esc_html_e( 'Select a page to display when a user visits a 404 error page on your site. The page must be set to private so that it will not appear on the front end.', 'tavern' ) ?>
 		</p>
 
 	<?php }
@@ -336,13 +336,13 @@ class General extends View {
 
 		<p>
 			<label>
-				<input type="checkbox" name="exhale_settings[disable_emoji]" value="true" <?php checked( Options::get( 'disable_emoji' ) ) ?> />
-				<?php esc_html_e( 'Disable Emoji Scripts', 'exhale' ) ?>
+				<input type="checkbox" name="tavern_settings[disable_emoji]" value="true" <?php checked( Options::get( 'disable_emoji' ) ) ?> />
+				<?php esc_html_e( 'Disable Emoji Scripts', 'tavern' ) ?>
 			</label>
 		</p>
 
 		<p class="description">
-			<?php esc_html_e( 'All modern browsers support emoji natively. Disabling emoji scripts removes the JavaScript loaded on every page of your site for a small percentage of users on outdated browsers.', 'exhale' ) ?>
+			<?php esc_html_e( 'All modern browsers support emoji natively. Disabling emoji scripts removes the JavaScript loaded on every page of your site for a small percentage of users on outdated browsers.', 'tavern' ) ?>
 		</p>
 
 	<?php }
@@ -358,12 +358,12 @@ class General extends View {
 
 		<p>
 			<label>
-				<input type="checkbox" name="exhale_settings[disable_toolbar]" value="true" <?php checked( Options::get( 'disable_toolbar' ) ) ?> />
-				<?php esc_html_e( 'Disable Toolbar', 'exhale' ) ?>
+				<input type="checkbox" name="tavern_settings[disable_toolbar]" value="true" <?php checked( Options::get( 'disable_toolbar' ) ) ?> />
+				<?php esc_html_e( 'Disable Toolbar', 'tavern' ) ?>
 			</label>
 		</p>
 		<p class="description">
-			<?php esc_html_e( 'Disables the toolbar on the front end of the site, which loads additional JavaScript and CSS on every page load.', 'exhale' ) ?>
+			<?php esc_html_e( 'Disables the toolbar on the front end of the site, which loads additional JavaScript and CSS on every page load.', 'tavern' ) ?>
 		</p>
 
 	<?php }
@@ -379,13 +379,13 @@ class General extends View {
 
 		<p>
 			<label>
-				<input type="checkbox" name="exhale_settings[disable_wp_embed]" value="true" <?php checked( Options::get( 'disable_wp_embed' ) ) ?> />
-				<?php esc_html_e( 'Disable WordPress Embeds', 'exhale' ) ?>
+				<input type="checkbox" name="tavern_settings[disable_wp_embed]" value="true" <?php checked( Options::get( 'disable_wp_embed' ) ) ?> />
+				<?php esc_html_e( 'Disable WordPress Embeds', 'tavern' ) ?>
 			</label>
 		</p>
 
 		<p class="description">
-			<?php esc_html_e( 'Removes the JavaScript that allows other sites to embed your posts.', 'exhale' ) ?>
+			<?php esc_html_e( 'Removes the JavaScript that allows other sites to embed your posts.', 'tavern' ) ?>
 		</p>
 
 	<?php }
@@ -400,9 +400,9 @@ class General extends View {
 	public function template() { ?>
 
 		<form method="post" action="options.php">
-			<?php settings_fields( 'exhale_settings' ); ?>
-			<?php do_settings_sections( 'exhale_settings' ); ?>
-			<?php submit_button( esc_attr__( 'Update Settings', 'exhale' ), 'primary' ); ?>
+			<?php settings_fields( 'tavern_settings' ); ?>
+			<?php do_settings_sections( 'tavern_settings' ); ?>
+			<?php submit_button( esc_attr__( 'Update Settings', 'tavern' ), 'primary' ); ?>
 		</form>
 
 	<?php }

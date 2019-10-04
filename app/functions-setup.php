@@ -10,16 +10,16 @@
  * things in this file. Those APIs should be used instead of attempting to use
  * `remove_action()`.
  *
- * @package   Exhale
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright 2019 Justin Tadlock
+ * @package   Tavern
+ * @author    WP Tavern <justintadlock@gmail.com>
+ * @copyright 2019 WP Tavern
  * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
- * @link      https://themehybrid.com/themes/exhale
+ * @link      https://wptavern.com
  */
 
-namespace Exhale;
+namespace Tavern;
 
-use Exhale\Tools\Config;
+use Tavern\Tools\Config;
 
 /**
  * Set up theme support.  This is where calls to `add_theme_support()` happen.
@@ -34,7 +34,7 @@ add_action( 'after_setup_theme', function() {
 	$GLOBALS['content_width'] = 640;
 
 	// Load theme translations.
-	load_theme_textdomain( 'exhale', get_parent_theme_file_path( 'public/lang' ) );
+	load_theme_textdomain( 'tavern', get_parent_theme_file_path( 'public/lang' ) );
 
 	// Automatically add the `<title>` tag.
 	add_theme_support( 'title-tag' );
@@ -85,9 +85,9 @@ add_action( 'after_setup_theme', function() {
 add_action( 'init', function() {
 
 	register_nav_menus( [
-		'primary' => esc_html_x( 'Primary', 'nav menu location', 'exhale' ),
-		'footer'  => esc_html_x( 'Footer',  'nav menu location', 'exhale' ),
-		'social'  => esc_html_x( 'Social',  'nav menu location', 'exhale' )
+		'primary' => esc_html_x( 'Primary', 'nav menu location', 'tavern' ),
+		'footer'  => esc_html_x( 'Footer',  'nav menu location', 'tavern' ),
+		'social'  => esc_html_x( 'Social',  'nav menu location', 'tavern' )
 	] );
 
 }, 5 );
@@ -112,7 +112,7 @@ add_action( 'widgets_init', function() {
 
 		register_sidebar( [
 			'id'   => "footer-{$num}",
-			'name' => sprintf( __( 'Footer %d', 'exhale' ), $num )
+			'name' => sprintf( __( 'Footer %d', 'tavern' ), $num )
 		] + $args );
 	}
 
@@ -140,19 +140,19 @@ add_filter( 'hybrid/template/path', function() {
 add_action( 'hybrid/templates/register', function( $templates ) {
 
 	$templates->add( 'template-canvas.php', [
-		'label' => __( 'Content Canvas', 'exhale' )
+		'label' => __( 'Content Canvas', 'tavern' )
 	] );
 
 	$templates->add( 'template-landing.php', [
-		'label' => __( 'Landing', 'exhale' )
+		'label' => __( 'Landing', 'tavern' )
 	] );
 
 	$templates->add( 'template-landing-canvas.php', [
-		'label' => __( 'Landing: Content Canvas', 'exhale' )
+		'label' => __( 'Landing: Content Canvas', 'tavern' )
 	] );
 
 	//$templates->add( 'template-entry-content-only.php', [
-	//	'label' => __( 'No Post Header/Footer', 'exhale' )
+	//	'label' => __( 'No Post Header/Footer', 'tavern' )
 	//] );
 
 } );

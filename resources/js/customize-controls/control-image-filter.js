@@ -3,19 +3,19 @@
  *
  * This file handles the JavaScript for the image filter customize control.
  *
- * @package   Exhale
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright 2019 Justin Tadlock
+ * @package   Tavern
+ * @author    WP Tavern <justintadlock@gmail.com>
+ * @copyright 2019 WP Tavern
  * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
- * @link      https://themehybrid.com/themes/exhale
+ * @link      https://wptavern.com
  */
 
-wp.customize.controlConstructor['exhale-image-filter'] = wp.customize.Control.extend( {
+wp.customize.controlConstructor['tavern-image-filter'] = wp.customize.Control.extend( {
 
 	ready : function() {
 
 		// Global set via `wp_localize_script()`.
-		let filters = exhaleCustomizeControls.imageFilters;
+		let filters = tavernCustomizeControls.imageFilters;
 
 		let control              = this;
 		let functionSetting      = control.settings.function;
@@ -26,8 +26,8 @@ wp.customize.controlConstructor['exhale-image-filter'] = wp.customize.Control.ex
 		// filter function is chosen.
 		functionSetting.bind( value => {
 
-			let defaultAmountContainer = control.selector + ' .exhale-image-default-filter-amount';
-			let hoverAmountContainer   = control.selector + ' .exhale-image-hover-filter-amount';
+			let defaultAmountContainer = control.selector + ' .tavern-image-default-filter-amount';
+			let hoverAmountContainer   = control.selector + ' .tavern-image-hover-filter-amount';
 			let defaultAmountSelector  = control.selector + ' [data-customize-setting-link=' + defaultAmountSetting.id + ']';
 			let hoverAmountSelector    = control.selector + ' [data-customize-setting-link=' + hoverAmountSetting.id   + ']';
 

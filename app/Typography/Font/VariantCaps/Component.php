@@ -4,19 +4,19 @@
  *
  * Manages the font variant caps component.
  *
- * @package   Exhale
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright 2019 Justin Tadlock
+ * @package   Tavern
+ * @author    WP Tavern <justintadlock@gmail.com>
+ * @copyright 2019 WP Tavern
  * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
- * @link      https://themehybrid.com/themes/exhale
+ * @link      https://wptavern.com
  */
 
-namespace Exhale\Typography\Font\VariantCaps;
+namespace Tavern\Typography\Font\VariantCaps;
 
 use WP_Customize_Manager;
 
 use Hybrid\Contracts\Bootable;
-use Exhale\Tools\Config;
+use Tavern\Tools\Config;
 
 /**
  * Font variant caps component class.
@@ -60,7 +60,7 @@ class Component implements Bootable {
 		add_action( 'after_setup_theme', [ $this, 'register' ] );
 
 		// Register default variant caps.
-		add_action( 'exhale/typography/font/variant/caps/register', [ $this, 'registerDefaultCaps' ] );
+		add_action( 'tavern/typography/font/variant/caps/register', [ $this, 'registerDefaultCaps' ] );
 	}
 
 	/**
@@ -73,7 +73,7 @@ class Component implements Bootable {
 	public function register() {
 
 		// Hook for registering custom fonts.
-		do_action( 'exhale/typography/font/variant/caps/register', $this->caps );
+		do_action( 'tavern/typography/font/variant/caps/register', $this->caps );
 	}
 
 	/**

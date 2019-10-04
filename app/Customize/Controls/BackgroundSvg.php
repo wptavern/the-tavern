@@ -6,13 +6,13 @@
  * apply by default and on hover/focus.
  *
  * @package   Hybrid
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright Copyright (c) 2018, Justin Tadlock
+ * @author    WP Tavern <justintadlock@gmail.com>
+ * @copyright Copyright (c) 2018, WP Tavern
  * @link      https://github.com/justintadlock/hybrid-customize
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-namespace Exhale\Customize\Controls;
+namespace Tavern\Customize\Controls;
 
 use WP_Customize_Control;
 
@@ -31,7 +31,7 @@ class BackgroundSvg extends WP_Customize_Control {
 	 * @access public
 	 * @var    string
 	 */
-	public $type = 'exhale-background-svg';
+	public $type = 'tavern-background-svg';
 
 	public $svgs;
 
@@ -79,7 +79,7 @@ class BackgroundSvg extends WP_Customize_Control {
 					<li class="svg-background">
 						<label>
 							<input type="radio" value="" name="_customize-{{ data.type }}-{{ data.id }}" {{{ data.link }}} <# if ( ! data.value ) { #> checked="checked" <# } #> />
-							<?php esc_html_e( 'None', 'exhale' ) ?>
+							<?php esc_html_e( 'None', 'tavern' ) ?>
 							<div data-svg="" class="svg-background__block" style="background-color: {{ data.background }};"></div>
 						</label>
 					</li>

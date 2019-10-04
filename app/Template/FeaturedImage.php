@@ -5,20 +5,20 @@
  * A class that extends the `Hybrid\Carbon\Image` static helper class and rolls
  * out custom options specifically for the theme.
  *
- * @package   Exhale
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright 2019 Justin Tadlock
+ * @package   Tavern
+ * @author    WP Tavern <justintadlock@gmail.com>
+ * @copyright 2019 WP Tavern
  * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
- * @link      https://themehybrid.com/themes/exhale
+ * @link      https://wptavern.com
  */
 
-namespace Exhale\Template;
+namespace Tavern\Template;
 
 use Hybrid\App;
 use Hybrid\Carbon\Image;
-use Exhale\Image\Size\Sizes;
-use Exhale\Template\Loop;
-use Exhale\Tools\Mod;
+use Tavern\Image\Size\Sizes;
+use Tavern\Template\Loop;
+use Tavern\Tools\Mod;
 
 /**
  * Featured image class.

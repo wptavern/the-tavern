@@ -4,17 +4,17 @@
  *
  * Bootstraps the color component.
  *
- * @package   Exhale
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright 2019 Justin Tadlock
+ * @package   Tavern
+ * @author    WP Tavern <justintadlock@gmail.com>
+ * @copyright 2019 WP Tavern
  * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
- * @link      https://themehybrid.com/themes/exhale
+ * @link      https://wptavern.com
  */
 
-namespace Exhale\Color;
+namespace Tavern\Color;
 
 use Hybrid\Tools\ServiceProvider;
-use Exhale\Tools\CustomProperties;
+use Tavern\Tools\CustomProperties;
 
 /**
  * Color service provider class.

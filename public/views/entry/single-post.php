@@ -5,8 +5,8 @@
 
 		<div class="entry__byline max-w-2xl mx-8 sm:mx-auto">
 			<?php Hybrid\Post\display_author() ?>
-			<?php Hybrid\Post\display_date( [ 'before' => Exhale\sep() ] ) ?>
-			<?php Hybrid\Post\display_comments_link( [ 'before' => Exhale\sep() ] ) ?>
+			<?php Hybrid\Post\display_date( [ 'before' => Tavern\sep() ] ) ?>
+			<?php Hybrid\Post\display_comments_link( [ 'before' => Tavern\sep() ] ) ?>
 		</div>
 	</header>
 
@@ -18,12 +18,12 @@
 	<footer class="entry__footer max-w-2xl mx-8 sm:mx-auto mt-8">
 		<?php Hybrid\Post\display_terms( [
 			// Translators: %s is the category list.
-			'text'     => __( 'Posted in %s', 'exhale' ),
+			'text'     => __( 'Posted in %s', 'tavern' ),
 			'taxonomy' => 'category'
 		] ) ?>
 		<?php Hybrid\Post\display_terms( [
 			// Translators: %s is the post tags list.
-			'text'     => __( 'Tagged %s', 'exhale' ),
+			'text'     => __( 'Tagged %s', 'tavern' ),
 			'taxonomy' => 'post_tag'
 		] ) ?>
 	</footer>

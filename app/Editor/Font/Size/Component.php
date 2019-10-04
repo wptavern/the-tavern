@@ -4,17 +4,17 @@
  *
  * Manages the font size component.
  *
- * @package   Exhale
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright 2019 Justin Tadlock
+ * @package   Tavern
+ * @author    WP Tavern <justintadlock@gmail.com>
+ * @copyright 2019 WP Tavern
  * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
- * @link      https://themehybrid.com/themes/exhale
+ * @link      https://wptavern.com
  */
 
-namespace Exhale\Editor\Font\Size;
+namespace Tavern\Editor\Font\Size;
 
 use Hybrid\Contracts\Bootable;
-use Exhale\Tools\Config;
+use Tavern\Tools\Config;
 
 /**
  * Font size component class.
@@ -58,7 +58,7 @@ class Component implements Bootable {
 		add_action( 'after_setup_theme', [ $this, 'register' ], 5 );
 
 		// Register default sizes and choices.
-		add_action( 'exhale/editor/font/size/register', [ $this, 'registerDefaultSizes' ] );
+		add_action( 'tavern/editor/font/size/register', [ $this, 'registerDefaultSizes' ] );
 	}
 
 	/**
@@ -70,7 +70,7 @@ class Component implements Bootable {
 	 */
 	public function register() {
 
-		do_action( 'exhale/editor/font/size/register', $this->sizes );
+		do_action( 'tavern/editor/font/size/register', $this->sizes );
 
 		$_sizes = [];
 

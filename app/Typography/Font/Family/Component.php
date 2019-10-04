@@ -4,20 +4,20 @@
  *
  * Manages the font family component.
  *
- * @package   Exhale
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright 2019 Justin Tadlock
+ * @package   Tavern
+ * @author    WP Tavern <justintadlock@gmail.com>
+ * @copyright 2019 WP Tavern
  * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
- * @link      https://themehybrid.com/themes/exhale
+ * @link      https://wptavern.com
  */
 
-namespace Exhale\Typography\Font\Family;
+namespace Tavern\Typography\Font\Family;
 
 use WP_Customize_Manager;
 
 use Hybrid\Contracts\Bootable;
-use Exhale\Tools\Config;
-use Exhale\Tools\CustomProperties;
+use Tavern\Tools\Config;
+use Tavern\Tools\CustomProperties;
 
 /**
  * Font component class.
@@ -61,7 +61,7 @@ class Component implements Bootable {
 		add_action( 'after_setup_theme', [ $this, 'register' ] );
 
 		// Register default families.
-		add_action( 'exhale/typography/font/family/register', [ $this, 'registerDefaultFamilies' ] );
+		add_action( 'tavern/typography/font/family/register', [ $this, 'registerDefaultFamilies' ] );
 	}
 
 	/**
@@ -74,10 +74,10 @@ class Component implements Bootable {
 	public function register() {
 
 		// Hook for registering custom fonts.
-		do_action( 'exhale/typography/font/family/register', $this->families );
+		do_action( 'tavern/typography/font/family/register', $this->families );
 
 		// Back-compat hook for pre-2.0.0.
-		do_action( 'exhale/font/family/register', $this->families );
+		do_action( 'tavern/font/family/register', $this->families );
 	}
 
 	/**

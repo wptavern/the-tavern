@@ -1,4 +1,4 @@
-<?php if ( $active_sidebars = Exhale\Template\Footer::activeSidebars() ) : ?>
+<?php if ( $active_sidebars = Tavern\Template\Footer::activeSidebars() ) : ?>
 
 	<aside <?php Hybrid\Attr\display( 'sidebar', $sidebar, [
 		'class' => 'sidebar sidebar--footer p-8 border-0 border-t border-solid'
@@ -10,7 +10,7 @@
 				'grid grid--sidebar-footer grid-col-1 sm:grid-col-%s md:grid-col-%s grid-gap-8 list-none max-w-%s my-0 mx-auto p-0',
 				2 <= count( $active_sidebars ) ? 2 : 1,
 				esc_attr( count( $active_sidebars ) ),
-				esc_attr( Exhale\Tools\Mod::get( 'sidebar_footer_width' ) )
+				esc_attr( Tavern\Tools\Mod::get( 'sidebar_footer_width' ) )
 			)
 		] ) ?>>
 

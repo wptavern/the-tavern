@@ -4,16 +4,16 @@
  *
  * Houses the collection of font families in a single array-object.
  *
- * @package   Exhale
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright 2019 Justin Tadlock
+ * @package   Tavern
+ * @author    WP Tavern <justintadlock@gmail.com>
+ * @copyright 2019 WP Tavern
  * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
- * @link      https://themehybrid.com/themes/exhale
+ * @link      https://wptavern.com
  */
 
-namespace Exhale\Typography\Font\Family;
+namespace Tavern\Typography\Font\Family;
 
-use Exhale\Tools\Collection;
+use Tavern\Tools\Collection;
 
 /**
  * Font families class.
@@ -49,11 +49,11 @@ class Families extends Collection {
 
 		$choices = [
 			'system' => [
-				'label'   => __( 'System Fonts', 'exhale' ),
+				'label'   => __( 'System Fonts', 'tavern' ),
 				'choices' => []
 			],
 			'google' => [
-				'label'   => __( 'Google Fonts', 'exhale' ),
+				'label'   => __( 'Google Fonts', 'tavern' ),
 				'choices' => []
 			]
 		];

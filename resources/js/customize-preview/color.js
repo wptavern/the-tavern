@@ -4,14 +4,14 @@
  * This file handles the JavaScript for the live preview of the `custom-header`
  * feature in the customizer.
  *
- * @package   Exhale
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright 2019 Justin Tadlock
+ * @package   Tavern
+ * @author    WP Tavern <justintadlock@gmail.com>
+ * @copyright 2019 WP Tavern
  * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
- * @link      https://themehybrid.com/themes/exhale
+ * @link      https://wptavern.com
  */
 
-let settings = exhaleCustomizePreview.colorSettings;
+let settings = tavernCustomizePreview.colorSettings;
 
 Object.keys( settings ).forEach( setting => {
 

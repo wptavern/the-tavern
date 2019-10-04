@@ -4,14 +4,14 @@
  *
  * Creates a font family object.
  *
- * @package   Exhale
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright 2019 Justin Tadlock
+ * @package   Tavern
+ * @author    WP Tavern <justintadlock@gmail.com>
+ * @copyright 2019 WP Tavern
  * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
- * @link      https://themehybrid.com/themes/exhale
+ * @link      https://wptavern.com
  */
 
-namespace Exhale\Typography\Font\Family;
+namespace Tavern\Typography\Font\Family;
 
 use JsonSerializable;
 
@@ -145,7 +145,7 @@ class Family implements JsonSerializable {
 	public function stack() {
 
 		return apply_filters(
-			"exhale/typography/font/family/{$this->name}/stack",
+			"tavern/typography/font/family/{$this->name}/stack",
 			$this->stack,
 			$this
 		);

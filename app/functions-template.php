@@ -5,14 +5,14 @@
  * This file holds template tags for the theme. Template tags are PHP functions
  * meant for use within theme templates.
  *
- * @package   Exhale
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright 2019 Justin Tadlock
+ * @package   Tavern
+ * @author    WP Tavern <justintadlock@gmail.com>
+ * @copyright 2019 WP Tavern
  * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
- * @link      https://themehybrid.com/themes/exhale
+ * @link      https://wptavern.com
  */
 
-namespace Exhale;
+namespace Tavern;
 
 /**
  * Returns the metadata separator.
@@ -25,10 +25,10 @@ namespace Exhale;
 function sep( $sep = '' ) {
 
 	return apply_filters(
-		'exhale/sep',
+		'tavern/sep',
 		sprintf(
 			' <span class="sep mx-2">%s</span> ',
-			$sep ?: esc_html_x( '&middot;', 'meta separator', 'exhale' )
+			$sep ?: esc_html_x( '&middot;', 'meta separator', 'tavern' )
 		)
 	);
 }

@@ -5,14 +5,14 @@
  * A simple class for randomly displaying a "powered by..." line of text in the
  * theme footer.
  *
- * @package   Exhale
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright 2019 Justin Tadlock
+ * @package   Tavern
+ * @author    WP Tavern <justintadlock@gmail.com>
+ * @copyright 2019 WP Tavern
  * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
- * @link      https://themehybrid.com/themes/exhale
+ * @link      https://wptavern.com
  */
 
-namespace Exhale\Tools;
+namespace Tavern\Tools;
 
 /**
  * Powered by class.
@@ -31,18 +31,18 @@ class PoweredBy {
 	 */
 	public static function all() {
 
-		return apply_filters( 'exhale/poweredby/collection', [
-			__( 'Powered by heart and soul.', 'exhale' ),
-			__( 'Powered by crazy ideas and passion.', 'exhale' ),
-			__( 'Powered by the thing that holds all things together in the universe.', 'exhale' ),
-			__( 'Powered by love.', 'exhale' ),
-			__( 'Powered by the vast and endless void.', 'exhale' ),
-			__( 'Powered by the code of a maniac.', 'exhale' ),
-			__( 'Powered by peace and understanding.', 'exhale' ),
-			__( 'Powered by coffee.', 'exhale' ),
-			__( 'Powered by sleepness nights.', 'exhale' ),
-			__( 'Powered by the love of all things.', 'exhale' ),
-			__( 'Powered by something greater than myself.', 'exhale' )
+		return apply_filters( 'tavern/poweredby/collection', [
+			__( 'Powered by heart and soul.', 'tavern' ),
+			__( 'Powered by crazy ideas and passion.', 'tavern' ),
+			__( 'Powered by the thing that holds all things together in the universe.', 'tavern' ),
+			__( 'Powered by love.', 'tavern' ),
+			__( 'Powered by the vast and endless void.', 'tavern' ),
+			__( 'Powered by the code of a maniac.', 'tavern' ),
+			__( 'Powered by peace and understanding.', 'tavern' ),
+			__( 'Powered by coffee.', 'tavern' ),
+			__( 'Powered by sleepness nights.', 'tavern' ),
+			__( 'Powered by the love of all things.', 'tavern' ),
+			__( 'Powered by something greater than myself.', 'tavern' )
 		] );
 	}
 

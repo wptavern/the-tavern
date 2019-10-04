@@ -4,14 +4,14 @@
  *
  * A simple class for returning or outputting an SVG file.
  *
- * @package   Exhale
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright 2019 Justin Tadlock
+ * @package   Tavern
+ * @author    WP Tavern <justintadlock@gmail.com>
+ * @copyright 2019 WP Tavern
  * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
- * @link      https://themehybrid.com/themes/exhale
+ * @link      https://wptavern.com
  */
 
-namespace Exhale\Tools;
+namespace Tavern\Tools;
 
 /**
  * SVG class.
@@ -33,7 +33,7 @@ class Svg {
 
 		$svg = file_get_contents( static::path( "{$name}.svg" ) );
 
-		return apply_filters( "exhale/svg/{$name}", $svg ?: '' );
+		return apply_filters( "tavern/svg/{$name}", $svg ?: '' );
 	}
 
 	/**

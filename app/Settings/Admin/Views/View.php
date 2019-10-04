@@ -4,17 +4,17 @@
  *
  * Abstract base class for creating views.
  *
- * @package    Exhale
+ * @package    Tavern
  * @subpackage Admin
- * @author     Justin Tadlock <justintadlock@gmail.com>
- * @copyright  Copyright (c) 2009 - 2018, Justin Tadlock
+ * @author     WP Tavern <justintadlock@gmail.com>
+ * @copyright  Copyright (c) 2009 - 2018, WP Tavern
  * @link       https://themehybrid.com/plugins/members
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-namespace Exhale\Settings\Admin\Views;
+namespace Tavern\Settings\Admin\Views;
 
-use Exhale\Settings\Admin\OptionsPage;
+use Tavern\Settings\Admin\OptionsPage;
 
 /**
  * View class.

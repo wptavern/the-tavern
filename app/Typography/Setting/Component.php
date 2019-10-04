@@ -4,26 +4,26 @@
  *
  * Manages the font setting component.
  *
- * @package   Exhale
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright 2019 Justin Tadlock
+ * @package   Tavern
+ * @author    WP Tavern <justintadlock@gmail.com>
+ * @copyright 2019 WP Tavern
  * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
- * @link      https://themehybrid.com/themes/exhale
+ * @link      https://wptavern.com
  */
 
-namespace Exhale\Typography\Setting;
+namespace Tavern\Typography\Setting;
 
 use WP_Customize_Manager;
 
 use Hybrid\App;
 use Hybrid\Contracts\Bootable;
-use Exhale\Customize\Controls\Typography as CustomizeControlTypography;
-use Exhale\Typography\Font\Family\Families;
-use Exhale\Typography\Font\Style\Styles;
-use Exhale\Typography\Font\VariantCaps\Caps;
-use Exhale\Typography\Text\Transform\Transforms;
-use Exhale\Tools\Config;
-use Exhale\Tools\CustomProperties;
+use Tavern\Customize\Controls\Typography as CustomizeControlTypography;
+use Tavern\Typography\Font\Family\Families;
+use Tavern\Typography\Font\Style\Styles;
+use Tavern\Typography\Font\VariantCaps\Caps;
+use Tavern\Typography\Text\Transform\Transforms;
+use Tavern\Tools\Config;
+use Tavern\Tools\CustomProperties;
 
 use function Hybrid\Font\enqueue as enqueue_font;
 
@@ -134,7 +134,7 @@ class Component implements Bootable {
 		add_action( 'after_setup_theme', [ $this, 'register' ] );
 
 		// Register default settings.
-		add_action( 'exhale/typography/setting/register', [ $this, 'registerDefaultSettings' ] );
+		add_action( 'tavern/typography/setting/register', [ $this, 'registerDefaultSettings' ] );
 
 		// Add customizer settings and controls.
 		//add_action( 'customize_register', [ $this, 'customizeRegister'] );
@@ -154,7 +154,7 @@ class Component implements Bootable {
 	public function register() {
 
 		// Hook for registering settings.
-		do_action( 'exhale/typography/setting/register', $this->settings );
+		do_action( 'tavern/typography/setting/register', $this->settings );
 
 		// Adds each font setting as a custom property.
 		foreach ( $this->settings as $setting ) {
@@ -212,7 +212,7 @@ class Component implements Bootable {
 		$fonts = $this->googleFonts();
 
 		if ( $fonts ) {
-			enqueue_font( 'exhale', [
+			enqueue_font( 'tavern', [
 				'family' => $fonts,
 				'subset' => [
 					'latin',

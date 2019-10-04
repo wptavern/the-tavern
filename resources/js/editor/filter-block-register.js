@@ -4,11 +4,11 @@
  * Adds a filter on `editor.BlockEdit` and adds custom inspector controls to
  * any blocks that has custom design settings.
  *
- * @package   Exhale
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright 2019 Justin Tadlock
+ * @package   Tavern
+ * @author    WP Tavern <justintadlock@gmail.com>
+ * @copyright 2019 WP Tavern
  * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
- * @link      https://themehybrid.com/themes/exhale
+ * @link      https://wptavern.com
  */
 
 // Imports the design setting fields.
@@ -28,7 +28,7 @@ const { addFilter } = wp.hooks;
  * @param  string  Block name.
  * @return object
  */
-addFilter( 'blocks.registerBlockType', 'exhale/block/register', ( settings, name ) => {
+addFilter( 'blocks.registerBlockType', 'tavern/block/register', ( settings, name ) => {
 
 	fields.forEach( field => {
 

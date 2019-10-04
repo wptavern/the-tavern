@@ -4,14 +4,14 @@
  *
  * Creates an image filter object.
  *
- * @package   Exhale
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright 2019 Justin Tadlock
+ * @package   Tavern
+ * @author    WP Tavern <justintadlock@gmail.com>
+ * @copyright 2019 WP Tavern
  * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
- * @link      https://themehybrid.com/themes/exhale
+ * @link      https://wptavern.com
  */
 
-namespace Exhale\Image\Filter;
+namespace Tavern\Image\Filter;
 
 use JsonSerializable;
 
@@ -125,7 +125,7 @@ class Filter implements JsonSerializable {
 	public function label() {
 
 		return apply_filters(
-			"exhale/image/filter/{$this->name}/label",
+			"tavern/image/filter/{$this->name}/label",
 			$this->label ?: $this->name(),
 			$this
 		);

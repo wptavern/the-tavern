@@ -4,67 +4,67 @@
  *
  * Defines the font sizes available to users via the block editor.
  *
- * @package   Exhale
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright 2019 Justin Tadlock
+ * @package   Tavern
+ * @author    WP Tavern <justintadlock@gmail.com>
+ * @copyright 2019 WP Tavern
  * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
- * @link      https://themehybrid.com/themes/exhale
+ * @link      https://wptavern.com
  */
 
 return [
 	'fine' => [
 		// Translators: Font size label.
-		'label' => __( 'Fine', 'exhale' ),
+		'label' => __( 'Fine', 'tavern' ),
 		'size'  => 12
 	],
 	'diminutive' => [
 		// Translators: Font size label.
-		'label' => __( 'Diminutive', 'exhale' ),
+		'label' => __( 'Diminutive', 'tavern' ),
 		'size'  => 13
 	],
 	'tiny' => [
 		// Translators: Font size label.
-		'label' => __( 'Tiny', 'exhale' ),
+		'label' => __( 'Tiny', 'tavern' ),
 		'size'  => 14
 	],
 	'small' => [
 		// Translators: Font size label.
-		'label' => __( 'Small', 'exhale' ),
+		'label' => __( 'Small', 'tavern' ),
 		'size'  => 15
 	],
 	'medium' => [
 		// Translators: Font size label.
-		'label' => __( 'Medium', 'exhale' ),
+		'label' => __( 'Medium', 'tavern' ),
 		'size'  => 16
 	],
 	'large' => [
 		// Translators: Font size label.
-		'label' => __( 'Large', 'exhale' ),
+		'label' => __( 'Large', 'tavern' ),
 		'size'  => 18
 	],
 	'extra-large' => [
 		// Translators: Font size label.
-		'label' => __( 'Extra Large', 'exhale' ),
+		'label' => __( 'Extra Large', 'tavern' ),
 		'size'  => 20
 	],
 	'huge' => [
 		// Translators: Font size label.
-		'label' => __( 'Huge', 'exhale' ),
+		'label' => __( 'Huge', 'tavern' ),
 		'size'  => 24
 	],
 	'gargantuan' => [
 		// Translators: Font size label.
-		'label' => __( 'Gargantuan', 'exhale' ),
+		'label' => __( 'Gargantuan', 'tavern' ),
 		'size'  => 30
 	],
 	'colossal' => [
 		// Translators: Font size label.
-		'label' => __( 'Colossal', 'exhale' ),
+		'label' => __( 'Colossal', 'tavern' ),
 		'size'  => 36
 	],
 	'titanic' => [
 		// Translators: Font size label.
-		'label' => __( 'Titanic', 'exhale' ),
+		'label' => __( 'Titanic', 'tavern' ),
 		'size'  => 48
 	]
 ];

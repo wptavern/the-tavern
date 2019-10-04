@@ -4,17 +4,17 @@
  *
  * A simple class for outputting the appropriate footer credit text.
  *
- * @package   Exhale
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright 2019 Justin Tadlock
+ * @package   Tavern
+ * @author    WP Tavern <justintadlock@gmail.com>
+ * @copyright 2019 WP Tavern
  * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
- * @link      https://themehybrid.com/themes/exhale
+ * @link      https://wptavern.com
  */
 
-namespace Exhale\Template;
+namespace Tavern\Template;
 
-use Exhale\Tools\Mod;
-use Exhale\Tools\PoweredBy;
+use Tavern\Tools\Mod;
+use Tavern\Tools\PoweredBy;
 
 /**
  * Powered by class.

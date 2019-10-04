@@ -4,20 +4,20 @@
  *
  * Adds customizer elements for the footer component.
  *
- * @package   Exhale
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright 2019 Justin Tadlock
+ * @package   Tavern
+ * @author    WP Tavern <justintadlock@gmail.com>
+ * @copyright 2019 WP Tavern
  * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
- * @link      https://themehybrid.com/themes/exhale
+ * @link      https://wptavern.com
  */
 
-namespace Exhale\Footer;
+namespace Tavern\Footer;
 
 use WP_Customize_Manager;
-use Exhale\Customize\Customizable;
-use Exhale\Tools\Mod;
+use Tavern\Customize\Customizable;
+use Tavern\Tools\Mod;
 
-use Exhale\Template\Footer as TemplateFooter;
+use Tavern\Template\Footer as TemplateFooter;
 
 /**
  * Footer customize class.
@@ -75,15 +75,15 @@ class Customize extends Customizable {
 		$manager->add_control( 'sidebar_footer_width', [
 			'section' => 'theme_footer_sidebar',
 			'type'    => 'select',
-			'label'   => __( 'Footer Sidebar: Width', 'exhale' ),
+			'label'   => __( 'Footer Sidebar: Width', 'tavern' ),
 			'choices' => [
-				'2xl'       => __( 'Medium',      'exhale' ),
-				'3xl'       => __( 'Large',       'exhale' ),
-				'4xl'       => __( 'Extra Large', 'exhale' ),
-				'5xl'       => __( 'Huge',        'exhale' ),
-				'6xl'       => __( 'Gargantuan',  'exhale' ),
-				'7xl'       => __( 'Titanic',     'exhale' ),
-				'full'      => __( 'Full',        'exhale' )
+				'2xl'       => __( 'Medium',      'tavern' ),
+				'3xl'       => __( 'Large',       'tavern' ),
+				'4xl'       => __( 'Extra Large', 'tavern' ),
+				'5xl'       => __( 'Huge',        'tavern' ),
+				'6xl'       => __( 'Gargantuan',  'tavern' ),
+				'7xl'       => __( 'Titanic',     'tavern' ),
+				'full'      => __( 'Full',        'tavern' )
 			]
 		] );
 
@@ -91,14 +91,14 @@ class Customize extends Customizable {
 		$manager->add_control( 'powered_by', [
 			'section'  => 'theme_footer_credit',
 			'type'     => 'checkbox',
-			'label'    => __( 'Show random "powered by" credit text.', 'exhale' )
+			'label'    => __( 'Show random "powered by" credit text.', 'tavern' )
 		] );
 
 		// Footer credit control.
 		$manager->add_control( 'footer_credit', [
 			'section'         => 'theme_footer_credit',
 			'type'            => 'textarea',
-			'label'           => __( 'Custom Footer Text', 'exhale' ),
+			'label'           => __( 'Custom Footer Text', 'tavern' ),
 			'active_callback' => function( $control ) {
 				return ! $control->manager->get_setting( 'powered_by' )->value();
 			}

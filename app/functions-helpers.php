@@ -4,14 +4,14 @@
  *
  * This file holds various helper functions needed in the theme.
  *
- * @package   Exhale
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright 2019 Justin Tadlock
+ * @package   Tavern
+ * @author    WP Tavern <justintadlock@gmail.com>
+ * @copyright 2019 WP Tavern
  * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
- * @link      https://themehybrid.com/themes/exhale
+ * @link      https://wptavern.com
  */
 
-namespace Exhale;
+namespace Tavern;
 
 use Hybrid\App;
 
@@ -23,7 +23,7 @@ use Hybrid\App;
  * @return string
  */
 function body_bg_color_compat() {
-	$compat = App::resolve( 'exhale/compat/background' );
+	$compat = App::resolve( 'tavern/compat/background' );
 	$color  = get_theme_mod( 'background_color', $compat['default-color'] );
 
 	return $color ?: 'f3f3f3';
@@ -37,7 +37,7 @@ function body_bg_color_compat() {
  * @return string
  */
 function body_bg_image_compat() {
-	$compat = App::resolve( 'exhale/compat/background' );
+	$compat = App::resolve( 'tavern/compat/background' );
 	$image  = get_theme_mod( 'background_image', $compat['default-image'] );
 
 	return $image ?: '';
@@ -51,7 +51,7 @@ function body_bg_image_compat() {
  * @return string
  */
 function body_bg_attachment_compat() {
-	$compat     = App::resolve( 'exhale/compat/background' );
+	$compat     = App::resolve( 'tavern/compat/background' );
 	$attachment = get_theme_mod( 'background_attachment', $compat['default-attachment'] );
 
 	return in_array( $attachment, [ 'scroll', 'fixed' ], true ) ? $attachment : 'scroll';
@@ -65,7 +65,7 @@ function body_bg_attachment_compat() {
  * @return string
  */
 function body_bg_size_compat() {
-	$compat = App::resolve( 'exhale/compat/background' );
+	$compat = App::resolve( 'tavern/compat/background' );
 	$size   = get_theme_mod( 'background_size', $compat['default-size'] );
 
 	return in_array( $size, [ 'auto', 'contain', 'cover' ], true ) ? $size : 'auto';
@@ -79,7 +79,7 @@ function body_bg_size_compat() {
  * @return string
  */
 function body_bg_repeat_compat() {
-	$compat = App::resolve( 'exhale/compat/background' );
+	$compat = App::resolve( 'tavern/compat/background' );
 	$repeat = get_theme_mod( 'background_repeat', $compat['default-repeat'] );
 
 	return in_array( $repeat, [ 'repeat-x', 'repeat-y', 'repeat', 'no-repeat' ], true ) ? $repeat : 'repeat';
@@ -93,7 +93,7 @@ function body_bg_repeat_compat() {
  * @return string
  */
 function body_bg_position_compat() {
-	$compat     = App::resolve( 'exhale/compat/background' );
+	$compat     = App::resolve( 'tavern/compat/background' );
 	$position_x = get_theme_mod( 'background_position_x', $compat['default-position-x'] );
 	$position_y = get_theme_mod( 'background_position_y', $compat['default-position-y'] );
 

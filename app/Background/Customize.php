@@ -4,23 +4,23 @@
  *
  * Adds customizer elements for the background component.
  *
- * @package   Exhale
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright 2019 Justin Tadlock
+ * @package   Tavern
+ * @author    WP Tavern <justintadlock@gmail.com>
+ * @copyright 2019 WP Tavern
  * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
- * @link      https://themehybrid.com/themes/exhale
+ * @link      https://wptavern.com
  */
 
-namespace Exhale\Background;
+namespace Tavern\Background;
 
 use WP_Customize_Manager;
 use WP_Customize_Color_Control;
 use WP_Customize_Image_Control;
-use Exhale\Customize\Customizable;
-use Exhale\Customize\Controls\BackgroundPosition;
-use Exhale\Customize\Controls\BackgroundSvg;
-use Exhale\Tools\Collection;
-use Exhale\Tools\Mod;
+use Tavern\Customize\Customizable;
+use Tavern\Customize\Controls\BackgroundPosition;
+use Tavern\Customize\Controls\BackgroundSvg;
+use Tavern\Tools\Collection;
+use Tavern\Tools\Mod;
 
 /**
  * Background customize class.
@@ -168,20 +168,20 @@ class Customize extends Customizable {
 
 			$manager->add_control( "{$section}_background_type", [
 				'section'  => "theme_{$section}_background",
-				'label'    => __( 'Background Type', 'exhale' ),
+				'label'    => __( 'Background Type', 'tavern' ),
 				'priority' => 25,
 				'type'     => 'select',
 				'choices'  => [
-					''      => __( 'None',    'exhale' ),
-					'image' => __( 'Image',   'exhale' ),
-					'svg'   => __( 'Pattern', 'exhale' )
+					''      => __( 'None',    'tavern' ),
+					'image' => __( 'Image',   'tavern' ),
+					'svg'   => __( 'Pattern', 'tavern' )
 				]
 			] );
 
 			$manager->add_control(
 				new WP_Customize_Color_Control( $manager, "color_{$section}_background_fill", [
 					'section'         => "theme_{$section}_background",
-					'label'           => __( 'Foreground Color', 'exhale' ),
+					'label'           => __( 'Foreground Color', 'tavern' ),
 					'priority'        => 25,
 					'active_callback' => function() use ( $section ) {
 						return 'svg' === Mod::get( "{$section}_background_type" );
@@ -191,7 +191,7 @@ class Customize extends Customizable {
 
 			$manager->add_control( "{$section}_background_fill_opacity", [
 				'section'     => "theme_{$section}_background",
-				'label'       => __( 'Foreground Opacity', 'exhale' ),
+				'label'       => __( 'Foreground Opacity', 'tavern' ),
 				'priority'    => 25,
 				'type'        => 'number',
 				'input_attrs' => [
@@ -219,7 +219,7 @@ class Customize extends Customizable {
 			$manager->add_control(
 				new BackgroundSvg( $manager, "{$section}_background_svg", [
 					'section'         => "theme_{$section}_background",
-					'label'           => __( 'Background Pattern', 'exhale' ),
+					'label'           => __( 'Background Pattern', 'tavern' ),
 					'choices'         => $choices,
 					'background'      => Mod::color( "{$section}-background" ),
 					'priority'        => 25,
@@ -232,7 +232,7 @@ class Customize extends Customizable {
 			$manager->add_control(
 				new WP_Customize_Image_Control( $manager, "{$section}_background_image", [
 					'section'         => "theme_{$section}_background",
-					'label'           => __( 'Background Image', 'exhale' ),
+					'label'           => __( 'Background Image', 'tavern' ),
 					'priority'        => 25,
 					'active_callback' => function() use ( $section ) {
 						return 'image' === Mod::get( "{$section}_background_type" );
@@ -242,13 +242,13 @@ class Customize extends Customizable {
 
 			$manager->add_control( "{$section}_background_attachment", [
 				'section'  => "theme_{$section}_background",
-				'label'    => __( 'Background Attachment', 'exhale' ),
+				'label'    => __( 'Background Attachment', 'tavern' ),
 				'priority' => 30,
 				'type'     => 'select',
 				'choices'  => [
-					'scroll'    => __( 'Scroll', 'exhale' ),
-					'fixed'     => __( 'Fixed',  'exhale' ),
-				//	'local'     => __( 'Local',  'exhale' )
+					'scroll'    => __( 'Scroll', 'tavern' ),
+					'fixed'     => __( 'Fixed',  'tavern' ),
+				//	'local'     => __( 'Local',  'tavern' )
 				],
 				'active_callback' => function() use ( $section ) {
 					return ( 'svg' === Mod::get( "{$section}_background_type" ) && Mod::get( "{$section}_background_svg" ) ) ||
@@ -258,13 +258,13 @@ class Customize extends Customizable {
 
 			$manager->add_control( "{$section}_background_size", [
 				'section'  => "theme_{$section}_background",
-				'label'    => __( 'Background Size', 'exhale' ),
+				'label'    => __( 'Background Size', 'tavern' ),
 				'priority' => 30,
 				'type'     => 'select',
 				'choices'  => [
-					'auto'    => __( 'Auto',    'exhale' ),
-					'cover'   => __( 'Cover',   'exhale' ),
-					'contain' => __( 'Contain', 'exhale' )
+					'auto'    => __( 'Auto',    'tavern' ),
+					'cover'   => __( 'Cover',   'tavern' ),
+					'contain' => __( 'Contain', 'tavern' )
 				],
 				'active_callback' => function() use ( $section ) {
 					return ( 'svg' === Mod::get( "{$section}_background_type" ) && Mod::get( "{$section}_background_svg" ) ) ||
@@ -274,14 +274,14 @@ class Customize extends Customizable {
 
 			$manager->add_control( "{$section}_background_repeat", [
 				'section'  => "theme_{$section}_background",
-				'label'    => __( 'Background Repeat', 'exhale' ),
+				'label'    => __( 'Background Repeat', 'tavern' ),
 				'priority' => 30,
 				'type'     => 'select',
 				'choices'  => [
-					'no-repeat' => __( 'No Repeat',           'exhale' ),
-					'repeat'    => __( 'Repeat',              'exhale' ),
-					'repeat-x'  => __( 'Repeat Horizontally', 'exhale' ),
-					'repeat-y'  => __( 'Repeat Vertically',   'exhale' )
+					'no-repeat' => __( 'No Repeat',           'tavern' ),
+					'repeat'    => __( 'Repeat',              'tavern' ),
+					'repeat-x'  => __( 'Repeat Horizontally', 'tavern' ),
+					'repeat-y'  => __( 'Repeat Vertically',   'tavern' )
 				],
 				'active_callback' => function() use ( $section ) {
 					return ( 'svg' === Mod::get( "{$section}_background_type" ) && Mod::get( "{$section}_background_svg" ) ) ||
@@ -292,7 +292,7 @@ class Customize extends Customizable {
 			$manager->add_control(
 				new BackgroundPosition( $manager, "{$section}_background_position", [
 					'section'         => "theme_{$section}_background",
-					'label'           => __( 'Background Position', 'exhale' ),
+					'label'           => __( 'Background Position', 'tavern' ),
 					'background'      => Mod::get( "{$section}_background_position" ),
 					'priority'        => 30,
 					'active_callback' => function() use ( $section ) {

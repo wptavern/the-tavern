@@ -5,18 +5,18 @@
  * This file holds some setup actions for scripts and styles as well as a helper
  * functions for work with assets.
  *
- * @package   Exhale
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright 2019 Justin Tadlock
+ * @package   Tavern
+ * @author    WP Tavern <justintadlock@gmail.com>
+ * @copyright 2019 WP Tavern
  * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
- * @link      https://themehybrid.com/themes/exhale
+ * @link      https://wptavern.com
  */
 
-namespace Exhale;
+namespace Tavern;
 
 use Hybrid\App;
-use Exhale\Tools\CustomProperties;
-use Exhale\Settings\Options;
+use Tavern\Tools\CustomProperties;
+use Tavern\Settings\Options;
 
 /**
  * Enqueue scripts/styles for the front end.
@@ -36,17 +36,17 @@ add_action( 'wp_enqueue_scripts', function() {
 	}
 
 	// Enqueue theme scripts.
-	wp_enqueue_script( 'exhale-app', asset( 'js/app.js' ), null, null, true );
+	wp_enqueue_script( 'tavern-app', asset( 'js/app.js' ), null, null, true );
 
 	// Enqueue theme styles.
 	wp_enqueue_style(
-		'exhale-screen',
+		'tavern-screen',
 		asset( Options::get( 'classic_style' ) ? 'css/screen-classic.css' : 'css/screen.css' ),
 		null,
 		null
 	);
 
-	wp_add_inline_style( 'exhale-screen', App::resolve( CustomProperties::class )->css() );
+	wp_add_inline_style( 'tavern-screen', App::resolve( CustomProperties::class )->css() );
 
 } );
 
@@ -88,51 +88,51 @@ add_action( 'enqueue_block_editor_assets', function() {
 		'wp-token-list'
 	];
 
-	wp_enqueue_script( 'exhale-editor', asset( 'js/editor.js' ), $deps, null, true );
+	wp_enqueue_script( 'tavern-editor', asset( 'js/editor.js' ), $deps, null, true );
 
 	// For now, we're adding translations via PHP. In the future, when our
 	// tools catch up, we'll internationalize in the JS files.
-	wp_localize_script( 'exhale-editor', 'exhaleEditor', [
+	wp_localize_script( 'tavern-editor', 'tavernEditor', [
 		'labels' => [
-			'default'        => __( 'Default',         'exhale' ),
-			'borderDouble'   => __( 'Double',          'exhale' ),
-			'borderDashed'   => __( 'Dashed',          'exhale' ),
-			'borderRadius'   => __( 'Border Radius',   'exhale' ),
-			'designSettings' => __( 'Design Settings', 'exhale' ),
-			'highlight'      => __( 'Highlight',       'exhale' ),
-			'listType'       => __( 'Bullets',         'exhale' ),
-			'none'           => __( 'None',            'exhale' ),
-			'reverse'        => __( 'Reverse',         'exhale' ),
-			'rounded'        => __( 'Rounded',         'exhale' ),
-			'shadow'         => __( 'Shadow',          'exhale' ),
+			'default'        => __( 'Default',         'tavern' ),
+			'borderDouble'   => __( 'Double',          'tavern' ),
+			'borderDashed'   => __( 'Dashed',          'tavern' ),
+			'borderRadius'   => __( 'Border Radius',   'tavern' ),
+			'designSettings' => __( 'Design Settings', 'tavern' ),
+			'highlight'      => __( 'Highlight',       'tavern' ),
+			'listType'       => __( 'Bullets',         'tavern' ),
+			'none'           => __( 'None',            'tavern' ),
+			'reverse'        => __( 'Reverse',         'tavern' ),
+			'rounded'        => __( 'Rounded',         'tavern' ),
+			'shadow'         => __( 'Shadow',          'tavern' ),
 
 			// Lists.
 			'lists' => [
-				'disc'   => __( 'Disc',   'exhale' ),
-				'circle' => __( 'Circle', 'exhale' ),
-				'square' => __( 'Square', 'exhale' )
+				'disc'   => __( 'Disc',   'tavern' ),
+				'circle' => __( 'Circle', 'tavern' ),
+				'square' => __( 'Square', 'tavern' )
 			],
 
 			// Sizes.
 			'sizes' => [
-				'fine'       => __( 'Fine',        'exhale' ),
-				'diminutive' => __( 'Diminutive',  'exhale' ),
-				'tiny'       => __( 'Tiny',        'exhale' ),
-				'small'      => __( 'Small',       'exhale' ),
-				'medium'     => __( 'Medium',      'exhale' ),
-				'large'      => __( 'Large',       'exhale' ),
-				'extraLarge' => __( 'Extra Large', 'exhale' ),
-				'huge'       => __( 'Huge',        'exhale' ),
-				'gargantuan' => __( 'Gargantuan',  'exhale' ),
-				'colossal'   => __( 'Colossal',    'exhale' )
+				'fine'       => __( 'Fine',        'tavern' ),
+				'diminutive' => __( 'Diminutive',  'tavern' ),
+				'tiny'       => __( 'Tiny',        'tavern' ),
+				'small'      => __( 'Small',       'tavern' ),
+				'medium'     => __( 'Medium',      'tavern' ),
+				'large'      => __( 'Large',       'tavern' ),
+				'extraLarge' => __( 'Extra Large', 'tavern' ),
+				'huge'       => __( 'Huge',        'tavern' ),
+				'gargantuan' => __( 'Gargantuan',  'tavern' ),
+				'colossal'   => __( 'Colossal',    'tavern' )
 			]
 		]
 	] );
 
 	// Enqueue theme editor styles.
-	wp_enqueue_style( 'exhale-editor', asset( 'css/editor.css' ), null, null );
+	wp_enqueue_style( 'tavern-editor', asset( 'css/editor.css' ), null, null );
 
-	wp_add_inline_style( 'exhale-editor', App::resolve( CustomProperties::class )->css() );
+	wp_add_inline_style( 'tavern-editor', App::resolve( CustomProperties::class )->css() );
 
 } );
 
@@ -149,7 +149,7 @@ add_action( 'enqueue_block_editor_assets', function() {
 function asset( $path ) {
 
 	// Get the Laravel Mix manifest.
-	$manifest = App::resolve( 'exhale/mix' );
+	$manifest = App::resolve( 'tavern/mix' );
 
 	// Make sure to trim any slashes from the front of the path.
 	$path = '/' . ltrim( $path, '/' );

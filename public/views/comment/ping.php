@@ -12,13 +12,13 @@
 			'text' => Hybrid\Comment\render_date( [
 				'format' => sprintf(
 					// Translators: Comment date + time format.
-					esc_html__( '%1$s, %2$s', 'exhale' ),
+					esc_html__( '%1$s, %2$s', 'tavern' ),
 					get_option( 'date_format' ),
 					get_option( 'time_format' )
 				)
 			] )
 		] ) ?>
-		<?php Hybrid\Comment\display_edit_link( [ 'before' => Exhale\sep() ] ) ?>
+		<?php Hybrid\Comment\display_edit_link( [ 'before' => Tavern\sep() ] ) ?>
 	</header>
 
 	<div class="comment__content mt-4">
@@ -26,7 +26,7 @@
 		<?php if ( ! Hybrid\Comment\is_approved() ) : ?>
 
 			<p class="comment__moderation">
-				<?php esc_html_e( 'Your comment is awaiting moderation.', 'exhale' ) ?>
+				<?php esc_html_e( 'Your comment is awaiting moderation.', 'tavern' ) ?>
 			</p>
 
 		<?php endif ?>

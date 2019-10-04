@@ -4,23 +4,23 @@
  *
  * Bootstraps the font components.
  *
- * @package   Exhale
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright 2019 Justin Tadlock
+ * @package   Tavern
+ * @author    WP Tavern <justintadlock@gmail.com>
+ * @copyright 2019 WP Tavern
  * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
- * @link      https://themehybrid.com/themes/exhale
+ * @link      https://wptavern.com
  */
 
-namespace Exhale\Typography;
+namespace Tavern\Typography;
 
 use Hybrid\Tools\ServiceProvider;
-use Exhale\Tools\CustomProperties;
+use Tavern\Tools\CustomProperties;
 
-use Exhale\Typography\Font\Family;
-use Exhale\Typography\Font\Style;
-use Exhale\Typography\Font\VariantCaps;
-use Exhale\Typography\Setting;
-use Exhale\Typography\Text\Transform;
+use Tavern\Typography\Font\Family;
+use Tavern\Typography\Font\Style;
+use Tavern\Typography\Font\VariantCaps;
+use Tavern\Typography\Setting;
+use Tavern\Typography\Text\Transform;
 
 /**
  * Font service provider class.

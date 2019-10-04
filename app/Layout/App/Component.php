@@ -4,22 +4,22 @@
  *
  * Manages the layout component.
  *
- * @package   Exhale
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright 2019 Justin Tadlock
+ * @package   Tavern
+ * @author    WP Tavern <justintadlock@gmail.com>
+ * @copyright 2019 WP Tavern
  * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
- * @link      https://themehybrid.com/themes/exhale
+ * @link      https://wptavern.com
  */
 
-namespace Exhale\Layout\App;
+namespace Tavern\Layout\App;
 
 use WP_Customize_Manager;
 
 use Hybrid\Contracts\Bootable;
-use Exhale\Layout\Layout;
-use Exhale\Layout\Layouts;
-use Exhale\Tools\Config;
-use Exhale\Tools\Mod;
+use Tavern\Layout\Layout;
+use Tavern\Layout\Layouts;
+use Tavern\Tools\Config;
+use Tavern\Tools\Mod;
 
 /**
  * Layout component class.
@@ -66,7 +66,7 @@ class Component implements Bootable {
 		add_filter( 'body_class', [ $this, 'bodyClass' ] );
 
 		// Register default layouts.
-		add_action( 'exhale/layout/global/register', [ $this, 'registerDefaultLayouts' ] );
+		add_action( 'tavern/layout/global/register', [ $this, 'registerDefaultLayouts' ] );
 	}
 
 	/**
@@ -79,7 +79,7 @@ class Component implements Bootable {
 	public function register() {
 
 		// Hook for registering custom layouts.
-		do_action( 'exhale/layout/global/register', $this->layouts );
+		do_action( 'tavern/layout/global/register', $this->layouts );
 	}
 
 	/**

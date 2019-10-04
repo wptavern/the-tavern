@@ -4,38 +4,38 @@
  *
  * Configuration for the theme's loop layouts.
  *
- * @package   Exhale
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright 2019 Justin Tadlock
+ * @package   Tavern
+ * @author    WP Tavern <justintadlock@gmail.com>
+ * @copyright 2019 WP Tavern
  * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
- * @link      https://themehybrid.com/themes/exhale
+ * @link      https://wptavern.com
  */
 
 return [
 	'blog' => [
-		'label'       => __( 'Blog', 'exhale' ),
+		'label'       => __( 'Blog', 'tavern' ),
 		'image_sizes' => [
-			'exhale-landscape-medium',
-			'exhale-landscape-large',
-			'exhale-landscape-extra-large',
-			'exhale-landscape-huge',
-			'exhale-square-medium'
+			'tavern-landscape-medium',
+			'tavern-landscape-large',
+			'tavern-landscape-extra-large',
+			'tavern-landscape-huge',
+			'tavern-square-medium'
 		]
 	],
 	'grid' => [
-		'label'            => __( 'Grid', 'exhale' ),
+		'label'            => __( 'Grid', 'tavern' ),
 		'supports_columns' => true,
 		'supports_width'   => true,
 		'requires_image'   => true,
 		'image_sizes'      => [
-			'exhale-landscape-medium',
-			'exhale-portrait-small',
-			'exhale-portrait-medium',
-			'exhale-square-medium'
+			'tavern-landscape-medium',
+			'tavern-portrait-small',
+			'tavern-portrait-medium',
+			'tavern-square-medium'
 		]
 	],
 	'list' => [
-		'label'       => __( 'List', 'exhale' ),
+		'label'       => __( 'List', 'tavern' ),
 		'image_sizes' => []
 	]
 ];

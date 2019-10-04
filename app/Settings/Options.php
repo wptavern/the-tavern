@@ -4,14 +4,14 @@
  *
  * This is an options helper class for quickly getting theme options.
  *
- * @package   Exhale
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright 2019 Justin Tadlock
+ * @package   Tavern
+ * @author    WP Tavern <justintadlock@gmail.com>
+ * @copyright 2019 WP Tavern
  * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
- * @link      https://themehybrid.com/themes/exhale
+ * @link      https://wptavern.com
  */
 
-namespace Exhale\Settings;
+namespace Tavern\Settings;
 
 /**
  * Options class.
@@ -32,7 +32,7 @@ class Options {
 	public static function get( $name = '' ) {
 
 		$defaults = static::defaults();
-		$settings = wp_parse_args( get_option( 'exhale_settings', $defaults ), $defaults );
+		$settings = wp_parse_args( get_option( 'tavern_settings', $defaults ), $defaults );
 
 		if ( ! $name ) {
 			return $settings;
@@ -50,7 +50,7 @@ class Options {
 	 */
 	public static function defaults() {
 
-		return apply_filters( 'exhale/settings/options/defaults', [
+		return apply_filters( 'tavern/settings/options/defaults', [
 			// 1.0.0
 			'classic_style'        => false,
 			'home_posts_number'    => 10,    // @deprecated 2.1.0

@@ -4,17 +4,17 @@
  *
  * Displays the child themes view (tab) on the settings page.
  *
- * @package    Exhale
+ * @package    Tavern
  * @subpackage Admin
- * @author     Justin Tadlock <justintadlock@gmail.com>
- * @copyright  Copyright (c) 2009 - 2018, Justin Tadlock
+ * @author     WP Tavern <justintadlock@gmail.com>
+ * @copyright  Copyright (c) 2009 - 2018, WP Tavern
  * @link       https://themehybrid.com/plugins/members
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-namespace Exhale\Settings\Admin\Views;
+namespace Tavern\Settings\Admin\Views;
 
-use Exhale\ThemeManager\Themes as ThemeCollection;
+use Tavern\ThemeManager\Themes as ThemeCollection;
 
 /**
  * Child Themes settings view class.
@@ -52,7 +52,7 @@ class Themes extends View {
 	 * @return string
 	 */
 	public function label() {
-		return __( 'Themes', 'exhale' );
+		return __( 'Themes', 'tavern' );
 	}
 
 	/**
@@ -66,7 +66,7 @@ class Themes extends View {
 	public function register() {
 
 		// Register child themes.
-		add_action( 'exhale/settings/admin/view/themes/register', [ $this, 'registerDefaultThemes' ] );
+		add_action( 'tavern/settings/admin/view/themes/register', [ $this, 'registerDefaultThemes' ] );
 	}
 
 	/**
@@ -80,7 +80,7 @@ class Themes extends View {
 	public function boot() {
 		$this->themes = new ThemeCollection();
 
-		do_action( 'exhale/settings/admin/view/themes/register', $this->themes );
+		do_action( 'tavern/settings/admin/view/themes/register', $this->themes );
 	}
 
 	/**

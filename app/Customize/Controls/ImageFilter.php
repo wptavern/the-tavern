@@ -6,13 +6,13 @@
  * apply by default and on hover/focus.
  *
  * @package   Hybrid
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright Copyright (c) 2018, Justin Tadlock
+ * @author    WP Tavern <justintadlock@gmail.com>
+ * @copyright Copyright (c) 2018, WP Tavern
  * @link      https://github.com/justintadlock/hybrid-customize
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-namespace Exhale\Customize\Controls;
+namespace Tavern\Customize\Controls;
 
 use WP_Customize_Control;
 
@@ -31,7 +31,7 @@ class ImageFilter extends WP_Customize_Control {
 	 * @access public
 	 * @var    string
 	 */
-	public $type = 'exhale-image-filter';
+	public $type = 'tavern-image-filter';
 
 	/**
 	 * Array of label strings for the various fields.
@@ -109,7 +109,7 @@ class ImageFilter extends WP_Customize_Control {
 
 		<# if ( data.function && data.function.choices ) { #>
 
-			<p class="exhale-image-filter-function">
+			<p class="tavern-image-filter-function">
 
 				<label>
 					<# if ( data.function.label ) { #>
@@ -134,7 +134,7 @@ class ImageFilter extends WP_Customize_Control {
 
 		<# if ( data.default_amount ) { #>
 
-			<p class="exhale-image-default-filter-amount">
+			<p class="tavern-image-default-filter-amount">
 
 				<label>
 					<# if ( data.default_amount.label ) { #>
@@ -153,7 +153,7 @@ class ImageFilter extends WP_Customize_Control {
 
 		<# if ( data.hover_amount ) { #>
 
-			<p class="exhale-image-hover-filter-amount">
+			<p class="tavern-image-hover-filter-amount">
 
 				<label>
 					<# if ( data.hover_amount.label ) { #>

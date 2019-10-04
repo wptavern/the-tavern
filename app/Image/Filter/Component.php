@@ -4,23 +4,23 @@
  *
  * Manages the image filter component.
  *
- * @package   Exhale
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright 2019 Justin Tadlock
+ * @package   Tavern
+ * @author    WP Tavern <justintadlock@gmail.com>
+ * @copyright 2019 WP Tavern
  * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
- * @link      https://themehybrid.com/themes/exhale
+ * @link      https://wptavern.com
  */
 
-namespace Exhale\Image\Filter;
+namespace Tavern\Image\Filter;
 
 use WP_Customize_Manager;
 
 use Hybrid\Contracts\Bootable;
 use Hybrid\Tools\Collection;
-use Exhale\Tools\Config;
-use Exhale\Tools\CustomProperties;
-use Exhale\Tools\CustomProperty;
-use Exhale\Tools\Mod;
+use Tavern\Tools\Config;
+use Tavern\Tools\CustomProperties;
+use Tavern\Tools\CustomProperty;
+use Tavern\Tools\Mod;
 
 /**
  * Image filter component class.
@@ -75,7 +75,7 @@ class Component implements Bootable {
 		add_action( 'init', [ $this, 'register' ], 5 );
 
 		// Register default filters.
-		add_action( 'exhale/image/filter/register', [ $this, 'registerDefaultFilters' ] );
+		add_action( 'tavern/image/filter/register', [ $this, 'registerDefaultFilters' ] );
 	}
 
 	/**
@@ -88,7 +88,7 @@ class Component implements Bootable {
 	public function register() {
 
 		// Hook for registering custom image filters.
-		do_action( 'exhale/image/filter/register', $this->filters );
+		do_action( 'tavern/image/filter/register', $this->filters );
 
 		array_map( function( $amount ) {
 

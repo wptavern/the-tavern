@@ -1,5 +1,5 @@
 <?php
-$svg = Exhale\Tools\Svg::render( 'patterns/texture' );
+$svg = Tavern\Tools\Svg::render( 'patterns/texture' );
 
 $svg = sprintf( $svg, '333333', '0.5' );
 

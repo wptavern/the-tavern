@@ -4,18 +4,18 @@
  *
  * Handles filters on the posts query.
  *
- * @package   Exhale
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright 2019 Justin Tadlock
+ * @package   Tavern
+ * @author    WP Tavern <justintadlock@gmail.com>
+ * @copyright 2019 WP Tavern
  * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
- * @link      https://themehybrid.com/themes/exhale
+ * @link      https://wptavern.com
  */
 
-namespace Exhale\Query;
+namespace Tavern\Query;
 
 use WP_Query;
 use Hybrid\Contracts\Bootable;
-use Exhale\Template\Loop;
+use Tavern\Template\Loop;
 
 /**
  * Query component class.

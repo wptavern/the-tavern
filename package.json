@@ -1,10 +1,10 @@
 {
-	"name": "exhale",
+	"name": "tavern",
 	"version": "1.0.0",
-	"description": "Exhale is a clean and modern theme.",
-	"author": "Justin Tadlock",
+	"description": "Tavern is a clean and modern theme.",
+	"author": "WP Tavern",
 	"license": "GPL-2.0+",
-	"homepage": "https://themehybrid.com/themes/exhale",
+	"homepage": "https://wptavern.com",
 	"main": "resources/js/app.js",
 	"scripts": {
 		"build": "npm run prod && npm run i18n && npm run export",
@@ -23,10 +23,10 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/justintadlock/exhale.git"
+		"url": "git+https://github.com/justintadlock/tavern.git"
 	},
 	"bugs": {
-		"url": "https://github.com/justintadlock/exhale/issues"
+		"url": "https://github.com/justintadlock/tavern/issues"
 	},
 	"devDependencies": {
 		"@babel/preset-react": "^7.0.0",

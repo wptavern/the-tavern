@@ -4,11 +4,11 @@
  *
  * Configuration for the core WordPress `custom-background` theme feature.
  *
- * @package   Exhale
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright 2019 Justin Tadlock
+ * @package   Tavern
+ * @author    WP Tavern <justintadlock@gmail.com>
+ * @copyright 2019 WP Tavern
  * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
- * @link      https://themehybrid.com/themes/exhale
+ * @link      https://wptavern.com
  */
 
 return [
@@ -21,6 +21,6 @@ return [
 	'default-attachment'     => 'scroll',
 	// Falls back to the `content-backgound` color for pre-1.2.0 compat.
 	'default-color'          => is_child_theme()
-	                            ? \Exhale\Tools\Mod::color( 'content-background', 'ffffff' )
+	                            ? \Tavern\Tools\Mod::color( 'content-background', 'ffffff' )
 				    : 'f3f3f3'
 ];

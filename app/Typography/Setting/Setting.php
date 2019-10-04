@@ -4,21 +4,21 @@
  *
  * Creates a font setting object.
  *
- * @package   Exhale
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright 2019 Justin Tadlock
+ * @package   Tavern
+ * @author    WP Tavern <justintadlock@gmail.com>
+ * @copyright 2019 WP Tavern
  * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
- * @link      https://themehybrid.com/themes/exhale
+ * @link      https://wptavern.com
  */
 
-namespace Exhale\Typography\Setting;
+namespace Tavern\Typography\Setting;
 
 use JsonSerializable;
-use Exhale\Typography\Font\Family\Families;
-use Exhale\Typography\Font\Style\Styles;
-use Exhale\Typography\Text\Transform\Transforms;
-use Exhale\Typography\Font\VariantCaps\Caps;
-use Exhale\Tools\CustomProperty;
+use Tavern\Typography\Font\Family\Families;
+use Tavern\Typography\Font\Style\Styles;
+use Tavern\Typography\Text\Transform\Transforms;
+use Tavern\Typography\Font\VariantCaps\Caps;
+use Tavern\Tools\CustomProperty;
 
 /**
  * Font setting class.

@@ -1,6 +1,6 @@
 
 // Global set via `wp_localize_script()`.
-const { loopLayouts, loopQueries, imageSizes } = exhaleCustomizeControls;
+const { loopLayouts, loopQueries, imageSizes } = tavernCustomizeControls;
 
 Object.values( loopQueries ).forEach( type => {
 

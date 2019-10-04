@@ -9,11 +9,11 @@
  * code to execute, use a closure. It will be invoked at an appropriate time when
  * all functions/variables are set up and available for use.
  *
- * @package   Exhale
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright 2019 Justin Tadlock
+ * @package   Tavern
+ * @author    WP Tavern <justintadlock@gmail.com>
+ * @copyright 2019 WP Tavern
  * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
- * @link      https://themehybrid.com/themes/exhale
+ * @link      https://wptavern.com
  */
 
 return [
@@ -37,25 +37,25 @@ return [
 
 	// Body background.
 	'body_background_type'         => function() {
-		return \Exhale\body_bg_image_compat() ? 'image' : '';
+		return \Tavern\body_bg_image_compat() ? 'image' : '';
 	},
 	'color_body_background_fill'   => 'a9a9a9',
 	'body_background_fill_opacity' => 0.5,
 	'body_background_svg'          => '',
 	'body_background_image'        => function() {
-		return \Exhale\body_bg_image_compat();
+		return \Tavern\body_bg_image_compat();
 	},
 	'body_background_attachment'   => function() {
-		return \Exhale\body_bg_attachment_compat();
+		return \Tavern\body_bg_attachment_compat();
 	},
 	'body_background_size'         => function() {
-		return \Exhale\body_bg_size_compat();
+		return \Tavern\body_bg_size_compat();
 	},
 	'body_background_repeat'       => function() {
-		return \Exhale\body_bg_repeat_compat();
+		return \Tavern\body_bg_repeat_compat();
 	},
 	'body_background_position'     => function() {
-		return \Exhale\body_bg_position_compat();
+		return \Tavern\body_bg_position_compat();
 	},
 
 	// Header background.
@@ -117,9 +117,9 @@ return [
 	'loop_archive_layout'     => 'list',
 	'loop_archive_width'      => 'full',
 	'loop_archive_columns'    => 4,
-	'loop_archive_image_size' => 'exhale-landscape-large',
+	'loop_archive_image_size' => 'tavern-landscape-large',
 	'loop_archive_limit'      => function() {
-		return \Exhale\Settings\Options::get( 'archive_posts_number' );
+		return \Tavern\Settings\Options::get( 'archive_posts_number' );
 	},
 
 	// Blog layout.
@@ -127,10 +127,10 @@ return [
 	'loop_blog_width'      => 'full',
 	'loop_blog_columns'    => 4,
 	'loop_blog_image_size' => function() {
-		return \Exhale\Tools\Mod::get( 'featured_image_size' );
+		return \Tavern\Tools\Mod::get( 'featured_image_size' );
 	},
 	'loop_blog_limit'      => function() {
-		return \Exhale\Settings\Options::get( 'home_posts_number' );
+		return \Tavern\Settings\Options::get( 'home_posts_number' );
 	},
 
 	// Archive product layout (WooCommerce).
@@ -138,7 +138,7 @@ return [
 	'loop_archive_product_layout'     => 'grid',
 	'loop_archive_product_width'      => 'full',
 	'loop_archive_product_columns'    => 5,
-	'loop_archive_product_image_size' => 'exhale-portrait-small',
+	'loop_archive_product_image_size' => 'tavern-portrait-small',
 	'loop_archive_product_limit'      => 10,
 
 	// Product taxonomy layouts (WooCommerce).
@@ -183,7 +183,7 @@ return [
 
 	// Default footer credit text.
 	'footer_credit' => function() {
-		return sprintf( __( 'Powered by %s.', 'exhale' ), \Hybrid\Theme\render_link() );
+		return sprintf( __( 'Powered by %s.', 'tavern' ), \Hybrid\Theme\render_link() );
 	},
 
 	# ----------------------------------------------------------------------
@@ -193,5 +193,5 @@ return [
 	# The following mods exist for back-compat only. Do not set.
 
 	// @deprecated 2.1.0
-	'featured_image_size' => 'exhale-landscape-large',
+	'featured_image_size' => 'tavern-landscape-large',
 ];

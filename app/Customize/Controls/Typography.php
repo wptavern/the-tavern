@@ -6,13 +6,13 @@
  * apply by default and on hover/focus.
  *
  * @package   Hybrid
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright Copyright (c) 2018, Justin Tadlock
+ * @author    WP Tavern <justintadlock@gmail.com>
+ * @copyright Copyright (c) 2018, WP Tavern
  * @link      https://github.com/justintadlock/hybrid-customize
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-namespace Exhale\Customize\Controls;
+namespace Tavern\Customize\Controls;
 
 use WP_Customize_Manager;
 use WP_Customize_Control;
@@ -32,7 +32,7 @@ class Typography extends WP_Customize_Control {
 	 * @access public
 	 * @var    string
 	 */
-	public $type = 'exhale-typography';
+	public $type = 'tavern-typography';
 
 	/**
 	 * Font family sub-control options.
@@ -84,7 +84,7 @@ class Typography extends WP_Customize_Control {
 			$this->json['family'] = wp_parse_args( $this->family, [
 				'link'    => $this->get_link( 'family' ),
 				'value'   => $this->value( 'family' ),
-				'label'   => __( 'Font Family', 'exhale' ),
+				'label'   => __( 'Font Family', 'tavern' ),
 				'choices' => $this->family['choices']
 			] );
 		}
@@ -93,7 +93,7 @@ class Typography extends WP_Customize_Control {
 			$this->json['style'] = wp_parse_args( $this->style, [
 				'link'    => $this->get_link( 'style' ),
 				'value'   => $this->value( 'style' ),
-				'label'   => __( 'Font Style', 'exhale' ),
+				'label'   => __( 'Font Style', 'tavern' ),
 				'choices' => $this->style['choices']
 			] );
 		}
@@ -102,7 +102,7 @@ class Typography extends WP_Customize_Control {
 			$this->json['caps'] = wp_parse_args( $this->caps, [
 				'link'    => $this->get_link( 'caps' ),
 				'value'   => $this->value( 'caps' ),
-				'label'   => __( 'Font Variant: Caps', 'exhale' ),
+				'label'   => __( 'Font Variant: Caps', 'tavern' ),
 				'choices' => $this->caps['choices']
 			] );
 		}
@@ -111,7 +111,7 @@ class Typography extends WP_Customize_Control {
 			$this->json['transform'] = wp_parse_args( $this->transform, [
 				'link'    => $this->get_link( 'transform' ),
 				'value'   => $this->value( 'transform' ),
-				'label'   => __( 'Text Transform', 'exhale' ),
+				'label'   => __( 'Text Transform', 'tavern' ),
 				'choices' => $this->transform['choices']
 			] );
 		}

@@ -4,7 +4,7 @@
 		<?php Hybrid\Post\display_title() ?>
 	</header>
 
-	<?php Exhale\Template\FeaturedImage::display( 'featured' ) ?>
+	<?php Tavern\Template\FeaturedImage::display( 'featured' ) ?>
 
 	<div class="entry__summary o-content-width">
 		<?php the_excerpt() ?>

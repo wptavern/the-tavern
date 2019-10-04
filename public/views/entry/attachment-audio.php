@@ -14,19 +14,19 @@
 
 	<div class="media-meta media-meta--audio o-content-width">
 
-		<h3 class="media-meta__title"><?php esc_html_e( 'Audio Info', 'exhale' ) ?></h3>
+		<h3 class="media-meta__title"><?php esc_html_e( 'Audio Info', 'tavern' ) ?></h3>
 
 		<ul class="media-meta__items list-none p-0 text-base">
-			<?php Hybrid\Media\display_meta( 'length_formatted', [ 'tag' => 'li', 'class' => 'media-meta__item p-2 sm:flex border-0 border-b border-solid', 'data_class' => 'media-meta__data flex-1 text-right', 'label' => __( 'Run Time:', 'exhale' )     ] ) ?>
-			<?php Hybrid\Media\display_meta( 'artist',           [ 'tag' => 'li', 'class' => 'media-meta__item p-2 sm:flex border-0 border-b border-solid', 'data_class' => 'media-meta__data flex-1 text-right', 'label' => __( 'Artist:', 'exhale' )       ] ) ?>
-			<?php Hybrid\Media\display_meta( 'album',            [ 'tag' => 'li', 'class' => 'media-meta__item p-2 sm:flex border-0 border-b border-solid', 'data_class' => 'media-meta__data flex-1 text-right', 'label' => __( 'Album:', 'exhale' )        ] ) ?>
-			<?php Hybrid\Media\display_meta( 'track_number',     [ 'tag' => 'li', 'class' => 'media-meta__item p-2 sm:flex border-0 border-b border-solid', 'data_class' => 'media-meta__data flex-1 text-right', 'label' => __( 'Track Number:', 'exhale' ) ] ) ?>
-			<?php Hybrid\Media\display_meta( 'year',             [ 'tag' => 'li', 'class' => 'media-meta__item p-2 sm:flex border-0 border-b border-solid', 'data_class' => 'media-meta__data flex-1 text-right', 'label' => __( 'Year:', 'exhale' )         ] ) ?>
-			<?php Hybrid\Media\display_meta( 'genre',            [ 'tag' => 'li', 'class' => 'media-meta__item p-2 sm:flex border-0 border-b border-solid', 'data_class' => 'media-meta__data flex-1 text-right', 'label' => __( 'Genre:', 'exhale' )        ] ) ?>
-			<?php Hybrid\Media\display_meta( 'file_name',        [ 'tag' => 'li', 'class' => 'media-meta__item p-2 sm:flex border-0 border-b border-solid', 'data_class' => 'media-meta__data flex-1 text-right', 'label' => __( 'Name:', 'exhale' )         ] ) ?>
-			<?php Hybrid\Media\display_meta( 'mime_type',        [ 'tag' => 'li', 'class' => 'media-meta__item p-2 sm:flex border-0 border-b border-solid', 'data_class' => 'media-meta__data flex-1 text-right', 'label' => __( 'Mime Type:', 'exhale' )    ] ) ?>
-			<?php Hybrid\Media\display_meta( 'file_type',        [ 'tag' => 'li', 'class' => 'media-meta__item p-2 sm:flex border-0 border-b border-solid', 'data_class' => 'media-meta__data flex-1 text-right', 'label' => __( 'Type:', 'exhale' )         ] ) ?>
-			<?php Hybrid\Media\display_meta( 'file_size',        [ 'tag' => 'li', 'class' => 'media-meta__item p-2 sm:flex border-0 border-b border-solid', 'data_class' => 'media-meta__data flex-1 text-right', 'label' => __( 'Size:', 'exhale' )         ] ) ?>
+			<?php Hybrid\Media\display_meta( 'length_formatted', [ 'tag' => 'li', 'class' => 'media-meta__item p-2 sm:flex border-0 border-b border-solid', 'data_class' => 'media-meta__data flex-1 text-right', 'label' => __( 'Run Time:', 'tavern' )     ] ) ?>
+			<?php Hybrid\Media\display_meta( 'artist',           [ 'tag' => 'li', 'class' => 'media-meta__item p-2 sm:flex border-0 border-b border-solid', 'data_class' => 'media-meta__data flex-1 text-right', 'label' => __( 'Artist:', 'tavern' )       ] ) ?>
+			<?php Hybrid\Media\display_meta( 'album',            [ 'tag' => 'li', 'class' => 'media-meta__item p-2 sm:flex border-0 border-b border-solid', 'data_class' => 'media-meta__data flex-1 text-right', 'label' => __( 'Album:', 'tavern' )        ] ) ?>
+			<?php Hybrid\Media\display_meta( 'track_number',     [ 'tag' => 'li', 'class' => 'media-meta__item p-2 sm:flex border-0 border-b border-solid', 'data_class' => 'media-meta__data flex-1 text-right', 'label' => __( 'Track Number:', 'tavern' ) ] ) ?>
+			<?php Hybrid\Media\display_meta( 'year',             [ 'tag' => 'li', 'class' => 'media-meta__item p-2 sm:flex border-0 border-b border-solid', 'data_class' => 'media-meta__data flex-1 text-right', 'label' => __( 'Year:', 'tavern' )         ] ) ?>
+			<?php Hybrid\Media\display_meta( 'genre',            [ 'tag' => 'li', 'class' => 'media-meta__item p-2 sm:flex border-0 border-b border-solid', 'data_class' => 'media-meta__data flex-1 text-right', 'label' => __( 'Genre:', 'tavern' )        ] ) ?>
+			<?php Hybrid\Media\display_meta( 'file_name',        [ 'tag' => 'li', 'class' => 'media-meta__item p-2 sm:flex border-0 border-b border-solid', 'data_class' => 'media-meta__data flex-1 text-right', 'label' => __( 'Name:', 'tavern' )         ] ) ?>
+			<?php Hybrid\Media\display_meta( 'mime_type',        [ 'tag' => 'li', 'class' => 'media-meta__item p-2 sm:flex border-0 border-b border-solid', 'data_class' => 'media-meta__data flex-1 text-right', 'label' => __( 'Mime Type:', 'tavern' )    ] ) ?>
+			<?php Hybrid\Media\display_meta( 'file_type',        [ 'tag' => 'li', 'class' => 'media-meta__item p-2 sm:flex border-0 border-b border-solid', 'data_class' => 'media-meta__data flex-1 text-right', 'label' => __( 'Type:', 'tavern' )         ] ) ?>
+			<?php Hybrid\Media\display_meta( 'file_size',        [ 'tag' => 'li', 'class' => 'media-meta__item p-2 sm:flex border-0 border-b border-solid', 'data_class' => 'media-meta__data flex-1 text-right', 'label' => __( 'Size:', 'tavern' )         ] ) ?>
 		</ul>
 
 	</div>

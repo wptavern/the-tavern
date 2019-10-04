@@ -8,7 +8,7 @@
 
 				<?php $engine->display( 'nav/menu', 'footer', [ 'location' => 'footer' ] ) ?>
 
-				<?php Exhale\Template\Footer::displayCredit() ?>
+				<?php Tavern\Template\Footer::displayCredit() ?>
 
 				<?php $engine->display( 'nav/menu', 'social', [ 'location' => 'social' ] ) ?>
 

@@ -4,11 +4,11 @@
  * Adds a filter on `editor.BlockEdit` and adds custom inspector controls to
  * any blocks that has custom design settings.
  *
- * @package   Exhale
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright 2019 Justin Tadlock
+ * @package   Tavern
+ * @author    WP Tavern <justintadlock@gmail.com>
+ * @copyright 2019 WP Tavern
  * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
- * @link      https://themehybrid.com/themes/exhale
+ * @link      https://wptavern.com
  */
 
 // Imports the design setting fields.
@@ -32,7 +32,7 @@ const { addFilter }                  = wp.hooks;
  * @param  object   BlockEdit
  * @return function
  */
-const ExhaleBlockEdit = createHigherOrderComponent( ( BlockEdit ) => {
+const TavernBlockEdit = createHigherOrderComponent( ( BlockEdit ) => {
 
 	return ( props ) => {
 
@@ -94,6 +94,6 @@ const ExhaleBlockEdit = createHigherOrderComponent( ( BlockEdit ) => {
 		);
 	};
 
-}, 'ExhaleBlockEdit' );
+}, 'TavernBlockEdit' );
 
-addFilter( 'editor.BlockEdit', 'exhale/block/edit', ExhaleBlockEdit );
+addFilter( 'editor.BlockEdit', 'tavern/block/edit', TavernBlockEdit );

@@ -4,18 +4,18 @@
  *
  * Displays the theme settings page in the admin.
  *
- * @package    Exhale
+ * @package    Tavern
  * @subpackage Admin
- * @author     Justin Tadlock <justintadlock@gmail.com>
- * @copyright  Copyright (c) 2009 - 2018, Justin Tadlock
+ * @author     WP Tavern <justintadlock@gmail.com>
+ * @copyright  Copyright (c) 2009 - 2018, WP Tavern
  * @link       https://themehybrid.com/plugins/members
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-namespace Exhale\Settings\Admin;
+namespace Tavern\Settings\Admin;
 
 use Hybrid\Contracts\Bootable;
-use Exhale\Settings\Admin\Views;
+use Tavern\Settings\Admin\Views;
 
 /**
  * Options page class.
@@ -195,7 +195,7 @@ class OptionsPage implements Bootable {
 			<h1 class="wp-heading-inline"><?= esc_html( $this->label ) ?></h1>
 
 			<?php if ( current_user_can( 'customize' ) ) : ?>
-				<a href="<?= esc_url( wp_customize_url() ) ?>" class="hide-if-no-js page-title-action"><?php esc_html_e( 'Customize', 'exhale' ) ?></a>
+				<a href="<?= esc_url( wp_customize_url() ) ?>" class="hide-if-no-js page-title-action"><?php esc_html_e( 'Customize', 'tavern' ) ?></a>
 			<?php endif ?>
 
 			<div class="wp-filter">

@@ -26,7 +26,7 @@
 	<?php if ( ! comments_open() ) : ?>
 
 		<p class="comments__closed max-w-2xl mx-auto px-8 text-center">
-			<?php esc_html_e( 'Comments are closed.', 'exhale' ) ?>
+			<?php esc_html_e( 'Comments are closed.', 'tavern' ) ?>
 		</p>
 
 	<?php endif ?>

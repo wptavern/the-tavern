@@ -4,19 +4,19 @@
  *
  * Adds and defines custom filters and actions the theme adds to core WordPress.
  *
- * @package   Exhale
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright 2019 Justin Tadlock
+ * @package   Tavern
+ * @author    WP Tavern <justintadlock@gmail.com>
+ * @copyright 2019 WP Tavern
  * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
- * @link      https://themehybrid.com/themes/exhale
+ * @link      https://wptavern.com
  */
 
-namespace Exhale;
+namespace Tavern;
 
-use Exhale\Settings\Options;
-use Exhale\Tools\Config;
-use Exhale\Tools\Svg;
-use Exhale\Template\ErrorPage;
+use Tavern\Settings\Options;
+use Tavern\Tools\Config;
+use Tavern\Tools\Svg;
+use Tavern\Template\ErrorPage;
 
 # Add social icons.
 add_filter( 'walker_nav_menu_start_el', __NAMESPACE__ . '\nav_menu_social_icons', 10, 4 );
@@ -53,7 +53,7 @@ add_filter( 'hybrid/view/content/data', function( $data ) {
 add_filter( 'display_post_states', function( $states, $post ) {
 
 	if ( 'page' === $post->post_type && $post->ID === absint( Options::get( 'error_page' ) ) ) {
-		$states['exhale_error_404'] = __( '404 Page', 'exhale' );
+		$states['tavern_error_404'] = __( '404 Page', 'tavern' );
 	}
 
 	return $states;
@@ -85,7 +85,7 @@ add_filter( 'excerpt_more', function() {
 		esc_url( get_permalink() ),
 		sprintf(
 			// Translators: %s is the post title for screen readers.
-			esc_html__( 'Continue reading&nbsp;%s&nbsp;&rarr;', 'exhale' ),
+			esc_html__( 'Continue reading&nbsp;%s&nbsp;&rarr;', 'tavern' ),
 			the_title( '<span class="screen-reader-text">', '</span>', false )
 		)
 	);

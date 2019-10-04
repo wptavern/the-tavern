@@ -1,20 +1,20 @@
 {
-	"name"        : "justintadlock/exhale",
+	"name"        : "justintadlock/tavern",
 	"type"        : "wordpress-theme",
-	"description" : "Exhale is a clean and modern theme.",
+	"description" : "Tavern is a clean and modern theme.",
 	"keywords"    : ["wordpress"],
-	"homepage"    : "https://themehybrid.com/themes/exhale",
+	"homepage"    : "https://wptavern.com",
 	"license"     : "GPL-2.0-or-later",
 	"authors"     : [
 		{
-			"name"    : "Justin Tadlock",
+			"name"    : "WP Tavern",
 			"email"   : "justintadlock@gmail.com",
 			"homepage": "https://themehybrid.com"
 		}
 	],
 	"autoload"    : {
 		"psr-4" : {
-			"Exhale\\" : "app/"
+			"Tavern\\" : "app/"
 		}
 	},
         "require": {

@@ -1,6 +1,6 @@
 <li class="grid__item">
 
-	<?php Exhale\Template\FeaturedImage::display( 'featured', [
+	<?php Tavern\Template\FeaturedImage::display( 'featured', [
 		'class' => 'entry__media max-w-full text-center'
 	] ) ?>
 

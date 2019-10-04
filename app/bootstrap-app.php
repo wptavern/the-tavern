@@ -5,11 +5,11 @@
  * This file is used to create a new application instance and bind items to the
  * container. This is the heart of the application.
  *
- * @package   Exhale
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright 2019 Justin Tadlock
+ * @package   Tavern
+ * @author    WP Tavern <justintadlock@gmail.com>
+ * @copyright 2019 WP Tavern
  * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
- * @link      https://themehybrid.com/themes/exhale
+ * @link      https://wptavern.com
  */
 
 # ------------------------------------------------------------------------------
@@ -20,7 +20,7 @@
 # this instance via the `\Hybrid\app()` function or `\Hybrid\App` static class
 # after the application has booted.
 
-$exhale = new \Hybrid\Core\Application();
+$tavern = new \Hybrid\Core\Application();
 
 # ------------------------------------------------------------------------------
 # Register service providers with the application.
@@ -30,19 +30,19 @@ $exhale = new \Hybrid\Core\Application();
 # for running the theme. Service providers are essentially the backbone of the
 # bootstrapping process.
 
-$exhale->provider( \Exhale\Provider::class            );
-$exhale->provider( \Exhale\Background\Provider::class );
-$exhale->provider( \Exhale\Block\Provider::class      );
-$exhale->provider( \Exhale\CleanWP\Provider::class    );
-$exhale->provider( \Exhale\Color\Provider::class      );
-$exhale->provider( \Exhale\Customize\Provider::class  );
-$exhale->provider( \Exhale\Editor\Provider::class     );
-$exhale->provider( \Exhale\Gallery\Provider::class    );
-$exhale->provider( \Exhale\Image\Provider::class      );
-$exhale->provider( \Exhale\Layout\Provider::class     );
-$exhale->provider( \Exhale\Query\Provider::class      );
-$exhale->provider( \Exhale\Settings\Provider::class   );
-$exhale->provider( \Exhale\Typography\Provider::class );
+$tavern->provider( \Tavern\Provider::class            );
+$tavern->provider( \Tavern\Background\Provider::class );
+$tavern->provider( \Tavern\Block\Provider::class      );
+$tavern->provider( \Tavern\CleanWP\Provider::class    );
+$tavern->provider( \Tavern\Color\Provider::class      );
+$tavern->provider( \Tavern\Customize\Provider::class  );
+$tavern->provider( \Tavern\Editor\Provider::class     );
+$tavern->provider( \Tavern\Gallery\Provider::class    );
+$tavern->provider( \Tavern\Image\Provider::class      );
+$tavern->provider( \Tavern\Layout\Provider::class     );
+$tavern->provider( \Tavern\Query\Provider::class      );
+$tavern->provider( \Tavern\Settings\Provider::class   );
+$tavern->provider( \Tavern\Typography\Provider::class );
 
 # ------------------------------------------------------------------------------
 # Perform bootstrap actions.
@@ -52,7 +52,7 @@ $exhale->provider( \Exhale\Typography\Provider::class );
 # bootstrapping process and add their own bindings before the app is booted by
 # passing the application instance to the action callback.
 
-do_action( 'exhale/bootstrap', $exhale );
+do_action( 'tavern/bootstrap', $tavern );
 
 # ------------------------------------------------------------------------------
 # Bootstrap the application.
@@ -61,4 +61,4 @@ do_action( 'exhale/bootstrap', $exhale );
 # Calls the application `boot()` method, which launches the application. Pat
 # yourself on the back for a job well done.
 
-$exhale->boot();
+$tavern->boot();
