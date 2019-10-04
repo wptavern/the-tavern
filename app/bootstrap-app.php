@@ -33,15 +33,12 @@ $tavern = new \Hybrid\Core\Application();
 $tavern->provider( \Tavern\Provider::class            );
 $tavern->provider( \Tavern\Background\Provider::class );
 $tavern->provider( \Tavern\Block\Provider::class      );
-$tavern->provider( \Tavern\CleanWP\Provider::class    );
 $tavern->provider( \Tavern\Color\Provider::class      );
 $tavern->provider( \Tavern\Customize\Provider::class  );
 $tavern->provider( \Tavern\Editor\Provider::class     );
 $tavern->provider( \Tavern\Gallery\Provider::class    );
 $tavern->provider( \Tavern\Image\Provider::class      );
 $tavern->provider( \Tavern\Layout\Provider::class     );
-$tavern->provider( \Tavern\Query\Provider::class      );
-$tavern->provider( \Tavern\Settings\Provider::class   );
 $tavern->provider( \Tavern\Typography\Provider::class );
 
 # ------------------------------------------------------------------------------
