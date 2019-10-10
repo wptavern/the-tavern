@@ -521,6 +521,13 @@ return [
 		'google' => 'Fira+Sans+Extra+Condensed',
 		'styles' => [ '100', '100i', '200', '200i', '300', '300i', '400', '400i', '500', '500i', '600', '600i', '700', '700i', '800', '800i', '900', '900i' ]
 	],
+	'frank-ruhl-libre' => [
+		// Translators: Font family label.
+		'label'  => __( 'Frank Ruhl Libre', 'tavern' ),
+		'stack'  => '"Frank Ruhl Libre", serif',
+		'google' => 'Frank+Ruhl+Libre',
+		'styles' => [ '100', '400', '500', '700', '900' ]
+	],
 	'gentium-basic' => [
 		// Translators: Font family label.
 		'label'  => __( 'Gentium Basic', 'tavern' ),

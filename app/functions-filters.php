@@ -52,9 +52,9 @@ add_filter( 'hybrid/view/content/data', function( $data ) {
  */
 add_filter( 'display_post_states', function( $states, $post ) {
 
-	if ( 'page' === $post->post_type && $post->ID === absint( Options::get( 'error_page' ) ) ) {
-		$states['tavern_error_404'] = __( '404 Page', 'tavern' );
-	}
+	//if ( 'page' === $post->post_type && $post->ID === absint( Options::get( 'error_page' ) ) ) {
+	//	$states['tavern_error_404'] = __( '404 Page', 'tavern' );
+	//}
 
 	return $states;
 

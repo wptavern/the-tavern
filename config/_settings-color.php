@@ -28,13 +28,13 @@ return [
 		'section'     => 'theme_content_background'
 	],
 	'primary' => [
-		'color'       => '687d81',
+		'color'       => '4a5568',
 		'label'       => __( 'Primary: Text', 'tavern' ),
 		'description' => __( 'Color used for most text on the site.', 'tavern' ),
 		'section'         => 'theme_content_colors'
 	],
 	'primary-link' => [
-		'color'       => 'e3342f',
+		'color'       => 'b11a21',
 		'label'       => __( 'Primary: Link', 'tavern' ),
 		'description' => __( 'Color used for links in primary text.', 'tavern' ),
 		'section'         => 'theme_content_colors'
@@ -52,7 +52,7 @@ return [
 		'section'         => 'theme_content_colors'
 	],
 	'secondary-link' => [
-		'color'           => 'a9a9a9',
+		'color'           => 'C85F64',
 		'label'           => __( 'Secondary: Link', 'tavern' ),
 		'description'     => __( 'Color used for links in secondary text.', 'tavern' ),
 		'section'         => 'theme_content_colors'
@@ -113,19 +113,19 @@ return [
 
 
 	'header-background' => [
-		'color'           => 'fcfcfc',
+		'color'           => 'ffffff',
 		'label'           => __( 'Header: Background', 'tavern' ),
 		'description'     => __( 'Background color for the entire header block.', 'tavern' ),
 		'section'         => 'theme_header_background'
 	],
 	'header-border' => [
-		'color'           => 'f3f3f3',
+		'color'           => 'f1f0ee',
 		'label'           => __( 'Header: Border', 'tavern' ),
 		'description'     => __( 'Color used for borders in the header.', 'tavern' ),
 		'section'         => 'theme_header_colors'
 	],
 	'branding-background' => [
-		'color'           => 'fcfcfc',
+		'color'           => '',
 		'label'           => __( 'Header: Branding Background', 'tavern' ),
 		'description'     => __( 'Background color for the branding area.', 'tavern' ),
 		'section'         => 'theme_header_colors'
