@@ -102,5 +102,18 @@ $grid-row-span: (
 				grid-template-columns: $value;
 			}
 		}
+
+
+		@each $name, $value in $grid-column-span {
+			.#{ $prefix }\:#{ $name } {
+				grid-column: $value;
+			}
+		}
+
+		@each $name, $value in $grid-row-span {
+			.#{ $prefix }\:#{ $name } {
+				grid-row: $value;
+			}
+		}
 	}
 }

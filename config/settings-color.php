@@ -12,12 +12,8 @@
  */
 
 return [
-	'pagination'                  => [ 'color' => '959595' ],
+	'pagination'                  => [ 'color' => '757575' ],
 	'pagination-hover'            => [ 'color' => 'ffffff' ],
 	'pagination-background'       => [ 'color' => 'f3f3f3' ],
 	'pagination-background-hover' => [ 'color' => '222222' ],
-	'sidebar-footer-headings'     => [ 'color' => '959595' ],
-	'footer'                      => [ 'color' => 'a9a9a9' ],
-	'footer-background'           => [ 'color' => 'fcfcfc' ],
-	'footer-border'               => [ 'color' => 'f3f3f3' ]
 ];

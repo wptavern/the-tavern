@@ -115,7 +115,7 @@ return [
 		'label' => __( 'Red: 600', 'tavern' )
 	],
 	'red-500' => [
-		'color' => 'f56565',
+		'color' => 'b11a21',
 		'label' => __( 'Red: 500', 'tavern' )
 	],
 	'red-400' => [

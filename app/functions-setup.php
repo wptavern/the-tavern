@@ -104,7 +104,7 @@ add_action( 'widgets_init', function() {
 	$args = [
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<h3 class="widget__title">',
+		'before_title'  => '<h3 class="widget__title text-xl">',
 		'after_title'   => '</h3>'
 	];
 

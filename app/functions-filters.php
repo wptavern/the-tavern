@@ -81,12 +81,12 @@ add_filter( 'excerpt_length', function() {
 add_filter( 'excerpt_more', function() {
 
 	return sprintf(
-		'&thinsp;&hellip;&thinsp;<a href="%s" class="entry__more-link italic">%s</a>',
+		'&thinsp;&hellip;&thinsp;<a href="%s" class="entry__more-link screen-reader-text">%s</a>',
 		esc_url( get_permalink() ),
 		sprintf(
 			// Translators: %s is the post title for screen readers.
 			esc_html__( 'Continue reading&nbsp;%s&nbsp;&rarr;', 'tavern' ),
-			the_title( '<span class="screen-reader-text">', '</span>', false )
+			the_title( '', '', false )
 		)
 	);
 } );
@@ -167,21 +167,3 @@ add_action( 'template_redirect', function() {
 	}
 
 }, ~PHP_INT_MAX );
-
-/**
- * Changes the `<span>` wrapper for entry terms to a `<div>`.
- *
- * @since  2.1.0
- * @access public
- * @param  string  $html
- * @return string
- */
-add_filter( 'hybrid/post/terms', function( $html ) {
-
-	return str_replace(
-		[ '<span', '</span>' ],
-		[ '<div',  '</div>'  ],
-		$html
-	);
-
-} );

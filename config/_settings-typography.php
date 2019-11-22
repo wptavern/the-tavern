@@ -32,7 +32,7 @@ return [
 	'secondary' => [
 		'label'           => _x( 'Secondary', 'font family setting', 'tavern' ),
 		'description'     => __( 'Font used for secondary, less important text.', 'tavern' ),
-		'family'          => 'lora',
+		'family'          => 'lato',
 		'options'         => [ 'family' ],
 		'required_styles' => [ '400', '400i', '700', '700i' ]
 	]

@@ -18,7 +18,7 @@ const rimraf  = require( 'rimraf' );
 const fs      = require( 'fs' );
 
 // Folder name to export the files to.
-let exportPath = 'tavern';
+let exportPath = 'the-tavern';
 
 // Theme root-level files to include.
 let files = [

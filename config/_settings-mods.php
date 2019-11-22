@@ -118,9 +118,7 @@ return [
 	'loop_archive_width'      => 'full',
 	'loop_archive_columns'    => 4,
 	'loop_archive_image_size' => 'tavern-landscape-large',
-	'loop_archive_limit'      => function() {
-		return \Tavern\Settings\Options::get( 'archive_posts_number' );
-	},
+	'loop_archive_limit'      => 50,
 
 	// Blog layout.
 	'loop_blog_layout'     => 'blog',
@@ -129,9 +127,7 @@ return [
 	'loop_blog_image_size' => function() {
 		return \Tavern\Tools\Mod::get( 'featured_image_size' );
 	},
-	'loop_blog_limit'      => function() {
-		return \Tavern\Settings\Options::get( 'home_posts_number' );
-	},
+	'loop_blog_limit'      => 15,
 
 	// Archive product layout (WooCommerce).
 	'loop_archive_product_inherit'    => false,
@@ -175,15 +171,15 @@ return [
 	# Handles various footer mods.
 
 	// Footer sidebar layout.
-	'sidebar_footer_width' => 'full',
+	'sidebar_footer_width' => '7xl',
 
 	// Whether to show a random powered by quote by default. If set to `false`,
 	// the `footer_credit` value will be used.
-	'powered_by' => true,
+	'powered_by' => false,
 
 	// Default footer credit text.
 	'footer_credit' => function() {
-		return sprintf( __( 'Powered by %s.', 'tavern' ), \Hybrid\Theme\render_link() );
+		return 'Proudly powered by WordPress.';
 	},
 
 	# ----------------------------------------------------------------------

@@ -10,6 +10,17 @@
 	border-color: currentColor;
 }
 
+/// Loops through the theme colors and adds utility classes for them. Primarily,
+/// these are the `.has-{$color}-color` and `.has-{$color}-background-color`
+/// classes added via Gutenberg. However, they are useful elsewhere.
+
+@each $color-name, $color-value in block-colors() {
+
+	.border-#{ $color-name } {
+		border-color: $color-value;
+	}
+}
+
 $border-width: (
 	'':   1px,
 	'-0': 0,

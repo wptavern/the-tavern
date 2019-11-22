@@ -64,7 +64,7 @@ return [
 		'section'         => 'theme_content_colors'
 	],
 	'headings' => [
-		'color'           => '222222',
+		'color'           => '22292f',
 		'label'           => __( 'Headings', 'tavern' ),
 		'description'     => __( 'Color used for text headings.', 'tavern' ),
 		'section'         => 'theme_content_colors'
@@ -196,21 +196,17 @@ return [
 	'footer-background' => [
 		'label'           => __( 'Footer: Background', 'tavern' ),
 		'description'     => __( 'Background color for the entire footer section.', 'tavern' ),
-		'color'           => function() {
-			return \Tavern\Tools\Mod::color( 'header-background' );
-		},
+		'color'           => '22292f',
 		'section'         => 'theme_footer_background'
 	],
 	'footer' => [
 		'label'           => __( 'Footer: Text', 'tavern' ),
 		'description'     => __( 'Color used for most text in the footer.', 'tavern' ),
-		'color'           => function() {
-			return \Tavern\Tools\Mod::color( 'secondary' );
-		},
+		'color'           => 'cbd5e0',
 		'section'         => 'theme_footer_colors'
 	],
 	'footer-border' => [
-		'color'           => '',
+		'color'           => 'f3f3f3',
 		'label'           => __( 'Footer: Border', 'tavern' ),
 		'description'     => __( 'Color used for borders in the footer.', 'tavern' ),
 		'section'         => 'theme_footer_colors'
@@ -218,48 +214,38 @@ return [
 	'footer-link' => [
 		'label'           => __( 'Footer: Link', 'tavern' ),
 		'description'     => __( 'Color for the links in the footer.', 'tavern' ),
-		'color'           => function() {
-			return \Tavern\Tools\Mod::color( 'secondary-link' );
-		},
+		'color'           => 'e2e8f0',
 		'section'         => 'theme_footer_colors'
 	],
 	'footer-link-hover' => [
 		'label'           => __( 'Footer: Link Hover', 'tavern' ),
 		'description'     => __( 'Color used when hovering or focusing a link.', 'tavern' ),
-		'color'           => function() {
-			return \Tavern\Tools\Mod::color( 'secondary-link-hover' );
-		},
+		'color'           => 'ffffff',
 		'section'         => 'theme_footer_colors'
 	],
 	'sidebar-footer-background' => [
 		'label'           => __( 'Sidebar Footer: Background', 'tavern' ),
 		'description'     => __( 'Background color for the entire footer section.', 'tavern' ),
-		'color'           => function() {
-			return \Tavern\Tools\Mod::color( 'footer-background' );
-		},
+		'color'           => 'fcfcfc',
 		'section'         => 'theme_sidebar_footer_background'
 	],
 	'sidebar-footer' => [
 		'label'           => __( 'Sidebar Footer: Text', 'tavern' ),
 		'description'     => __( 'Color used for most text in the footer.', 'tavern' ),
-		'color'           => function() {
-			return \Tavern\Tools\Mod::color( 'footer' );
-		},
+		'color'           => '718096',
 		'section'         => 'theme_footer_colors'
 	],
 	'sidebar-footer-headings' => [
 		'label'           => __( 'Sidebar Footer: Headings', 'tavern' ),
 		'description'     => __( 'Color used for most text in the footer.', 'tavern' ),
-		'color'           => function() {
-			return \Tavern\Tools\Mod::color( 'footer' );
-		},
+		'color'           => '4a5568',
 		'section'         => 'theme_footer_colors'
 	],
 	'sidebar-footer-link' => [
 		'label'           => __( 'Sidebar Footer: Link', 'tavern' ),
 		'description'     => __( 'Color for the links in the footer.', 'tavern' ),
 		'color'           => function() {
-			return \Tavern\Tools\Mod::color( 'footer-link' );
+			return \Tavern\Tools\Mod::color( 'primary-link' );
 		},
 		'section'         => 'theme_footer_colors'
 	],
@@ -267,7 +253,7 @@ return [
 		'label'           => __( 'Sidebar Footer: Link Hover', 'tavern' ),
 		'description'     => __( 'Color used when hovering or focusing a link.', 'tavern' ),
 		'color'           => function() {
-			return \Tavern\Tools\Mod::color( 'footer-link-hover' );
+			return \Tavern\Tools\Mod::color( 'primary-link-hover' );
 		},
 		'section'         => 'theme_footer_colors'
 	]

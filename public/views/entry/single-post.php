@@ -1,14 +1,18 @@
 <article <?php Hybrid\Attr\display( 'entry' ) ?>>
 
 	<header class="entry__header mb-8 text-center">
-		<h1 class="entry__title md:max-w-4xl mx-8 sm:mx-auto my-4 text-5xl leading-tight">
+		<h1 class="entry__title md:max-w-4xl mx-8 sm:mx-auto my-0 text-5xl leading-tight">
 			<?php the_title() ?>
 		</h1>
 
-		<div class="entry__byline max-w-2xl mx-8 sm:mx-auto">
+		<div class="entry__byline max-w-2xl mx-8 mt-2 sm:mx-auto">
 			<?php Hybrid\Post\display_author() ?>
 			<?php Hybrid\Post\display_date( [ 'before' => Tavern\sep() ] ) ?>
-			<?php Hybrid\Post\display_comments_link( [ 'before' => Tavern\sep() ] ) ?>
+			<?php Hybrid\Post\display_terms( [
+				'before' => Tavern\sep(),
+				'text'     => '<span class="screen-reader-text">Posted in </span>%s',
+				'taxonomy' => 'category'
+			] ) ?>
 		</div>
 	</header>
 
@@ -18,11 +22,6 @@
 	</div>
 
 	<footer class="entry__footer max-w-2xl mx-8 sm:mx-auto mt-8">
-		<?php Hybrid\Post\display_terms( [
-			// Translators: %s is the category list.
-			'text'     => __( 'Posted in %s', 'tavern' ),
-			'taxonomy' => 'category'
-		] ) ?>
 		<?php Hybrid\Post\display_terms( [
 			// Translators: %s is the post tags list.
 			'text'     => __( 'Tagged %s', 'tavern' ),
