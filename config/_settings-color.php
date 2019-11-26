@@ -28,7 +28,7 @@ return [
 		'section'     => 'theme_content_background'
 	],
 	'primary' => [
-		'color'       => '4a5568',
+		'color'       => '2d3748',
 		'label'       => __( 'Primary: Text', 'tavern' ),
 		'description' => __( 'Color used for most text on the site.', 'tavern' ),
 		'section'         => 'theme_content_colors'
@@ -46,7 +46,7 @@ return [
 		'section'         => 'theme_content_colors'
 	],
 	'secondary' => [
-		'color'       => 'a9a9a9',
+		'color'       => '718096',
 		'label'       => __( 'Secondary: Text', 'tavern' ),
 		'description' => __( 'Color used for secondary text.', 'tavern' ),
 		'section'         => 'theme_content_colors'
@@ -131,7 +131,7 @@ return [
 		'section'         => 'theme_header_colors'
 	],
 	'header-title' => [
-		'color'           => '757575',
+		'color'           => '2d3748',
 		'label'           => __( 'Header: Title Text', 'tavern' ),
 		'description'     => __( 'Color for the branding title text.', 'tavern' ),
 		'section'         => 'theme_header_colors'
@@ -143,13 +143,13 @@ return [
 		'section'         => 'theme_header_colors'
 	],
 	'header-description' => [
-		'color'           => '959595',
+		'color'           => '4a5568',
 		'label'           => __( 'Header: Tagline Text', 'tavern' ),
 		'description'     => __( 'Color used for the branding tagline text.', 'tavern' ),
 		'section'         => 'theme_header_colors'
 	],
 	'menu-primary' => [
-		'color'           => '959595',
+		'color'           => '718096',
 		'label'           => __( 'Header: Menu Link', 'tavern' ),
 		'description'     => __( 'Color for the primary menu links.', 'tavern' ),
 		'section'         => 'theme_header_colors'
@@ -232,13 +232,13 @@ return [
 	'sidebar-footer' => [
 		'label'           => __( 'Sidebar Footer: Text', 'tavern' ),
 		'description'     => __( 'Color used for most text in the footer.', 'tavern' ),
-		'color'           => '718096',
+		'color'           => '4a5568',
 		'section'         => 'theme_footer_colors'
 	],
 	'sidebar-footer-headings' => [
 		'label'           => __( 'Sidebar Footer: Headings', 'tavern' ),
 		'description'     => __( 'Color used for most text in the footer.', 'tavern' ),
-		'color'           => '4a5568',
+		'color'           => '2d3748',
 		'section'         => 'theme_footer_colors'
 	],
 	'sidebar-footer-link' => [

@@ -46,14 +46,14 @@
 	&__logo-link {
 		display: inline-block;
 		// Centers our image no matter what size.
-		margin: auto 0;
-		line-height: 0;
+	//	margin: auto 0;
+	//	line-height: 0;
 	}
 
 	&__logo {
 		max-width: unset;
 		width: auto;
-		max-height: 58px;
+		max-height: 30px;
 		padding: 0;
 		border: none;
 		filter: none;
