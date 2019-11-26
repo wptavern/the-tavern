@@ -30,7 +30,8 @@
 								<?php Hybrid\Post\display_date( [ 'before' => Tavern\sep() ] ) ?>
 								<?= Tavern\sep() ?>
 								<?php foreach ( get_the_category( get_the_ID() ) as $term ) : ?>
-									<span class=""><?= esc_html( $term->name ) ?></span>
+									<a href="<?= esc_url( get_term_link( $term, $term->taxonomy ) ) ?>"><?= esc_html( $term->name ) ?></a>
+									<?php break; ?>
 								<?php endforeach ?>
 							</div>
 						</header>
@@ -73,7 +74,8 @@
 									<?php Hybrid\Post\display_date( [ 'before' => Tavern\sep() ] ) ?>
 									<?= Tavern\sep() ?>
 									<?php foreach ( get_the_category( get_the_ID() ) as $term ) : ?>
-										<span class=""><?= esc_html( $term->name ) ?></span>
+										<a href="<?= esc_url( get_term_link( $term, $term->taxonomy ) ) ?>"><?= esc_html( $term->name ) ?></a>
+										<?php break; ?>
 									<?php endforeach ?>
 								</div>
 							</header>

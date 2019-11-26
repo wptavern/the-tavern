@@ -6,6 +6,66 @@
 /// @link   https://wptavern.com
 ////
 
+// BEGIN JETPACK ------------------------
+
+[id^=contact-form-],
+.grunion-field-wrap,
+.entry__content .sharedaddy {
+	margin-top: $spacing-global;
+}
+
+.entry__content .sd-like {
+	margin-top: 0;
+}
+
+.entry__content #jp-relatedposts {
+	display: block;
+	max-width: $max-w-4xl;
+	margin: $spacing-global auto;
+}
+
+.entry__content div.sharedaddy h3.sd-title,
+.entry__content #jp-relatedposts h3.jp-relatedposts-headline {
+	font-weight: normal;
+	font-size:   $text-base;
+}
+
+.entry__content div.sharedaddy h3.sd-title:before,
+.entry__content #jp-relatedposts h3.jp-relatedposts-headline em:before {
+	display: none;
+}
+
+.entry__content #jp-relatedposts .jp-relatedposts-items-visual h4.jp-relatedposts-post-title {
+	margin-top: $spacing-fourth;
+}
+
+.comment__content div.jetpack-comment-likes-widget-wrapper {
+	margin-top: $spacing-half;
+}
+
+.comment-respond .comment-subscription-form {
+	margin: $spacing-global 0 0;
+
+	+ .comment-subscription-form,
+	+ .prompt-comment-subscribe {
+		margin: 0;
+	}
+}
+
+.akismet_comment_form_privacy_notice {
+	margin-left:  $spacing-global;
+	margin-right: $spacing-global;
+	font-size:    $text-base;
+
+	@media ( min-width: $content-width-padded ) {
+		max-width:    $content-width;
+		margin-left:  auto;
+		margin-right: auto;
+	}
+}
+
+// END JETPACK.
+
 :first-child {
 	margin-top: 0;
 }

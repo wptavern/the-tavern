@@ -70,7 +70,7 @@ return [
 		'section'         => 'theme_content_colors'
 	],
 	'border' => [
-		'color'           => 'e1e1e1',
+		'color'           => 'cbd5e0',
 		'label'           => __( 'Border', 'tavern' ),
 		'description'     => __( 'Color used for borders in general.', 'tavern' ),
 		'section'         => 'theme_content_colors'

@@ -17,6 +17,7 @@
 	border:        1px solid var( --color-border );
 
 	@media only screen and ( max-width: $content-width-padded ) {
+		box-sizing: border-box;
 	//	margin-bottom: 0;
 		margin-top:    0;
 		border-width:  0 0 1px;

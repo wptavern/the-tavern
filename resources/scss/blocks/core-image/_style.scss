@@ -45,3 +45,16 @@
 	//	text-align: center;
 	}
 }
+
+// Wrapped with a <div> when floated and centered.
+div.wp-block-image {
+	margin-bottom: $spacing-global;
+
+	.aligncenter {
+		margin-bottom: $spacing-2x;
+	}
+
+	+ * {
+		margin-top: -#{ $spacing-global };
+	}
+}
