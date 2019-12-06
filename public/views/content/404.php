@@ -12,7 +12,7 @@
 
 		<div class="entry entry--error">
 
-			<header class="entry__header o-content-width">
+			<header class="entry__header o-content-width text-center">
 				<h1 class="entry__title"><?php $error->displayTitle() ?></h1>
 			</header>
 

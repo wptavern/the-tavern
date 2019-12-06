@@ -43,7 +43,7 @@ class ErrorPage {
 	 */
 	public function __construct() {
 
-		$page_id = absint( Options::get( 'error_page' ) );
+		$page_id = false;//absint( Options::get( 'error_page' ) );
 
 		if ( $page_id ) {
 			$this->post = get_post( $page_id );
@@ -132,7 +132,7 @@ class ErrorPage {
 		}
 
 		printf(
-			'<p>%s</p>',
+			'<p class="mb-8">%s</p>',
 			esc_html__( 'It looks like you stumbled upon a page that does not exist. Perhaps rolling the dice with a search might help.', 'tavern' )
 		);
 

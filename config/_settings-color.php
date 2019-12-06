@@ -28,7 +28,7 @@ return [
 		'section'     => 'theme_content_background'
 	],
 	'primary' => [
-		'color'       => '2d3748',
+		'color'       => '4a5568',
 		'label'       => __( 'Primary: Text', 'tavern' ),
 		'description' => __( 'Color used for most text on the site.', 'tavern' ),
 		'section'         => 'theme_content_colors'
@@ -143,7 +143,7 @@ return [
 		'section'         => 'theme_header_colors'
 	],
 	'header-description' => [
-		'color'           => '4a5568',
+		'color'           => '718096',
 		'label'           => __( 'Header: Tagline Text', 'tavern' ),
 		'description'     => __( 'Color used for the branding tagline text.', 'tavern' ),
 		'section'         => 'theme_header_colors'
