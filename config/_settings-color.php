@@ -28,7 +28,7 @@ return [
 		'section'     => 'theme_content_background'
 	],
 	'primary' => [
-		'color'       => '4a5568',
+		'color'       => '2d3748',
 		'label'       => __( 'Primary: Text', 'tavern' ),
 		'description' => __( 'Color used for most text on the site.', 'tavern' ),
 		'section'         => 'theme_content_colors'
