@@ -12,11 +12,7 @@
 			<div class="entry__byline text-xs">
 				<?php Hybrid\Post\display_author() ?>
 				<?php Hybrid\Post\display_date( [ 'before' => Tavern\sep() ] ) ?>
-				<?= Tavern\sep() ?>
-				<?php foreach ( get_the_category( get_the_ID() ) as $term ) : ?>
-					<a href="<?= esc_url( get_term_link( $term, $term->taxonomy ) ) ?>"><?= esc_html( $term->name ) ?></a>
-					<?php break; ?>
-				<?php endforeach ?>
+				<?php Hybrid\Post\display_comments_link( [ 'before' => Tavern\sep() ] ) ?>
 			</div>
 		</header>
 

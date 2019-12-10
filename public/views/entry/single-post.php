@@ -8,11 +8,7 @@
 		<div class="entry__byline max-w-2xl mx-8 mt-2 sm:mx-auto">
 			<?php Hybrid\Post\display_author() ?>
 			<?php Hybrid\Post\display_date( [ 'before' => Tavern\sep() ] ) ?>
-			<?php Hybrid\Post\display_terms( [
-				'before' => Tavern\sep(),
-				'text'     => '<span class="screen-reader-text">Posted in </span>%s',
-				'taxonomy' => 'category'
-			] ) ?>
+			<?php Hybrid\Post\display_comments_link( [ 'before' => Tavern\sep() ] ) ?>
 		</div>
 	</header>
 
@@ -22,6 +18,10 @@
 	</div>
 
 	<footer class="entry__footer max-w-2xl mx-8 sm:mx-auto mt-8">
+		<?php Hybrid\Post\display_terms( [
+			'text'     => 'Posted in %s',
+			'taxonomy' => 'category'
+		] ) ?>
 		<?php Hybrid\Post\display_terms( [
 			// Translators: %s is the post tags list.
 			'text'     => __( 'Tagged %s', 'tavern' ),
