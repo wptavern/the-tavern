@@ -47,12 +47,13 @@
 		font-family: var( --font-family-secondary );
 	//	font-size:   16px;
 	//	line-height: 1;
-		color:       var( --color-menu-primary );
+	//	color:       var( --color-menu-primary );
 
-		border-top: 1px solid var( --color-header-border );
+	//	border-top: 1px solid var( --color-header-border );
 
 		@media ( min-width: $breakpoint-md ) {
-			border: none;
+		//	border: none;
+			border-bottom: 1px solid var( --color-header-border );
 		}
 
 		&::-webkit-scrollbar {
@@ -95,14 +96,14 @@
 		.menu__link {
 		//	padding:         1.5rem 1.5rem;
 		//	text-decoration: none;
-			color:           inherit;
+		//	color:           inherit;
 			box-sizing: border-box;
 
 			&:hover,
 			&:focus {
 		//		text-decoration: underline;
-				color:           var( --color-menu-primary-hover );
-				background-color: var( --color-menu-primary-background-hover );
+		//		color:           var( --color-menu-primary-hover );
+		//		background-color: var( --color-menu-primary-background-hover );
 			}
 		}
 	}

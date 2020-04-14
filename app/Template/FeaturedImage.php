@@ -124,9 +124,9 @@ class FeaturedImage extends Image {
 	 */
 	private static function svgFallback( $type, array $args = [] ) {
 
-		if ( ! ( is_home() || is_archive() ) || ! Loop::layout()->requiresImage() ) {
-			return '';
-		}
+	//	if ( ! ( is_home() || is_archive() ) || ! Loop::layout()->requiresImage() ) {
+	//		return '';
+	//	}
 
 		$post_id = ! empty( $args['post_id'] ) ? $args['post_id'] : get_the_ID();
 		$size    = Loop::imageSize();
@@ -145,13 +145,18 @@ class FeaturedImage extends Image {
 		}
 
 		$svg = sprintf(
+			'<img class="entry__image block mx-auto" src="%s" alt="" />',
+			get_template_directory_uri() . '/public/img/tavern-featured.png'
+		);
+
+		/*$svg = sprintf(
 			'<svg class="entry__image block mx-auto" fill="#%1$s" width="%2$s" height="%3$s" viewBox="0 0 %2$s %3$s">
 				<rect class="svg-shape" width="%2$s" height="%3$s" />
 			</svg>',
 			sanitize_hex_color_no_hash( Mod::color( 'primary-link' ) ),
 			esc_attr( $size->width() ),
 			esc_attr( $size->height() )
-		);
+		);*/
 
 		if ( ! isset( $args['link'] ) || $args['link'] ) {
 			$svg = sprintf(

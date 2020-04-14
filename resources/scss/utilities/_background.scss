@@ -56,6 +56,24 @@ $bg-attachment: (
 	}
 }
 
+@media ( min-width: $breakpoint-sm ) {
+
+	@each $color-name, $color-value in block-colors() {
+		.sm\:bg-#{ $color-name } {
+			background-color: $color-value;
+		}
+	}
+}
+
+@media ( min-width: $breakpoint-md ) {
+
+	@each $color-name, $color-value in block-colors() {
+		.md\:bg-#{ $color-name } {
+			background-color: $color-value;
+		}
+	}
+}
+
 /// Background position.
 
 @each $name, $value in $bg-position {

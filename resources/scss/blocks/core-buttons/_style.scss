@@ -1,0 +1,16 @@
+////
+/// Buttons block (multiple buttons).
+///
+/// @group  Blocks
+/// @author WP Tavern <justintadlock@gmail.com>
+/// @link   https://wptavern.com
+////
+
+.wp-block-buttons {
+
+	.wp-block-button {
+		display: inline-block;
+		margin-left: $spacing-half;
+		margin-right: $spacing-half;
+	}
+}

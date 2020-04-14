@@ -42,7 +42,7 @@
 ///
 /// @since  1.0.0
 
-.edit-post-visual-editor {
+.editor-styles-wrapper {
 
 	// ---------------------------------------------------------------------
 	// Import element styles.
@@ -82,6 +82,7 @@
 
 	@import 'blocks/core-audio/style';
 	@import 'blocks/core-button/style';
+	@import 'blocks/core-buttons/style';
 	@import 'blocks/core-calendar/style';
 	@import 'blocks/core-categories/style';
 	@import 'blocks/core-code/style';

@@ -1,6 +1,8 @@
+<?php get_search_form() ?>
+
 <?php if ( has_nav_menu( $data->location ) ) : ?>
 
-	<div class="toggle toggle--menu-primary block md:hidden h-16 px-8 flex items-center">
+	<div class="toggle toggle--menu-primary block md:hidden h-16 pr-8 flex items-center">
 		<button class="toggle__button flex items-center px-3 py-2 rounded-sm border-0">
 			<span class="screen-reader-text"><?php esc_html_e( 'Open Menu', 'tavern' ) ?></span>
 			<svg class="toggle__hamburger fill-current h-5 w-5" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -13,8 +15,12 @@
 	</div>
 
 	<nav <?php Hybrid\Attr\display( 'menu', $data->location, [
-		'class' => 'menu menu--primary hidden md:block w-full md:h-16 flex-grow md:flex md:items-center md:justify-end md:w-auto ml-auto md:pr-2 text-sm leading-none'
+		'class' => 'menu menu--primary hidden md:block w-full md:h-16
+		            flex-grow md:flex md:items-center md:justify-start
+			    col-span-3 md:w-auto ml-auto md:ml-0 md:pr-2 text-sm
+			    leading-none bg-black md:bg-white'
 	] ) ?>>
+
 
 		<h3 class="menu__title screen-reader-text">
 			<?php Hybrid\Menu\display_name( $data->location ) ?>
@@ -25,7 +31,7 @@
 			'depth'          => 1,
 			'container'      => '',
 			'menu_id'        => '',
-			'menu_class'     => 'menu__items list-none md:h-full m-0 p-0',
+			'menu_class'     => 'menu__items list-none md:flex md:items-center md:h-full m-0 p-0',
 			'items_wrap'     => '<ul class="%2$s">%3$s</ul>',
 			'item_spacing'   => 'discard'
 		] ) ?>

@@ -171,3 +171,23 @@ $vertical-align: (
 	}
 
 }
+
+@media ( min-width: $breakpoint-sm ) {
+
+	@each $color-name, $color-value in block-colors() {
+		.sm\:text-#{ $color-name },
+		a.sm\:text-#{ $color-name } {
+			color: $color-value;
+		}
+	}
+}
+
+@media ( min-width: $breakpoint-md ) {
+
+	@each $color-name, $color-value in block-colors() {
+		.md\:text-#{ $color-name },
+		a.md\:text-#{ $color-name } {
+			color: $color-value;
+		}
+	}
+}

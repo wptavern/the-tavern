@@ -138,7 +138,7 @@ add_filter( 'nav_menu_css_class', function( $classes, $items, $args, $depth ) {
 add_filter( 'nav_menu_link_attributes', function( $attr, $item, $args, $depth ) {
 
 	if ( 'primary' === $args->theme_location ) {
-		$attr['class'] .= ' block md:inline-block px-8 py-4 md:p-6 md:h-full no-underline hover:underline focus:underline';
+		$attr['class'] .= ' block md:inline-block px-8 py-4 md:ml-8 md:px-0 md:py-0 md:h-full text-white md:text-red-500 no-underline hover:underline focus:underline';
 	} elseif ( 'footer' === $args->theme_location ) {
 		$attr['class'] .= ' no-underline hover:underline focus:underline';
 	} elseif ( 'social' === $args->theme_location ) {
@@ -148,6 +148,22 @@ add_filter( 'nav_menu_link_attributes', function( $attr, $item, $args, $depth ) 
 	return $attr;
 
 }, 15, 4 );
+
+add_filter( 'get_search_form', function( $form ) {
+
+	$form = sprintf(
+		'<form role="search" method="get" class="search-form hidden md:block w-full md:h-16 flex-grow md:flex md:items-center md:justify-end ml-auto pr-8" action="%s">
+			<label class="w-full">
+				<span class="screen-reader-text">Search for:</span>
+				<input type="search" class="search-field w-full px-4 border-gray-700 bg-gray-900 text-gray-300" placeholder="Search &hellip;" value="%s" name="s" />
+			</label>
+		</form>',
+		esc_url( home_url( '/' ) ),
+		get_search_query()
+	);
+
+	return $form;
+} );
 
 /**
  * Converts old page template slugs to the updated slug.

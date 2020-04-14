@@ -113,7 +113,7 @@ return [
 
 
 	'header-background' => [
-		'color'           => 'ffffff',
+		'color'           => '1a202c',
 		'label'           => __( 'Header: Background', 'tavern' ),
 		'description'     => __( 'Background color for the entire header block.', 'tavern' ),
 		'section'         => 'theme_header_background'
@@ -131,31 +131,31 @@ return [
 		'section'         => 'theme_header_colors'
 	],
 	'header-title' => [
-		'color'           => '2d3748',
+		'color'           => 'ffffff',
 		'label'           => __( 'Header: Title Text', 'tavern' ),
 		'description'     => __( 'Color for the branding title text.', 'tavern' ),
 		'section'         => 'theme_header_colors'
 	],
 	'header-title-hover' => [
-		'color'           => '222222',
+		'color'           => 'ffffff',
 		'label'           => __( 'Header: Title Text Hover', 'tavern' ),
 		'description'     => __( 'Color used when hovering or focusing a link.', 'tavern' ),
 		'section'         => 'theme_header_colors'
 	],
 	'header-description' => [
-		'color'           => '718096',
+		'color'           => 'e2e8f0',
 		'label'           => __( 'Header: Tagline Text', 'tavern' ),
 		'description'     => __( 'Color used for the branding tagline text.', 'tavern' ),
 		'section'         => 'theme_header_colors'
 	],
 	'menu-primary' => [
-		'color'           => '718096',
+		'color'           => 'e2e8f0',
 		'label'           => __( 'Header: Menu Link', 'tavern' ),
 		'description'     => __( 'Color for the primary menu links.', 'tavern' ),
 		'section'         => 'theme_header_colors'
 	],
 	'menu-primary-hover' => [
-		'color'           => '222222',
+		'color'           => 'ffffff',
 		'label'           => __( 'Header: Menu Link Hover', 'tavern' ),
 		'description'     => __( 'Color used when hovering or focusing a link.', 'tavern' ),
 		'section'         => 'theme_header_colors'
@@ -169,28 +169,19 @@ return [
 	'menu-primary-toggle' => [
 		'label'           => __( 'Mobile Menu Button', 'tavern' ),
 		'description'     => __( 'Color for the mobile menu toggle button.', 'tavern' ),
-		'color'           => function() {
-			$color = \Tavern\Tools\Mod::color( 'header-background' );
-			$color = $color ?: \Tavern\Tools\Mod::color( 'header-background' );
-			$color = $color ?: get_background_color();
-			return $color ?: 'ffffff';
-		},
+		'color'           => '1a202c',
 		'section'         => 'theme_header_colors'
 	],
 	'menu-primary-toggle-background' => [
 		'label'           => __( 'Mobile Menu Button Background', 'tavern' ),
 		'description'     => __( 'Background color for the mobile menu toggle button.', 'tavern' ),
-		'color'           => function() {
-			return \Tavern\Tools\Mod::color( 'header-title' );
-		},
+		'color'           => 'edf2f7',
 		'section'         => 'theme_header_colors'
 	],
 	'menu-primary-toggle-background-hover' => [
 		'label'           => __( 'Mobile Menu Button Background Hover', 'tavern' ),
 		'description'     => __( 'Background color for the mobile menu toggle button.', 'tavern' ),
-		'color'           => function() {
-			return \Tavern\Tools\Mod::color( 'header-title-hover' );
-		},
+		'color'           => 'ffffff',
 		'section'         => 'theme_header_colors'
 	],
 	'footer-background' => [
