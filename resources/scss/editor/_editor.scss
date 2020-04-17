@@ -137,8 +137,8 @@
 
 	@each $color-name, $color-value in block-colors() {
 
-		.has-color-#{ $color-name },
-		a.has-color-#{ $color-name } {
+		.has-#{ $color-name }-color,
+		a.has-#{ $color-name }-color {
 			color: $color-value;
 		}
 

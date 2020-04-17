@@ -62,6 +62,7 @@
 .wp-block-cover__inner-container,
 .wp-block-cover-text {
 	z-index: 2;
+	width:     $max-w-full;
 	max-width: $width-alignwide;
 	color: var( --white );
 
