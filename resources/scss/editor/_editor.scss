@@ -41,12 +41,12 @@
 	max-width: none;
 }
 
-.editor-styles-wrapper.editor-styles-wrapper {
+.editor-styles-wrapper {
 
 	.wp-block[data-align=left],
 	.wp-block[data-align=right] {
 		[data-block] {
-			margin-top: 0;
+			margin-top: $spacing-global;
 			margin-bottom: 0;
 		}
 	}
@@ -115,7 +115,9 @@
 // Overwrite core styles dropped into the footer.
 
 .editor-styles-wrapper .wp-block-paragraph {
-	margin: $spacing-global 0 0;
+	//margin: $spacing-global 0 0;
+	margin-top: $spacing-global;
+	margin-bottom: 0;
 }
 
 .editor-styles-wrapper .block-library-list ul,
