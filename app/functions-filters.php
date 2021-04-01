@@ -21,6 +21,40 @@ use Tavern\Template\ErrorPage;
 # Add social icons.
 add_filter( 'walker_nav_menu_start_el', __NAMESPACE__ . '\nav_menu_social_icons', 10, 4 );
 
+add_filter( 'render_block_dsb/details-summary-block', function( $content, $block ) {
+
+	//wp_die( var_dump( $content ) );
+
+	preg_match( "/<details(.*?)<div>(.*?)<\/div><\/details>/si", trim( $content ), $matches );
+
+	if ( ! empty( $matches ) && isset( $matches[1] ) && isset( $matches[2] ) ) {
+
+
+		$text = str_replace( ['<p>', '</p>'], '', $matches[2] );
+
+		$chat = new \Tavern\Template\Chat( $text );
+
+		$transcript = $chat->get_transcript();
+
+		if ( $transcript ) {
+			return sprintf(
+				'<details%s<div>%s</div></details>',
+				$matches[1],
+				$transcript
+			);
+		}
+
+		//wp_die( var_dump( $chat->get_transcript() ) );
+
+	}
+	//var_dump( $matches );
+
+
+
+	return $content;
+}, 10, 2 );
+
+
 /**
  * Adds error data for the 404 content template. Passes in the `ErrorPage` object
  * as the `$error` variable.

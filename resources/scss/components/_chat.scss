@@ -1,0 +1,35 @@
+
+.chat {
+
+
+	&-stanza {
+		&:first-child {
+			margin-top: $spacing-global;
+		}
+
+		margin-top: $spacing-global;
+	}
+
+	&-timestamp {
+		font-size: $text-base;
+		color: var( --gray-800 );
+	}
+
+	&-author {
+		svg {
+			width: 16px;
+			height: 16px;
+			margin-right: 4px;
+			padding-top: 2px;
+		}
+		cite {
+			font-size: $text-lg;
+			font-weight: bold;
+			font-variant: normal;
+		}
+	}
+
+	&-text {
+		margin-top: $spacing-half;
+	}
+}
