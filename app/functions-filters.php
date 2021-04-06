@@ -21,6 +21,10 @@ use Tavern\Template\ErrorPage;
 # Add social icons.
 add_filter( 'walker_nav_menu_start_el', __NAMESPACE__ . '\nav_menu_social_icons', 10, 4 );
 
+add_filter( 'pre_option_image_default_size', function( $size ) {
+	return 'full';
+} );
+
 add_filter( 'render_block_dsb/details-summary-block', function( $content, $block ) {
 
 	//wp_die( var_dump( $content ) );
