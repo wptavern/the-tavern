@@ -113,7 +113,7 @@
 }
 
 // Cropped images.
-.is-cropped .blocks-gallery-item
+.is-cropped .blocks-gallery-item,
 .is-cropped.blocks-gallery-grid .wp-block-image {
 	a,
 	img {
@@ -125,7 +125,7 @@
 }
 
 // Fallback to 2 columns.
-.blocks-gallery-item
+.blocks-gallery-item,
 .blocks-gallery-grid .wp-block-image {
 	width: calc( 100% / 2 - #{ $spacing-half } );
 
@@ -135,7 +135,7 @@
 }
 
 // 1 column.
-.columns-1 .blocks-gallery-item
+.columns-1 .blocks-gallery-item,
 .columns-1.blocks-gallery-grid .wp-block-image {
 	width:        100%;
 	margin-right: 0;
@@ -144,7 +144,7 @@
 // 3-8 columns on larger screens.
 @media ( min-width: $content-width ) {
 
-	.wp-block-gallery .blocks-gallery-item
+	.wp-block-gallery .blocks-gallery-item,
 	.blocks-gallery-grid .wp-block-image {
 		margin-right: $spacing-half;
 	}
