@@ -49,7 +49,7 @@ class Customize extends Customizable {
 	 *
 	 * @since  2.1.0
 	 * @access protected
-	 * @var    Font\Family\Styles
+	 * @var    Font\Style\Styles
 	 */
 	protected $styles;
 

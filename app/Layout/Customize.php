@@ -328,8 +328,8 @@ class Customize extends Customizable {
 				),
 				'container_inclusive' => true,
 				'fallback_refresh'    => false,
-				'render_callback'     => function( $partial, $context ) {
-					return FeaturedImage::display( 'featured', [
+				'render_callback'     => function ( $partial, $context ) {
+					FeaturedImage::display( 'featured', [
 						'post_id' => absint( $context['post_id'] )
 					] );
 				}

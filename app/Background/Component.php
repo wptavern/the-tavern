@@ -14,7 +14,7 @@
 namespace Tavern\Background;
 
 use Hybrid\Contracts\Bootable;
-use Tavern\Background\Patterns;
+use Tavern\Background\Pattern\Patterns;
 use Tavern\Settings\Options;
 use Tavern\Tools\Config;
 use Tavern\Tools\Mod;

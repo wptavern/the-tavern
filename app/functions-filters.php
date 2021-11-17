@@ -137,7 +137,7 @@ add_filter( 'excerpt_more', function() {
  * @param  string  $item_output
  * @param  object  $item
  * @param  int     $depth
- * @param  array   $args
+ * @param  object  $args
  * @return string
  */
 function nav_menu_social_icons( $item_output, $item, $depth, $args ) {

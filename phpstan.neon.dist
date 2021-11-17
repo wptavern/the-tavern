@@ -1,0 +1,20 @@
+includes:
+    - vendor/szepeviktor/phpstan-wordpress/extension.neon
+parameters:
+    level: max
+    inferPrivatePropertyTypeFromConstructor: true
+    paths:
+        - app/
+    scanFiles:
+        - app/bootstrap-compat.php
+        - app/functions-assets.php
+        - app/functions-filters.php
+        - app/functions-helpers.php
+        - app/functions-setup.php
+        - app/functions-template.php
+        - app/functions-woocommerce.php
+    ignoreErrors:
+        # Uses func_get_args()
+        - '#^Function apply_filters invoked with [34567] parameters, 2 required\.$#'
+        # Uses __callStatic()
+        - '#^Call to static method resolve\(\) on an unknown class Hybrid\\App\.$#'

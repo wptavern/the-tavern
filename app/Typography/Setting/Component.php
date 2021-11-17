@@ -104,7 +104,7 @@ class Component implements Bootable {
 	 * @since  2.0.0
 	 * @access public
 	 * @param  Settings          $settings
-	 * @param  CustomProperties  $settings
+	 * @param  CustomProperties  $properties
 	 * @param  array             $collections
 	 * @return void
 	 */

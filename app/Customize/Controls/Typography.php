@@ -233,7 +233,7 @@ class Typography extends WP_Customize_Control {
 	 *
 	 * @since  2.0.0
 	 * @access public
-	 * @return bool
+	 * @return void
 	 */
 	protected function render_content() {}
 }
