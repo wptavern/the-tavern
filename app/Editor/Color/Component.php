@@ -57,7 +57,7 @@ class Component implements Bootable {
 	 *
 	 * @since  2.0.0
 	 * @access public
-	 * @param  Colors           $editor
+	 * @param  Colors           $colors
 	 * @param  CustomProperties $properties
 	 * @return void
 	 */

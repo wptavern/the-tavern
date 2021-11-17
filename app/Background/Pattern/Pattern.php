@@ -121,7 +121,7 @@ class Pattern implements JsonSerializable {
 
 		return preg_replace(
 			'/fill=([\'"])#.+?([\'"])/i',
-			'fill=${1}' . $fill . '${2} fill-opacity=${1}' . + $opacity . '${2}',
+			'fill=${1}' . $fill . '${2} fill-opacity=${1}' . $opacity . '${2}',
 			$this->svg
 		);
 	}

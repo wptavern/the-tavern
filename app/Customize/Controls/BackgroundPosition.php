@@ -137,7 +137,7 @@ class BackgroundPosition extends WP_Customize_Control {
 	 *
 	 * @since  1.0.0
 	 * @access public
-	 * @return bool
+	 * @return void
 	 */
 	protected function render_content() {}
 }

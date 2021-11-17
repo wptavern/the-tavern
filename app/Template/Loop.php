@@ -100,7 +100,7 @@ class Loop {
 	 * @since  2.1.0
 	 * @access public
 	 * @param  string  $type
-	 * @return \Tavern\Layout\LoopLayout
+	 * @return \Tavern\Layout\Loop\Layout
 	 */
 	public static function layout( $type = '' ) {
 
@@ -143,7 +143,7 @@ class Loop {
 	 * @since  2.1.0
 	 * @access public
 	 * @param  string  $type
-	 * @return \Tavern\Layout\LoopLayout
+	 * @return \Tavern\Layout\Loop\Layout
 	 */
 	public static function width( $type = '' ) {
 

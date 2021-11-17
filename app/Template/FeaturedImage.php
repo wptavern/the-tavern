@@ -91,7 +91,7 @@ class FeaturedImage extends Image {
 	 * @access public
 	 * @param  array|string  $type
 	 * @param  array         $args
-	 * @return string
+	 * @return void
 	 */
 	public static function display( $type, array $args = [] ) {
 		echo static::render( $type, $args );

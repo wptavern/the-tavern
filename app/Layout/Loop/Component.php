@@ -43,8 +43,7 @@ class Component implements Bootable {
 	 *
 	 * @since  2.1.0
 	 * @access public
-	 * @param  Layouts  $global
-	 * @param  Layouts  $loop
+	 * @param  Layouts  $layouts
 	 * @return void
 	 */
 	public function __construct( Layouts $layouts ) {
